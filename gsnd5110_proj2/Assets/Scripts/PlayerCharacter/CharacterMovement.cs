@@ -25,12 +25,6 @@ public class CharacterMovement : MonoBehaviour
         _cc.Move(move);
     }
 
-    public void Rotate(Vector2 rotationVector)
-    {
-        // _rotationY += rotationVector.x * rotationSpeed * Time.deltaTime;
-        // transform.localRotation = Quaternion.Euler(0, _rotationY, 0);
-    }
-
     private void FlipSprite(float x)
     {
         if (x < 0) _sr.flipX = true;
