@@ -6,7 +6,7 @@ public class CharacterInteraction : MonoBehaviour
 
     public void Interact()
     {
-        currInteractable.RunInteraction();
+        if (currInteractable != null) currInteractable.RunInteraction();
     }
 
     private void OnTriggerEnter(Collider other)
