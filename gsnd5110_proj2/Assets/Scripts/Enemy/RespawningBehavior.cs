@@ -18,7 +18,7 @@ public class RespawningBehavior : MonoBehaviour
     {
         _isRespawning = true;
         yield return new WaitForSeconds(waitTime);
-        Instantiate(_enemyToRespawn, transform);
+        _currEnemy = Instantiate(_enemyToRespawn, transform);
         _isRespawning = false;
     }
 }
