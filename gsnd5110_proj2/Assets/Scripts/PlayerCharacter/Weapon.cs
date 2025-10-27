@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    Health currTarget = null;
+    EnemyController currTarget = null;
     [SerializeField] int damage;
 
     public void HitTarget()
@@ -14,7 +14,7 @@ public class Weapon : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            currTarget = other.gameObject.GetComponent<Health>();
+            currTarget = other.gameObject.GetComponent<EnemyController>();
         }
     }
 
