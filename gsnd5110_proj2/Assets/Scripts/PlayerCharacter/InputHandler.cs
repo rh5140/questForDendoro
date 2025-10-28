@@ -16,7 +16,9 @@ public class InputHandler : MonoBehaviour
     
     private InputAction _moveAction;
 
-    private PlayerState _state = PlayerState.MOVE; 
+    [SerializeField] private Animator _animator;
+
+    private PlayerState _state = PlayerState.IDLE; 
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void OnEnable()
@@ -36,10 +38,12 @@ public class InputHandler : MonoBehaviour
         switch (_state)
         {
             case PlayerState.MOVE:
+                _animator.SetTrigger("Walk");
                 TryMove();
                 break;
             
             case PlayerState.IDLE:
+                _animator.SetTrigger("Idle");
                 break;
 
             case PlayerState.DIALOGUE:
@@ -48,7 +52,11 @@ public class InputHandler : MonoBehaviour
             default:
                 break;
         }
-
+        if (!transform.hasChanged)
+        {
+            _state = PlayerState.IDLE;
+        }
+        transform.hasChanged = false;
     }
 
     public void OnMove()

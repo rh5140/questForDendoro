@@ -34,15 +34,15 @@ public class CharacterMovement : MonoBehaviour
 
     private void FlipSprite(float x)
     {
-        if (x < 0)
+        if (x > 0)
         {
             _sr.flipX = true;
-            _weapon.gameObject.transform.localPosition = _weaponLeftPosition;
+            _weapon.gameObject.transform.localPosition = _weaponRightPosition;
         }
-        else if (x > 0)
+        else if (x < 0)
         {
             _sr.flipX = false;
-            _weapon.gameObject.transform.localPosition = _weaponRightPosition;
+            _weapon.gameObject.transform.localPosition = _weaponLeftPosition;
         }
         _lastDirection = x;
     }
