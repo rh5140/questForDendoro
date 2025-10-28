@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class CharacterHealth : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class CharacterHealth : MonoBehaviour
     protected virtual void Die()
     {
         _currHealth = 0;
+        SceneManager.LoadScene("MovementAndInteraction");
     }
 
     private IEnumerator BecomeTemporarilyInvincible()

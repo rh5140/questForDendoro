@@ -1,9 +1,14 @@
 using UnityEngine;
+using System.Collections;
 
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] private int _maxHealth;
     private int _currHealth;
+    
+    [SerializeField] private bool _isInvincible = false;
+    [SerializeField] private float _iFrames = 0.2f;
+    [SerializeField] private SpriteRenderer _sr;
 
     void OnEnable()
     {
@@ -20,6 +25,7 @@ public class EnemyController : MonoBehaviour
     {
         _currHealth -= dmg;
         if (_currHealth <= 0) Die();
+        if (!_isInvincible) StartCoroutine(BecomeTemporarilyInvincible());
     }
 
     protected virtual void Die()
@@ -28,4 +34,12 @@ public class EnemyController : MonoBehaviour
         Destroy(transform.parent.gameObject);
     }
 
+    private IEnumerator BecomeTemporarilyInvincible()
+    {
+        _isInvincible = true;
+        _sr.color = Color.red;
+        yield return new WaitForSeconds(_iFrames);
+        _sr.color = Color.white;
+        _isInvincible = false;
+    }
 }
