@@ -8,7 +8,7 @@ public class Billboard : MonoBehaviour
     private void Start()
     {
         cam = Camera.main.transform;
-        offset = new Vector3(0f,0f,5f);
+        offset = new Vector3(0f,0f,0f);
     }
 
     void LateUpdate()
