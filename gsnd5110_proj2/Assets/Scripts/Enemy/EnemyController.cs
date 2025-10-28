@@ -10,6 +10,9 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float _iFrames = 0.2f;
     [SerializeField] private SpriteRenderer _sr;
 
+    // Temporary code for prototype
+    public GameObject winScreen;
+
     void OnEnable()
     {
         _currHealth = _maxHealth;
@@ -32,6 +35,10 @@ public class EnemyController : MonoBehaviour
     {
         _currHealth = 0;
         Destroy(transform.parent.gameObject);
+
+        // Temporary code for prototype
+        winScreen.SetActive(true);
+
     }
 
     private IEnumerator BecomeTemporarilyInvincible()
