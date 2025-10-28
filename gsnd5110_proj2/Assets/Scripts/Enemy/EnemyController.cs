@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.InputSystem; // TEMPORARY
 
 public class EnemyController : MonoBehaviour
 {
@@ -11,11 +12,15 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private SpriteRenderer _sr;
 
     // Temporary code for prototype
-    public GameObject winScreen;
+    public GameObject winScreen;    
+    private InputAction _bossCheat;
 
     void OnEnable()
     {
         _currHealth = _maxHealth;
+        _bossCheat = InputSystem.actions.FindAction("BossCheat");
+
+        _bossCheat.performed += DamageCheat;
     }
 
     public void HealDamage(int heal)
@@ -29,6 +34,11 @@ public class EnemyController : MonoBehaviour
         _currHealth -= dmg;
         if (_currHealth <= 0) Die();
         if (!_isInvincible) StartCoroutine(BecomeTemporarilyInvincible());
+    }
+
+    private void DamageCheat(InputAction.CallbackContext ctx)
+    {
+        ReceiveDamage(1);
     }
 
     protected virtual void Die()
@@ -48,5 +58,10 @@ public class EnemyController : MonoBehaviour
         yield return new WaitForSeconds(_iFrames);
         _sr.color = Color.white;
         _isInvincible = false;
+    }
+
+    void OnDisable()
+    {
+        _bossCheat.performed -= DamageCheat;
     }
 }
