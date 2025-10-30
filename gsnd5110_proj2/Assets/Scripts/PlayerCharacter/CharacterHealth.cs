@@ -18,8 +18,9 @@ public class CharacterHealth : MonoBehaviour
 
     public void HealDamage(int heal)
     {
-        _currHealth += heal;
-        if (_currHealth > _maxHealth) _currHealth = _maxHealth;
+        int actualHeal = Mathf.Min(_maxHealth - _currHealth, heal);
+        _currHealth += actualHeal;
+        _hearts.AddHearts(actualHeal);
     }
 
     public void ReceiveDamage(int dmg)
@@ -28,6 +29,11 @@ public class CharacterHealth : MonoBehaviour
         _currHealth -= dmg;
         if (_currHealth <= 0) Die();
         if (!_isInvincible) StartCoroutine(BecomeTemporarilyInvincible());
+    }
+
+    public int GetCurrhealth()
+    {
+        return _currHealth;
     }
 
     protected virtual void Die()

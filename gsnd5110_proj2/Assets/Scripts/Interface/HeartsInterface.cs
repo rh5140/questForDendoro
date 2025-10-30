@@ -3,6 +3,13 @@ using UnityEngine;
 public class HeartsInterface : MonoBehaviour
 {
     [SerializeField] private GameObject _heartPrefab;
+    [SerializeField] private CharacterHealth _charHealth;
+
+    public void Start()
+    {
+        int currHealth = _charHealth.GetCurrhealth();
+        AddHearts(currHealth);
+    }
 
     public void RemoveHearts(int num)
     {

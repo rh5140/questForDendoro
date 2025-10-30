@@ -7,7 +7,6 @@ public class UnlockButton : Interactable
 
     public override void RunInteraction()
     {
-        Debug.Log("RUNNING INTERACTION");
         if (_sr.color == Color.white) 
         {
             _sr.color = Color.yellow;
