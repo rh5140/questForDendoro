@@ -6,14 +6,15 @@ public class EnemyAttack : MonoBehaviour
 
     public float interval = 1f;
     private float currTime = 0f;
-    private float range = 5f;
+    
+    [SerializeField] Vector3 hitboxSize;
 
     // Update is called once per frame
     void Update()
     {
         if (currTime > interval)
         {
-            Collider[] hitColliders = Physics.OverlapSphere(transform.position, range);
+            Collider[] hitColliders = Physics.OverlapBox(transform.position, hitboxSize);
             foreach (var hitCollider in hitColliders)
             {
                 CharacterHealth currTarget = hitCollider.transform.GetComponent<CharacterHealth>();
@@ -31,6 +32,6 @@ public class EnemyAttack : MonoBehaviour
     {
         Gizmos.color = new Color(1f, 0f, 0f, 0.5f);
 
-        Gizmos.DrawSphere(transform.position, range);
+        Gizmos.DrawWireCube(transform.position, hitboxSize);
     }
 }
