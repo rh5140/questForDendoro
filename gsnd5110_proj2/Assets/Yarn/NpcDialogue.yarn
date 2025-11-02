@@ -1,4 +1,9 @@
-﻿title: NpcDialogue
+﻿title: Test
+---
+trigger entered
+===
+
+title: NpcDialogue
 ---
 Raccoon: hello!
 ===

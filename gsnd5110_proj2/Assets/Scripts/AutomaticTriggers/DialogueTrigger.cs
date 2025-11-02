@@ -1,14 +1,13 @@
 using UnityEngine;
 using Yarn.Unity;
 
-public class TalkInteraction : Interactable
+public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField] DialogueRunner dr;
     [SerializeField] string startNode;
-
-    public override void RunInteraction()
+    
+    void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Start Dialogue");
         dr.StartDialogue(startNode);
     }
 }
