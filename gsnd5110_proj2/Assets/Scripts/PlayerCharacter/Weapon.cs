@@ -15,6 +15,9 @@ public class Weapon : MonoBehaviour
     [SerializeField] float interval = 0.3f;
     private bool _onCooldown = false;
 
+    // TEMPORARY
+    [SerializeField] Animator playerAnimator;
+
     public void Start()
     {
         center = transform.position;
@@ -26,6 +29,7 @@ public class Weapon : MonoBehaviour
     {
         if (!_onCooldown)
         {
+            playerAnimator.Play("Attack");
             StartCoroutine(DisplayHit());
             Collider[] hitColliders = Physics.OverlapBox(transform.position, hitboxSize);
             foreach (var hitCollider in hitColliders)
@@ -64,11 +68,11 @@ public class Weapon : MonoBehaviour
 
         while (time < interval)
         {
-            attackButton.color = Color.Lerp(cooldownStart, Color.red, time); // CHANGE TO Color.white later
+            attackButton.color = Color.Lerp(cooldownStart, Color.white, time);
             time += Time.deltaTime;
             yield return null;
         }
-        attackButton.color = Color.red;
+        attackButton.color = Color.white;
         _onCooldown = false;
     }
 }

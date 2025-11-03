@@ -30,6 +30,7 @@ public class CompanionProjectile : MonoBehaviour
             if (hitCollider.gameObject.tag == "Enemy" && currTarget != null)
             {
                 currTarget.ReceiveDamage(_damage);
+                Destroy(gameObject);
             }
         }
         _currTime += Time.deltaTime;
