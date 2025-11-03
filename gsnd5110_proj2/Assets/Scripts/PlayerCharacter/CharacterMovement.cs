@@ -5,6 +5,7 @@ public class CharacterMovement : MonoBehaviour
     private CharacterController _cc;
     [SerializeField] private SpriteRenderer _sr;
     [SerializeField] private Weapon _weapon; // not sure if best approach
+    [SerializeField] private Companion _companion; // not sure if best approach
 
     public float movementSpeed = 10f;
     public float rotationSpeed = 5f;
@@ -13,6 +14,9 @@ public class CharacterMovement : MonoBehaviour
     private float _lastDirection;
     private Vector3 _weaponRightPosition;
     private Vector3 _weaponLeftPosition;
+    
+    private Vector3 _companionRightPosition;
+    private Vector3 _companionLeftPosition;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
