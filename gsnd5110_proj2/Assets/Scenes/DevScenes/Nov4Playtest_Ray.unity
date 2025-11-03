@@ -1813,7 +1813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e968302a3b83248805f61ec7df62b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
-  _maxHealth: 3
+  _maxHealth: 20
   _isInvincible: 0
   _iFrames: 0.2
   _sr: {fileID: 2110388163}
@@ -3462,6 +3462,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1549953739 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 192046556274224311, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
+  m_PrefabInstance: {fileID: 9193025535157281302}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f750c1587ad82d428abd516b5c4ce6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Companion
 --- !u!1 &1647457421
 GameObject:
   m_ObjectHideFlags: 0
@@ -5513,6 +5524,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 30.824
       objectReference: {fileID: 0}
+    - target: {fileID: 192046556274224311, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
+      propertyPath: _interval
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1401084111949941241, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: range
       value: 3
@@ -5533,6 +5548,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4369484249872996305, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
+      propertyPath: _companion
+      value: 
+      objectReference: {fileID: 1549953739}
     - target: {fileID: 4534547676069527082, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: m_IsTrigger
       value: 0

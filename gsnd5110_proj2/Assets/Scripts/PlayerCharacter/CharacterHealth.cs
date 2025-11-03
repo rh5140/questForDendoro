@@ -25,6 +25,7 @@ public class CharacterHealth : MonoBehaviour
 
     public void ReceiveDamage(int dmg)
     {
+        if (_isInvincible) return;
         _hearts.RemoveHearts(dmg);
         _currHealth -= dmg;
         if (_currHealth <= 0) Die();

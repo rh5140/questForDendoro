@@ -22,8 +22,12 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         _cc = GetComponent<CharacterController>();
+
         _weaponRightPosition = _weapon.gameObject.transform.localPosition;
         _weaponLeftPosition = new Vector3(-_weapon.gameObject.transform.localPosition.x, _weapon.gameObject.transform.localPosition.y, _weapon.gameObject.transform.localPosition.z);
+        
+        _companionRightPosition = _companion.gameObject.transform.localPosition;
+        _companionLeftPosition = new Vector3(-_companion.gameObject.transform.localPosition.x, _companion.gameObject.transform.localPosition.y, _companion.gameObject.transform.localPosition.z);
     }
 
     public void Move(Vector2 movementVector)
@@ -42,11 +46,13 @@ public class CharacterMovement : MonoBehaviour
         {
             _sr.flipX = true;
             _weapon.gameObject.transform.localPosition = _weaponRightPosition;
+            _companion.gameObject.transform.localPosition = _companionRightPosition;
         }
         else if (x < 0)
         {
             _sr.flipX = false;
             _weapon.gameObject.transform.localPosition = _weaponLeftPosition;
+            _companion.gameObject.transform.localPosition = _companionLeftPosition;
         }
         _lastDirection = x;
     }
