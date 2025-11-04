@@ -540,6 +540,7 @@ MonoBehaviour:
   tempVfx: {fileID: 7872779233021093916}
   attackButton: {fileID: 0}
   interval: 1
+  playerAnimator: {fileID: 0}
 --- !u!1 &6708782267966946500
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,6 +722,7 @@ GameObject:
   - component: {fileID: 4369484249872996305}
   - component: {fileID: 5468976802764022628}
   - component: {fileID: 4408113260140674380}
+  - component: {fileID: 3431223088388836997}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Player
@@ -823,7 +825,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Height: 2
@@ -897,6 +899,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterAttack
   weapon: {fileID: 1401084111949941241}
   companion: {fileID: 192046556274224311}
+--- !u!65 &3431223088388836997
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7780698166203854701}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8096840496152933968
 GameObject:
   m_ObjectHideFlags: 0

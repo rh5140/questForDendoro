@@ -11,9 +11,12 @@ public class CharacterHealth : MonoBehaviour
     [SerializeField] private SpriteRenderer _sr;
     [SerializeField] private HeartsInterface _hearts;
 
+    private string _scene;
+
     void OnEnable()
     {
         _currHealth = _maxHealth;
+        _scene = SceneManager.GetActiveScene().name;
     }
 
     public void HealDamage(int heal)
@@ -40,7 +43,7 @@ public class CharacterHealth : MonoBehaviour
     protected virtual void Die()
     {
         _currHealth = 0;
-        SceneManager.LoadScene("MovementAndInteraction");
+        SceneManager.LoadScene(_scene);
     }
 
     private IEnumerator BecomeTemporarilyInvincible()
