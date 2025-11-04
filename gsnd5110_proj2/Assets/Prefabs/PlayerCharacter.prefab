@@ -339,7 +339,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.28, y: 1.04, z: -1.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4852392040554661684}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -404,9 +404,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a044d296f0c964ed8856be08c527238d, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.9218221, a: 1}
-  m_FlipX: 0
+  m_Sprite: {fileID: 21300000, guid: ebf5d69ff025517449c9a3f7e85f011b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.64, y: 0.64}
@@ -970,7 +970,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterMovement
   _sr: {fileID: 7079820435015817642}
   _weapon: {fileID: 1401084111949941241}
-  _companion: {fileID: 0}
+  _companion: {fileID: 192046556274224311}
+  _csr: {fileID: 5252637585568745842}
   movementSpeed: 10
   rotationSpeed: 5
 --- !u!114 &5468976802764022628
