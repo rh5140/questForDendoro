@@ -17,12 +17,14 @@ public class Weapon : MonoBehaviour
 
     // TEMPORARY
     [SerializeField] Animator playerAnimator;
+    [SerializeField] AudioSource audioSource;
 
     public void Start()
     {
         center = transform.position;
         range = 2f;
         hitboxSize = new Vector3(range, range, range);
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void HitTarget()
@@ -30,6 +32,7 @@ public class Weapon : MonoBehaviour
         if (!_onCooldown)
         {
             playerAnimator.Play("Attack");
+            audioSource.Play();
             StartCoroutine(DisplayHit());
             Collider[] hitColliders = Physics.OverlapBox(transform.position, hitboxSize);
             foreach (var hitCollider in hitColliders)

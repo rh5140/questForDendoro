@@ -52,7 +52,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 2}
+  m_Size: {x: 4, y: 2, z: 4}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &525512135283364860
 MonoBehaviour:
@@ -67,6 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnlockButton
   _sr: {fileID: 8390302201410994114}
+  _ug: {fileID: 0}
 --- !u!1 &3811248782975620238
 GameObject:
   m_ObjectHideFlags: 0
