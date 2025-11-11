@@ -10,13 +10,14 @@ public class CharacterHealth : MonoBehaviour
     [SerializeField] private float _iFrames = 0.5f;
     [SerializeField] private SpriteRenderer _sr;
     [SerializeField] private HeartsInterface _hearts;
+    [SerializeField] private GameObject _gameOverScreen;
 
     private string _scene;
 
     void OnEnable()
     {
         _currHealth = _maxHealth;
-        _scene = SceneManager.GetActiveScene().name;
+        // _scene = SceneManager.GetActiveScene().name;
     }
 
     public void HealDamage(int heal)
@@ -24,6 +25,11 @@ public class CharacterHealth : MonoBehaviour
         int actualHeal = Mathf.Min(_maxHealth - _currHealth, heal);
         _currHealth += actualHeal;
         _hearts.AddHearts(actualHeal);
+    }
+
+    public void HealFull()
+    {
+        HealDamage(_maxHealth);
     }
 
     public void ReceiveDamage(int dmg)
@@ -43,7 +49,8 @@ public class CharacterHealth : MonoBehaviour
     protected virtual void Die()
     {
         _currHealth = 0;
-        SceneManager.LoadScene(_scene);
+        _gameOverScreen.SetActive(true);
+        // SceneManager.LoadScene(_scene);
     }
 
     private IEnumerator BecomeTemporarilyInvincible()
