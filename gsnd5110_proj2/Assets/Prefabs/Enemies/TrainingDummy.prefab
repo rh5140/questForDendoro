@@ -82,7 +82,6 @@ MonoBehaviour:
   _isInvincible: 0
   _iFrames: 0.2
   _sr: {fileID: 0}
-  winScreen: {fileID: 0}
 --- !u!65 &927886344511509223
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -98,12 +97,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 8, y: 3, z: 4}
-  m_Center: {x: 0, y: 0, z: -2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9166983522612573654
 GameObject:
   m_ObjectHideFlags: 0

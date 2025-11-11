@@ -11,16 +11,10 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float _iFrames = 0.2f;
     [SerializeField] private SpriteRenderer _sr;
 
-    // Temporary code for prototype
-    public GameObject winScreen;    
-    private InputAction _bossCheat;
 
     void OnEnable()
     {
         _currHealth = _maxHealth;
-        _bossCheat = InputSystem.actions.FindAction("BossCheat");
-
-        _bossCheat.performed += DamageCheat;
     }
 
     public void HealDamage(int heal)
@@ -46,10 +40,6 @@ public class EnemyController : MonoBehaviour
     {
         _currHealth = 0;
         Destroy(transform.parent.gameObject);
-
-        // Temporary code for prototype
-        winScreen.SetActive(true);
-
     }
 
     private IEnumerator BecomeTemporarilyInvincible()
@@ -63,6 +53,5 @@ public class EnemyController : MonoBehaviour
 
     void OnDisable()
     {
-        _bossCheat.performed -= DamageCheat;
     }
 }
