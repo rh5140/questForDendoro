@@ -31,15 +31,10 @@ public class EnemyController : MonoBehaviour
         if (!_isInvincible) StartCoroutine(BecomeTemporarilyInvincible());
     }
 
-    private void DamageCheat(InputAction.CallbackContext ctx)
-    {
-        ReceiveDamage(1);
-    }
-
     protected virtual void Die()
     {
         _currHealth = 0;
-        Destroy(transform.parent.gameObject);
+        Destroy(transform.gameObject);
     }
 
     private IEnumerator BecomeTemporarilyInvincible()

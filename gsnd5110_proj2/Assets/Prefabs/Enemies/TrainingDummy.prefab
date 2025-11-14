@@ -81,7 +81,7 @@ MonoBehaviour:
   _maxHealth: 1
   _isInvincible: 0
   _iFrames: 0.2
-  _sr: {fileID: 0}
+  _sr: {fileID: 5829616979746931626}
 --- !u!65 &927886344511509223
 BoxCollider:
   m_ObjectHideFlags: 0
