@@ -3,10 +3,10 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     private CharacterController _cc;
-    [SerializeField] private SpriteRenderer _sr;
+    [SerializeField] private GameObject _spriteArt;
     [SerializeField] private Weapon _weapon; // not sure if best approach
     [SerializeField] private Companion _companion; // not sure if best approach
-    [SerializeField] private SpriteRenderer _csr; // not sure if best approach
+    [SerializeField] private GameObject _companionSpriteArt;
 
     public float movementSpeed = 10f;
     public float rotationSpeed = 5f;
@@ -33,7 +33,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void Move(Vector2 movementVector)
     {
-        if (movementVector.x != _lastDirection)
+        if (movementVector.x != _lastDirection && movementVector.x != 0)
             FlipSprite(movementVector.x);
 
         Vector3 move = transform.forward * movementVector.y + transform.right * movementVector.x;
@@ -45,18 +45,26 @@ public class CharacterMovement : MonoBehaviour
     {
         if (x > 0)
         {
-            _sr.flipX = true;
+            FlipX(true, _spriteArt);
             _weapon.gameObject.transform.localPosition = _weaponRightPosition;
             _companion.gameObject.transform.localPosition = _companionRightPosition;
-            _csr.flipX = true;
+            FlipX(true, _companionSpriteArt);
         }
         else if (x < 0)
         {
-            _sr.flipX = false;
+            FlipX(false, _spriteArt);
             _weapon.gameObject.transform.localPosition = _weaponLeftPosition;
             _companion.gameObject.transform.localPosition = _companionLeftPosition;
-            _csr.flipX = false;
+            FlipX(false, _companionSpriteArt);
         }
         _lastDirection = x;
+    }
+
+    private void FlipX(bool flip, GameObject targetSprite)
+    {
+        Vector3 flipX = targetSprite.transform.localScale;
+        if (flip) flipX.x = -1;
+        else flipX.x = 1;
+        targetSprite.transform.localScale = flipX;
     }
 }
