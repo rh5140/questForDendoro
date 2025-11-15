@@ -47,21 +47,52 @@ public class InputHandler : MonoBehaviour
                 break;
 
             case PlayerState.DIALOGUE:
+                _animator.SetTrigger("Idle");
                 break;
             
             default:
                 break;
         }
-        if (!transform.hasChanged)
+        if (!transform.hasChanged && _state != PlayerState.DIALOGUE)
         {
             _state = PlayerState.IDLE;
         }
         transform.hasChanged = false;
     }
 
+    private void ChangePlayerState(string newState)
+    {
+        if (newState == "MOVE")
+        {
+            _state = PlayerState.MOVE;
+        }
+        else if (newState == "IDLE")
+        {
+            _state = PlayerState.IDLE;
+        }
+        else if (newState == "DIALOGUE")
+        {
+            _state = PlayerState.DIALOGUE;
+        }
+    }
+
+    public void ChangePlayerToDialogue()
+    {
+        ChangePlayerState("DIALOGUE");
+    }
+
+    public void ChangePlayerToIdle()
+    {
+        ChangePlayerState("IDLE");
+    }
+
+
     public void OnMove()
     {
-        _state = PlayerState.MOVE;
+        if (_state != PlayerState.DIALOGUE)
+        {
+            _state = PlayerState.MOVE;
+        }
     }
 
     public void OnInteract()
