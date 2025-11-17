@@ -2288,6 +2288,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597681187}
   m_CullTransparentMesh: 1
+--- !u!114 &645903908 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6445310763803927103, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+  m_PrefabInstance: {fileID: 6954767109659155381}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4782940980a00d4789ad85242baaf92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TalkInteraction
 --- !u!1001 &658085527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3484,6 +3495,61 @@ MonoBehaviour:
   player: {fileID: 1982303230}
   playerHealth: {fileID: 1518666150}
   endScreen: {fileID: 1709245135}
+--- !u!1 &1065098892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1065098893}
+  - component: {fileID: 1065098894}
+  m_Layer: 0
+  m_Name: TemporaryDataHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1065098893
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065098892}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.33326387, y: -0, z: -0, w: 0.94283366}
+  m_LocalPosition: {x: 0, y: 7.7799997, z: -8.77}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1065098894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065098892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e3138c61749274db506c2cb28e14cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NameToNpcMap
+  npcArray:
+  - npcName: QueenNPC
+    ti: {fileID: 416768395}
+  - npcName: NPC1
+    ti: {fileID: 645903908}
+  - npcName: NPC2
+    ti: {fileID: 1537343514}
+  - npcName: NPC3
+    ti: {fileID: 2145799564}
+  - npcName: NPC4
+    ti: {fileID: 1725029775}
 --- !u!1 &1066111428
 GameObject:
   m_ObjectHideFlags: 0
@@ -4179,14 +4245,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7262066351540048079, guid: 52571f68872914e24837210513edea1d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1852156191}
   m_SourcePrefab: {fileID: 100100000, guid: 52571f68872914e24837210513edea1d, type: 3}
 --- !u!114 &1188001896 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
   m_PrefabInstance: {fileID: 1188001895}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1852156189}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
@@ -5267,6 +5336,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1537343514 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6445310763803927103, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+  m_PrefabInstance: {fileID: 658085527}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4782940980a00d4789ad85242baaf92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TalkInteraction
 --- !u!114 &1549953739 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 192046556274224311, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
@@ -5886,6 +5966,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709245135}
   m_CullTransparentMesh: 1
+--- !u!114 &1725029775 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6445310763803927103, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+  m_PrefabInstance: {fileID: 691644151}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4782940980a00d4789ad85242baaf92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TalkInteraction
 --- !u!1001 &1755761556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6346,6 +6437,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MoveTo
   goal: {fileID: 1982303224}
   interval: 3
+--- !u!1 &1852156189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7262066351540048079, guid: 52571f68872914e24837210513edea1d, type: 3}
+  m_PrefabInstance: {fileID: 1188001895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1852156191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852156189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd141e9ee0a57ad4ca41b4ffc3eaf3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YarnCommands
+  dr: {fileID: 1188001896}
+  map: {fileID: 1065098894}
 --- !u!1 &1951478034
 GameObject:
   m_ObjectHideFlags: 0
@@ -7452,6 +7562,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
   cam: {fileID: 0}
   offset: {x: 0, y: 0.5, z: 0}
+--- !u!114 &2145799564 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6445310763803927103, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+  m_PrefabInstance: {fileID: 2075436182}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4782940980a00d4789ad85242baaf92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TalkInteraction
 --- !u!1001 &729884471580703742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8087,6 +8208,7 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 418699502}
   - {fileID: 314928819}
+  - {fileID: 1065098893}
   - {fileID: 1016724383}
   - {fileID: 2091184881}
   - {fileID: 9193025535157281302}

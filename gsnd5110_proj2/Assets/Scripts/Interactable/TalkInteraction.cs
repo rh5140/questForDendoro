@@ -8,19 +8,31 @@ public class TalkInteraction : Interactable
     [SerializeField] string startNode;
     bool onCooldown = false;
 
+    public void Awake()
+    {
+        // dr.AddCommandHandler<float>(
+        //     "interaction_cooldown",     // the name of the command
+        //     InteractionCooldown // the method to run
+        // );
+    }
+
     public override void RunInteraction()
     {
         if (!onCooldown)
         {
             onCooldown = true;
             dr.StartDialogue(startNode);
-            StartCoroutine(StartCooldown()); // not my preferred way of doing this..
         }
+    }
+
+    public void InteractionCooldown()
+    {
+        StartCoroutine(StartCooldown());
     }
 
     public IEnumerator StartCooldown()
     {
-        float cooldownTime = 10f;
+        float cooldownTime = 3f;
         float currTime = 0f;
         while (currTime < cooldownTime)
         {
