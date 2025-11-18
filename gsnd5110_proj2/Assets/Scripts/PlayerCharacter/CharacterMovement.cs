@@ -63,8 +63,8 @@ public class CharacterMovement : MonoBehaviour
     private void FlipX(bool flip, GameObject targetSprite)
     {
         Vector3 flipX = targetSprite.transform.localScale;
-        if (flip) flipX.x = -1;
-        else flipX.x = 1;
+        if (flip) flipX.x = -1 * Mathf.Abs(targetSprite.transform.localScale.x);
+        else flipX.x = Mathf.Abs(targetSprite.transform.localScale.x);
         targetSprite.transform.localScale = flipX;
     }
 }

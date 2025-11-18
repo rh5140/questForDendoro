@@ -11,6 +11,7 @@ public class CharacterHealth : MonoBehaviour
     [SerializeField] private SpriteRenderer _sr;
     [SerializeField] private HeartsInterface _hearts;
     [SerializeField] private GameObject _gameOverScreen;
+    [SerializeField] Animator playerAnimator;
 
     private string _scene;
 
@@ -35,6 +36,7 @@ public class CharacterHealth : MonoBehaviour
     public void ReceiveDamage(int dmg)
     {
         if (_isInvincible) return;
+        playerAnimator.Play("Hurt");
         _hearts.RemoveHearts(dmg);
         _currHealth -= dmg;
         if (_currHealth <= 0) Die();
