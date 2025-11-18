@@ -32,3 +32,15 @@ title: Villager4
 Villager 4: Did you know raccoons are omnivores? That means they eat anything! What a bunch of savages... They might eat us! Oh gosh, save us!!!
 <<interaction_cooldown NPC4>>
 ===
+
+title: RightButtonHint
+---
+Juniper: On the last door, you start with the button on the RIGHT.
+<<interaction_cooldown ButtonHintNPC>>
+===
+
+title: ThirdGateHint
+---
+Cashew: After you press this button, there's only one more door to unlock!
+<<interaction_cooldown 3rdGateNPC>>
+===
