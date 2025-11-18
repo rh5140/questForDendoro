@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &866842738117125921
+--- !u!1 &5671055836247866529
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6799013619832978456}
-  - component: {fileID: 6971135139388514656}
-  - component: {fileID: 525512135283364860}
+  - component: {fileID: 5456069070461898759}
+  - component: {fileID: 3249759053075240722}
+  - component: {fileID: 8729453748511832164}
   m_Layer: 0
-  m_Name: InteractRange
+  m_Name: OrderedButton
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6799013619832978456
+--- !u!4 &5456069070461898759
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866842738117125921}
+  m_GameObject: {fileID: 5671055836247866529}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -10.88, y: 1.15, z: 3.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5168714378095343463}
+  m_Children:
+  - {fileID: 9161800858925890063}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6971135139388514656
+--- !u!65 &3249759053075240722
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866842738117125921}
+  m_GameObject: {fileID: 5671055836247866529}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -54,23 +55,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4, y: 2, z: 4}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &525512135283364860
+--- !u!114 &8729453748511832164
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866842738117125921}
+  m_GameObject: {fileID: 5671055836247866529}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d631f83cfa0dc2f4eb101b853ff3727a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0494e87ed046c7b43b2bdf00152ab98d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UnlockButton
-  _sr: {fileID: 8390302201410994114}
+  m_EditorClassIdentifier: Assembly-CSharp::OrderedUnlockButton
+  _sr: {fileID: 5623467684814185794}
+  ug: {fileID: 0}
   unpressed: {fileID: 21300000, guid: bce1f45536ab0224094cf92a76f838ef, type: 3}
   pressed: {fileID: 21300000, guid: 6890ad35b53308e4f8549f5762c23ad5, type: 3}
-  _ug: {fileID: 0}
---- !u!1 &3811248782975620238
+--- !u!1 &7310752807163775242
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,9 +79,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1382813156949513597}
-  - component: {fileID: 8390302201410994114}
-  - component: {fileID: 3666531787460677195}
+  - component: {fileID: 9161800858925890063}
+  - component: {fileID: 5623467684814185794}
+  - component: {fileID: 1265753901074425830}
   m_Layer: 0
   m_Name: ObjectArt
   m_TagString: Untagged
@@ -88,28 +89,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1382813156949513597
+--- !u!4 &9161800858925890063
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3811248782975620238}
+  m_GameObject: {fileID: 7310752807163775242}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 5168714378095343463}
+  m_Father: {fileID: 5456069070461898759}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8390302201410994114
+--- !u!212 &5623467684814185794
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3811248782975620238}
+  m_GameObject: {fileID: 7310752807163775242}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 0
@@ -161,13 +162,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3666531787460677195
+--- !u!114 &1265753901074425830
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3811248782975620238}
+  m_GameObject: {fileID: 7310752807163775242}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f84e4a729c06cb489b62dbc0fc25eeb, type: 3}
@@ -175,36 +176,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
   cam: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
---- !u!1 &8595271787015745443
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5168714378095343463}
-  m_Layer: 0
-  m_Name: PuzzleButton
-  m_TagString: Interactable
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5168714378095343463
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8595271787015745443}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3, y: 1.42218, z: 22.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6799013619832978456}
-  - {fileID: 1382813156949513597}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

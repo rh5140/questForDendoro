@@ -2,27 +2,24 @@ using UnityEngine;
 
 public class OrderedUnlockButton : Interactable
 {
-    bool pressed = false;
+    bool isPressed = false;
     [SerializeField] SpriteRenderer _sr;
-    [SerializeField] public Color startColor;
     [SerializeField] OrderedUnlockGate ug;
+    [SerializeField] Sprite unpressed;
+    [SerializeField] Sprite pressed;
 
-    public void Start()
-    {
-        _sr.color = startColor;
-    }
 
     public override void RunInteraction()
     {
-        if (pressed) return;
-        pressed = true;
-        _sr.color = Color.white;
+        if (isPressed) return;
+        isPressed = true;
+        _sr.sprite = pressed;
         ug.AddButton(this);
     }
 
     public void ResetButton()
     {
-        pressed = false;
-        _sr.color = startColor;
+        isPressed = false;
+        _sr.sprite = unpressed;
     }
 }
