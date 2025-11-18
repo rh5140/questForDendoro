@@ -4,6 +4,7 @@ public class CharacterInteraction : MonoBehaviour
 {
     Interactable currInteractable = null;
     AudioSource audioSource;
+    [SerializeField] Animator playerAnimator;
 
     public void Start()
     {
@@ -14,6 +15,7 @@ public class CharacterInteraction : MonoBehaviour
     {
         if (currInteractable != null) 
         {
+            playerAnimator.Play("Interact");
             audioSource.Play();
             currInteractable.RunInteraction();
         }
