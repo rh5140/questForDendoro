@@ -2,15 +2,23 @@ using UnityEngine;
 
 public class UnlockTarget : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private SpriteRenderer _sr;
+    private bool _wasHit = false;
+    [SerializeField] UnlockGate gate;
+
+    private void Start()
     {
-        
+        _sr = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider collider)
     {
-        
+        if (_wasHit) return;
+        if (collider.gameObject.tag == "FriendlyProjectile")
+        {
+            _sr.color = Color.orange;
+            gate.Raise();
+            _wasHit = true;
+        }
     }
 }
