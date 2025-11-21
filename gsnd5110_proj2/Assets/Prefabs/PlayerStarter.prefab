@@ -1063,9 +1063,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 159bbd443628340adbb14d6f4d986eb0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5680666285988095026}
-    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 159bbd443628340adbb14d6f4d986eb0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4916934332581210999}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 159bbd443628340adbb14d6f4d986eb0, type: 3}
 --- !u!4 &998910791112663427 stripped
 Transform:
@@ -1175,20 +1172,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4916934332581210999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1038610986168772012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f84e4a729c06cb489b62dbc0fc25eeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Billboard
-  cam: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
 --- !u!4 &1317272996769948793 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7221020487405985688, guid: 159bbd443628340adbb14d6f4d986eb0, type: 3}
