@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: d17322ce63e78604e8d343b1a8e04808
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - playerData: {fileID: 11400000, guid: 2bfb7cfba3b0d3c4ca2b6025b461939a, type: 2}
+  - orange: {fileID: 11400000, guid: ac4ea6eb9dc81924fb72a4e19a0628f8, type: 2}
+  - red: {fileID: 11400000, guid: 27f991a1e14edd5468ff720498f92571, type: 2}
+  - blue: {fileID: 11400000, guid: 9e1d601968924c640818daab0e6d5de0, type: 2}
+  - green: {fileID: 11400000, guid: b7426e303e0c0a34da6fde206b8a2d4f, type: 2}
+  - white: {fileID: 11400000, guid: a4de98eebad40ec44a8c0a92981d54f6, type: 2}
+  - helm: {instanceID: 0}
+  - l_arm: {instanceID: 0}
+  - waist: {instanceID: 0}
+  - body: {instanceID: 0}
+  - r_arm: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
