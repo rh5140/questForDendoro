@@ -8,9 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/DevScenes/MovementAndInteraction.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DevScenes/Nov4Playtest_Ray.unity
     guid: 926acf35daf31b64a9ca0617d831e4ef
+  - enabled: 1
+    path: Assets/Scenes/DevScenes/Level_1.unity
+    guid: 4be5958f8945f8c4cabed4ad462d1c81
+  - enabled: 1
+    path: Assets/Scenes/DevScenes/Nov18Playtest_Ray.unity
+    guid: 374a4d87650d87f4fa47fee6d0753053
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

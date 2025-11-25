@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 133347283e115d147a5fcce7f47a538f, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -432,13 +432,53 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 94290689601379099, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.038095072
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106227740512117984, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.20037043
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106227740512117984, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.97972023
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457078344135118819, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0000002980232
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458908830413099939, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.27662623
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458908830413099939, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.9609776
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661154115447030097, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3651141394183394439, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00000090152025
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054674910316146539, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9957424
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054674910316146539, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.092179894
+      objectReference: {fileID: 0}
     - target: {fileID: 4852392040554661684, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.7579
       objectReference: {fileID: 0}
     - target: {fileID: 4852392040554661684, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.24
+      value: 11.025
       objectReference: {fileID: 0}
     - target: {fileID: 4852392040554661684, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -475,6 +515,26 @@ PrefabInstance:
     - target: {fileID: 7780698166203854701, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: m_Name
       value: PlayerCharacter
+      objectReference: {fileID: 0}
+    - target: {fileID: 7858666056442540064, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99972516
+      objectReference: {fileID: 0}
+    - target: {fileID: 7858666056442540064, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.023443324
+      objectReference: {fileID: 0}
+    - target: {fileID: 8256413106714031578, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.024482407
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852015663467154372, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99561745
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852015663467154372, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.093520254
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1195,6 +1255,7 @@ GameObject:
   - component: {fileID: 1660447232}
   - component: {fileID: 1660447231}
   - component: {fileID: 1660447234}
+  - component: {fileID: 1660447235}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1270,12 +1331,12 @@ Transform:
   m_GameObject: {fileID: 1660447230}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 26.1379, y: 24.26, z: 42.324944}
+  m_LocalPosition: {x: 26.1379, y: 23.045, z: 42.324944}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!114 &1660447234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1308,6 +1369,50 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &1660447235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660447230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1 &1680950688
 GameObject:
   m_ObjectHideFlags: 0

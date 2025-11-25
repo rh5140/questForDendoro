@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a06958f59eba4044b323d0d5e17b11d, type: 3}
+  m_Name: GreenVariant
+  m_EditorClassIdentifier: Assembly-CSharp::ColorVariantAssets
+  p_color: 2
+  helm: {fileID: -6434661833969106911, guid: 159bbd443628340adbb14d6f4d986eb0, type: 3}
+  l_arm: {fileID: -3880746672343887051, guid: 159bbd443628340adbb14d6f4d986eb0, type: 3}
+  waist: {fileID: 4628790931923735667, guid: 159bbd443628340adbb14d6f4d986eb0, type: 3}
+  body: {fileID: -5341070978489734016, guid: 159bbd443628340adbb14d6f4d986eb0, type: 3}
+  r_arm: {fileID: -1128861193071248774, guid: 159bbd443628340adbb14d6f4d986eb0, type: 3}

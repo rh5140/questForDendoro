@@ -8,7 +8,7 @@ public class CharacterHealth : MonoBehaviour
     [SerializeField] private int _currHealth;
     [SerializeField] private bool _isInvincible = false;
     [SerializeField] private float _iFrames = 0.5f;
-    [SerializeField] private SpriteRenderer _sr;
+    // [SerializeField] private SpriteRenderer _sr;
     [SerializeField] private HeartsInterface _hearts;
     [SerializeField] private GameObject _gameOverScreen;
     [SerializeField] Animator playerAnimator;
@@ -58,9 +58,9 @@ public class CharacterHealth : MonoBehaviour
     private IEnumerator BecomeTemporarilyInvincible()
     {
         _isInvincible = true;
-        _sr.color = Color.red;
+        // _sr.color = Color.red;
         yield return new WaitForSeconds(_iFrames);
-        _sr.color = Color.white;
+        // _sr.color = Color.white;
         _isInvincible = false;
     }
 

@@ -22,7 +22,7 @@ public class OrderedUnlockGate : MonoBehaviour
 
     public void AddButton(OrderedUnlockButton pressedButton)
     {
-        symbols[currPressed].color = pressedButton.startColor;
+        symbols[currPressed].color = Color.red;
         pressedOrder.Add(pressedButton);
         currPressed++;
         ButtonPressed();
