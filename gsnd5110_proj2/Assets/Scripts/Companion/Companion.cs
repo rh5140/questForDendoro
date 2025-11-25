@@ -4,7 +4,7 @@ public class Companion : MonoBehaviour
 {
     [SerializeField] CompanionProjectile projectile;
     [SerializeField] private float _interval = 0.5f;
-    private float _currTime = 1f;
+    private float _currTime = 0;
 
     void Update()
     {
