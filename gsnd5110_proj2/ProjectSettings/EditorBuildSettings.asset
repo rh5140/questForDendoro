@@ -11,12 +11,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/DevScenes/Nov4Playtest_Ray.unity
     guid: 926acf35daf31b64a9ca0617d831e4ef
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DevScenes/Level_1.unity
     guid: 4be5958f8945f8c4cabed4ad462d1c81
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DevScenes/Nov18Playtest_Ray.unity
     guid: 374a4d87650d87f4fa47fee6d0753053
+  - enabled: 1
+    path: Assets/Scenes/DevScenes/GreyboxVersion/ColorSelection.unity
+    guid: 53aa8b75a32304b46a6c6bee87872e04
+  - enabled: 1
+    path: Assets/Scenes/DevScenes/GreyboxVersion/LevelTestScene.unity
+    guid: 40bf19340e0fc7d4b8218e36c6dbbe86
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

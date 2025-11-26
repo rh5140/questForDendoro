@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class RaccoonEnemy : MonoBehaviour
+public class RaccoonEnemy : EnemyController
 {
     Vector3 startPosition;
     [SerializeField] Vector3 lungeVector;

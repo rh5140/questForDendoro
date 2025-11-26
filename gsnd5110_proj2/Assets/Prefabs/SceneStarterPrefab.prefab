@@ -484,7 +484,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6435871898918298909}
-  - component: {fileID: 4185760912465518147}
   m_Layer: 0
   m_Name: ===PLAYER================
   m_TagString: Untagged
@@ -507,24 +506,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7824599506714467439}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4185760912465518147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4763683514699909863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13927a72384213340bacc219d31ddb94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerSetup
-  playerData: {fileID: 11400000, guid: 2bfb7cfba3b0d3c4ca2b6025b461939a, type: 2}
-  helm: {fileID: 8081175459187664754}
-  l_arm: {fileID: 5268587238463892792}
-  waist: {fileID: 827202517024141822}
-  body: {fileID: 9028021469856057367}
-  r_arm: {fileID: 9145364808188295513}
 --- !u!1 &5874285558058593030
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,11 +963,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
---- !u!212 &827202517024141822 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 288356787459495240, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
-  m_PrefabInstance: {fileID: 1115382760657183926}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &995554887949289473 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 192046556274224311, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
@@ -998,11 +974,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f750c1587ad82d428abd516b5c4ce6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Companion
---- !u!212 &5268587238463892792 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 5073140723325012366, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
-  m_PrefabInstance: {fileID: 1115382760657183926}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5489195717390066562 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4852392040554661684, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
@@ -1035,21 +1006,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea9e90a26f52dfe48a8adf48d6d1475f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterHealth
---- !u!212 &8081175459187664754 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 9177413506065810372, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
-  m_PrefabInstance: {fileID: 1115382760657183926}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &9028021469856057367 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 8229021032624565409, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
-  m_PrefabInstance: {fileID: 1115382760657183926}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &9145364808188295513 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 8183179476549180911, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
-  m_PrefabInstance: {fileID: 1115382760657183926}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4305986725930399886
 PrefabInstance:
   m_ObjectHideFlags: 0
