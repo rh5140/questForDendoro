@@ -8,7 +8,7 @@ public class UnlockTarget : MonoBehaviour
 
     private void Start()
     {
-        _sr = GetComponent<SpriteRenderer>();
+        _sr = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void OnTriggerEnter(Collider collider)

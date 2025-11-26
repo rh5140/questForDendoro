@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3816135480848185662}
   - component: {fileID: 5792204103466080474}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Billboarding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

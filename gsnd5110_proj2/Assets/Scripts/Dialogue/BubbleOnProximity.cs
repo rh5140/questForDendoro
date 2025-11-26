@@ -6,7 +6,7 @@ public class BubbleOnProximity : MonoBehaviour
 {
     [SerializeField] GameObject dialogueBubble;
     [SerializeField] TextMeshPro dialogueTMP;
-    [SerializeField] string dialogue;
+    [SerializeField] public string dialogue;
     [SerializeField] string hitReaction;
 
     void Awake()
@@ -38,6 +38,11 @@ public class BubbleOnProximity : MonoBehaviour
     IEnumerator RefreshDialogue()
     {
         yield return new WaitForSeconds(2f);
+        dialogueTMP.text = dialogue;
+    }
+
+    public void RefreshDialogueImmediate()
+    {
         dialogueTMP.text = dialogue;
     }
 }
