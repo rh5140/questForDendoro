@@ -16,7 +16,8 @@ public class Companion : MonoBehaviour
         if (_currTime < _interval) return;
         else
         {
-            Instantiate(projectile, transform);
+            CompanionProjectile newProjectile = Instantiate(projectile, transform.position, transform.rotation);
+            if (transform.localPosition.x > 0) newProjectile.SetDirection(-1);
             _currTime = 0;
         }
     }

@@ -311,7 +311,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7333331363688009907}
-  - component: {fileID: 3794647858070527249}
   - component: {fileID: 8621188730409288822}
   - component: {fileID: 8277849715529309844}
   m_Layer: 0
@@ -339,22 +338,6 @@ Transform:
   - {fileID: 5599474977066373276}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3794647858070527249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8906126604719830039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77e968302a3b83248805f61ec7df62b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
-  _maxHealth: 1
-  _isInvincible: 0
-  _iFrames: 0.2
-  _sr: {fileID: 8140535411699461968}
 --- !u!114 &8621188730409288822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,6 +350,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f50cd744ba9a34e89d64a990482105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RaccoonEnemy
+  _maxHealth: 0
+  _isInvincible: 0
+  _iFrames: 0.2
+  _sr: {fileID: 0}
   lungeVector: {x: -5, y: 0, z: 0}
   attackDamage: 1
   attackInterval: 5
