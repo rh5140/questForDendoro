@@ -15,7 +15,7 @@ public class CircleAOE : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isDisplaying && currTime < interval - 0.95f && currTime > interval - 1.05f)
+        if (!isDisplaying && currTime < interval - 2.95f && currTime > interval - 3.05f)
         {
             isDisplaying = true;
             StartCoroutine(IncreaseOpacity());
@@ -38,7 +38,7 @@ public class CircleAOE : MonoBehaviour
         currTime += Time.deltaTime;
     }
 
-    IEnumerator IncreaseOpacity(float duration = 1f)
+    IEnumerator IncreaseOpacity(float duration = 3f)
     {
         float time = 0;
         Color startValue = rangeIndicator.color;
