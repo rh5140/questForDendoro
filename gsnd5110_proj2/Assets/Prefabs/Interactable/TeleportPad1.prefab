@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4348014353771215982}
   - component: {fileID: 3045882845376387273}
+  - component: {fileID: 8506812726120171718}
   m_Layer: 0
   m_Name: Indicator
   m_TagString: Untagged
@@ -90,6 +91,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8506812726120171718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4714769437030323189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f84e4a729c06cb489b62dbc0fc25eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Billboard
+  cam: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &5605659387598194638
 GameObject:
   m_ObjectHideFlags: 0
