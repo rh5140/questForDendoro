@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    [SerializeField] GameObject indicator;
+    [SerializeField] protected GameObject indicator;
     public virtual void RunInteraction()
     {
         Debug.Log("RUNNING INTERACTION");
