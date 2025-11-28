@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &7346451173467769064
+--- !u!1001 &3075468238609612903
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: afd5b5d0074bb71488b455fc1ee6d5b4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 49.678055
+      value: 48.232
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: afd5b5d0074bb71488b455fc1ee6d5b4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.000002861023
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: afd5b5d0074bb71488b455fc1ee6d5b4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 49.040043
+      value: 48.0686
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: afd5b5d0074bb71488b455fc1ee6d5b4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -51,10 +51,10 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: afd5b5d0074bb71488b455fc1ee6d5b4, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 12324e0cd34bb254887d1ba37767e153, type: 2}
+      objectReference: {fileID: 2100000, guid: 687b77ba69bb4e04b8ac592ccde62ccd, type: 2}
     - target: {fileID: 919132149155446097, guid: afd5b5d0074bb71488b455fc1ee6d5b4, type: 3}
       propertyPath: m_Name
-      value: Quad_stand
+      value: Quad_stand (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
