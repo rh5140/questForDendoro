@@ -12,6 +12,10 @@ public class CharacterHealth : MonoBehaviour
     [SerializeField] private HeartsInterface _hearts;
     [SerializeField] private GameObject _gameOverScreen;
     [SerializeField] Animator playerAnimator;
+    [SerializeField] GameObject animatedBody;
+    [SerializeField] GameObject deadSprite;
+    [SerializeField] CharacterController player;
+    bool _isDead = false;
 
     private string _scene;
 
@@ -35,6 +39,7 @@ public class CharacterHealth : MonoBehaviour
 
     public void ReceiveDamage(int dmg)
     {
+        if (_isDead) return;
         if (_isInvincible) return;
         playerAnimator.Play("Hurt");
         _hearts.RemoveHearts(dmg);
@@ -51,17 +56,25 @@ public class CharacterHealth : MonoBehaviour
     protected virtual void Die()
     {
         _currHealth = 0;
-        _gameOverScreen.SetActive(true);
-        // SceneManager.LoadScene(_scene);
+        _isDead = true;
+        StartCoroutine(DeathSequence());
     }
 
     private IEnumerator BecomeTemporarilyInvincible()
     {
         _isInvincible = true;
-        // _sr.color = Color.red;
         yield return new WaitForSeconds(_iFrames);
-        // _sr.color = Color.white;
         _isInvincible = false;
+    }
+
+    private IEnumerator DeathSequence()
+    {
+        playerAnimator.Play("Dead");
+        yield return new WaitForSeconds(0.5f);
+        deadSprite.SetActive(true);
+        animatedBody.SetActive(false);
+        yield return new WaitForSeconds(1f);
+        _gameOverScreen.SetActive(true);
     }
 
 }

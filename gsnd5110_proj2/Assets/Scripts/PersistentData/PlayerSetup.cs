@@ -9,6 +9,7 @@ public class PlayerSetup : MonoBehaviour
     public SpriteRenderer waist;
     public SpriteRenderer body;
     public SpriteRenderer r_arm;
+    public SpriteRenderer dead;
 
     void Awake()
     {
@@ -17,5 +18,6 @@ public class PlayerSetup : MonoBehaviour
         waist.sprite = playerData.colorVariant.waist;
         body.sprite = playerData.colorVariant.body;
         r_arm.sprite = playerData.colorVariant.r_arm;
+        dead.sprite = playerData.colorVariant.dead;
     }
 }

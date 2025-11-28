@@ -18,3 +18,4 @@ MonoBehaviour:
   waist: {fileID: 4297381588646230339, guid: 159bbd443628340adbb14d6f4d986eb0, type: 3}
   body: {fileID: 9043818877861246588, guid: 159bbd443628340adbb14d6f4d986eb0, type: 3}
   r_arm: {fileID: 4466568101826380125, guid: 159bbd443628340adbb14d6f4d986eb0, type: 3}
+  dead: {fileID: 21300000, guid: 7926bbe9e85904c6e948c28403bd5c2d, type: 3}
