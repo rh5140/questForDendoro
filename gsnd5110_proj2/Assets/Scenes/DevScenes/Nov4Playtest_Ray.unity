@@ -1427,6 +1427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4782940980a00d4789ad85242baaf92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TalkInteraction
+  indicator: {fileID: 0}
   dr: {fileID: 1188001896}
   startNode: NpcDialogue
 --- !u!1 &418699500
@@ -5584,38 +5585,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998963890}
   m_CullTransparentMesh: 1
---- !u!1 &2023493603 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2509705964577694039, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
-  m_PrefabInstance: {fileID: 9193025535157281302}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &2023493604 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 7079820435015817642, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
-  m_PrefabInstance: {fileID: 9193025535157281302}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &2023493606
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023493603}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 65519e11fd3f10a4c98e959886997269, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2039028265
 GameObject:
   m_ObjectHideFlags: 0
@@ -6848,7 +6817,7 @@ PrefabInstance:
     - target: {fileID: 1401084111949941241, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: playerAnimator
       value: 
-      objectReference: {fileID: 2023493606}
+      objectReference: {fileID: 0}
     - target: {fileID: 2392415177827400664, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -6964,7 +6933,7 @@ PrefabInstance:
     - target: {fileID: 7146964302405494395, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: _sr
       value: 
-      objectReference: {fileID: 2023493604}
+      objectReference: {fileID: 0}
     - target: {fileID: 7146964302405494395, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: _hearts
       value: 
@@ -6980,7 +6949,7 @@ PrefabInstance:
     - target: {fileID: 7346042930251847468, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: _animator
       value: 
-      objectReference: {fileID: 2023493606}
+      objectReference: {fileID: 0}
     - target: {fileID: 7780698166203854701, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: m_Name
       value: PlayerCharacter
@@ -6992,10 +6961,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2509705964577694039, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2023493606}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
