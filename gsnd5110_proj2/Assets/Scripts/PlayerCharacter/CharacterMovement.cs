@@ -7,6 +7,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private Weapon _weapon; // not sure if best approach
     [SerializeField] private Companion _companion; // not sure if best approach
     [SerializeField] private GameObject _companionSpriteArt;
+    [SerializeField] private GameObject _deadSprite;
 
     public float movementSpeed = 10f;
     public float rotationSpeed = 5f;
@@ -46,6 +47,7 @@ public class CharacterMovement : MonoBehaviour
         if (x > 0)
         {
             FlipX(true, _spriteArt);
+            FlipX(true, _deadSprite);
             _weapon.gameObject.transform.localPosition = _weaponRightPosition;
             _companion.gameObject.transform.localPosition = _companionRightPosition;
             FlipX(true, _companionSpriteArt);
@@ -53,6 +55,7 @@ public class CharacterMovement : MonoBehaviour
         else if (x < 0)
         {
             FlipX(false, _spriteArt);
+            FlipX(false, _deadSprite);
             _weapon.gameObject.transform.localPosition = _weaponLeftPosition;
             _companion.gameObject.transform.localPosition = _companionLeftPosition;
             FlipX(false, _companionSpriteArt);

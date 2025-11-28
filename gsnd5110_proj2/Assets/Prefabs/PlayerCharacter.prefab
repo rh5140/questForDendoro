@@ -917,6 +917,7 @@ MonoBehaviour:
   _weapon: {fileID: 1401084111949941241}
   _companion: {fileID: 192046556274224311}
   _companionSpriteArt: {fileID: 3008753415550959869}
+  _deadSprite: {fileID: 6442496739534110779}
   movementSpeed: 15
   rotationSpeed: 5
 --- !u!114 &5468976802764022628
