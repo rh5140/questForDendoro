@@ -15,7 +15,11 @@ public class CompanionProjectile : MonoBehaviour
     void Start()
     {
         hitboxSize = new Vector3(range, range, range);
-        if (transform.parent.localPosition.x > 0) shootRight = -1;
+    }
+
+    public void SetDirection(int dir)
+    {
+        shootRight = dir;
     }
 
     // Update is called once per frame

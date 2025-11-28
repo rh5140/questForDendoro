@@ -29,4 +29,9 @@ public class FadeBlack : MonoBehaviour
         }
         _blackScreen.color = endValue;
     }
+
+    public void RunFadeCoroutine(float endOpacity, float duration)
+    {
+        StartCoroutine(FadeOpacity(endOpacity, duration));
+    }
 }

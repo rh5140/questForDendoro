@@ -37,10 +37,14 @@ public class Weapon : MonoBehaviour
             Collider[] hitColliders = Physics.OverlapBox(transform.position, hitboxSize);
             foreach (var hitCollider in hitColliders)
             {
-                EnemyController currTarget = hitCollider.transform.GetComponent<EnemyController>();
+                GameObject currTarget = hitCollider.gameObject;
                 if (hitCollider.gameObject.tag == "Enemy" && currTarget != null)
                 {
-                    currTarget.ReceiveDamage(damage);
+                    currTarget.transform.GetComponent<EnemyController>().ReceiveDamage(damage);
+                }
+                else if (hitCollider.gameObject.tag == "NPC" && currTarget != null)
+                {
+                    currTarget.transform.GetComponent<BubbleOnProximity>().ReactToHit();
                 }
             }
             StartCoroutine(ButtonCooldown());

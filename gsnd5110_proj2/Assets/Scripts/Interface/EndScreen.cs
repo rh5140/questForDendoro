@@ -15,10 +15,8 @@ public class EndScreen : MonoBehaviour
     public void RestartWithProgress()
     {
         player.enabled = false;
-        Vector3 distanceToMove = startingPosition - player.transform.position;
         player.transform.position = startingPosition;
         player.enabled = true;
-        // player.Move(distanceToMove);
         playerHealth.HealFull();
         endScreen.SetActive(false);
     }
