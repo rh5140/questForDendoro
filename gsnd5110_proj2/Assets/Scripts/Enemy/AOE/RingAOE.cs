@@ -5,6 +5,7 @@ public class RingAOE : EnemyAOE
 {
     [SerializeField] float innerRadius;
     bool inSafeZone = false;
+    [SerializeField] bool isRaccoon = false;
 
     protected override void CheckOverlapForDamage()
     {
@@ -23,6 +24,11 @@ public class RingAOE : EnemyAOE
             if (!inSafeZone && hitCollider.gameObject.tag == "Player" && currTarget != null)
             {
                 currTarget.ReceiveDamage(damage);
+            }
+            ReflectTarget crystal = hitCollider.transform.GetComponent<ReflectTarget>();
+            if (isRaccoon && crystal != null)
+            {
+                crystal.ShootAtTarget(transform.position, 500);
             }
         }
         inSafeZone = false;

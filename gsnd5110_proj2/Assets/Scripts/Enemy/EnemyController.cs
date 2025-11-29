@@ -8,9 +8,13 @@ public class EnemyController : MonoBehaviour
     
     [SerializeField] protected bool _isInvincible = false;
     [SerializeField] protected float _iFrames = 0.2f;
-    [SerializeField] SpriteRenderer _sr;
 
     void OnEnable()
+    {
+        _currHealth = _maxHealth;
+    }
+    
+    void OnStart()
     {
         _currHealth = _maxHealth;
     }
@@ -38,9 +42,7 @@ public class EnemyController : MonoBehaviour
     private IEnumerator BecomeTemporarilyInvincible()
     {
         _isInvincible = true;
-        if (_sr != null) _sr.color = Color.red;
         yield return new WaitForSeconds(_iFrames);
-        if (_sr != null) _sr.color = Color.white;
         _isInvincible = false;
     }
 

@@ -5,6 +5,7 @@ public class RectAOE : EnemyAOE
 {
     [SerializeField] Vector3 hitboxSize;
     [SerializeField] GameObject hitboxGO;
+    [SerializeField] bool isRaccoon = false;
 
     protected override void CheckOverlapForDamage()
     {
@@ -15,6 +16,11 @@ public class RectAOE : EnemyAOE
             if (hitCollider.gameObject.tag == "Player" && currTarget != null)
             {
                 currTarget.ReceiveDamage(damage);
+            }
+            ReflectTarget crystal = hitCollider.transform.GetComponent<ReflectTarget>();
+            if (isRaccoon && crystal != null)
+            {
+                crystal.ShootAtTarget(transform.position, 500);
             }
         }
     }

@@ -13,8 +13,18 @@ public class EnemyProjectile : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapBox(transform.position, new Vector3(1f,1f,1f));
         foreach (var hitCollider in hitColliders)
         {
+            if (hitCollider.gameObject.tag == "Enemy")
+            {
+                BossController bc = hitCollider.gameObject.GetComponent<BossController>();
+                if (bc != null) 
+                {
+                    Debug.Log("HIT RACCOON...");
+                    bc.ReceiveDamage(damage);
+                    Destroy(gameObject);
+                }
+            }
             CharacterHealth currTarget = hitCollider.transform.GetComponent<CharacterHealth>();
-            if (hitCollider.gameObject.tag == "Player" && currTarget != null)
+            if (damage < 500 && hitCollider.gameObject.tag == "Player" && currTarget != null)
             {
                 currTarget.ReceiveDamage(damage);
                 Destroy(gameObject);
@@ -26,5 +36,10 @@ public class EnemyProjectile : MonoBehaviour
     {
         targetPosition = newPosition;
         Destroy(gameObject, 5f); // super jank
+    }
+
+    public void SetDamage(int newDamage)
+    {
+        damage = newDamage;
     }
 }
