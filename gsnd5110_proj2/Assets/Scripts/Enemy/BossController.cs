@@ -22,6 +22,7 @@ public class BossController : EnemyController
         if (currAttack != null && isAttacking)
         {
             isAttacking = !currAttack.IsAttackCompleted();
+            currTime = 0f;
         }
         currTime += Time.deltaTime;
     }

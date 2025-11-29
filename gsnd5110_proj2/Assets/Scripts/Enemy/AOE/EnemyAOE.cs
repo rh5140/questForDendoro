@@ -4,11 +4,11 @@ using UnityEngine;
 public class EnemyAOE : MonoBehaviour
 {
     [SerializeField] protected int damage;
-    protected float currTime = 0f;
     [SerializeField] protected float warningTime = 3f;
     
     [SerializeField] protected float radius;
     [SerializeField] SpriteRenderer rangeIndicator; // change to shader if time
+    [SerializeField] SpriteRenderer rangeOutline;
     bool attackCompleted = true;
 
     public void UseAttack()
@@ -19,8 +19,9 @@ public class EnemyAOE : MonoBehaviour
         StartCoroutine(WaitBeforeAttack());
     }
 
-    IEnumerator IncreaseOpacity(float duration = 3f)
+    IEnumerator IncreaseOpacity(float duration = 2f)
     {
+        if (rangeOutline != null) rangeOutline.color = Color.white;
         float time = 0;
         Color startValue = rangeIndicator.color;
         Color endValue = new Color(startValue.r, startValue.b, startValue.g, 1f);
@@ -39,6 +40,7 @@ public class EnemyAOE : MonoBehaviour
         yield return new WaitForSeconds(warningTime);
         CheckOverlapForDamage();
         rangeIndicator.color = new Color(rangeIndicator.color.r, rangeIndicator.color.b, rangeIndicator.color.g, 0f);
+        if (rangeOutline != null) rangeOutline.color = Color.clear;
         attackCompleted = true;
     }
 
