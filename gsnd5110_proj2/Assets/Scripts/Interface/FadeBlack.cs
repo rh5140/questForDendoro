@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class FadeBlack : MonoBehaviour
 {
     private CanvasGroup _loadingScreen;
-    private float _fadeAmount = 0.5f;
 
     void Awake()
     {
