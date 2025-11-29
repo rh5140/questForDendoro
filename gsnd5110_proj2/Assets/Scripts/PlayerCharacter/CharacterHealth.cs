@@ -77,4 +77,9 @@ public class CharacterHealth : MonoBehaviour
         _gameOverScreen.SetActive(true);
     }
 
+    public void SetPlayerAlive()
+    {
+        _isDead = false;
+    }
+
 }

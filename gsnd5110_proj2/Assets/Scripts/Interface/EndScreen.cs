@@ -30,6 +30,7 @@ public class EndScreen : MonoBehaviour
         player.transform.position = startingPosition;
         player.enabled = true;
         playerHealth.HealFull();
+        playerHealth.SetPlayerAlive();
         endScreen.SetActive(false);
         deadSprite.SetActive(false);
         animatedBody.SetActive(true);

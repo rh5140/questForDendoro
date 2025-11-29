@@ -1,16 +1,14 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.InputSystem; // TEMPORARY
 
 public class EnemyController : MonoBehaviour
 {
-    [SerializeField] private int _maxHealth;
-    private int _currHealth;
+    [SerializeField] protected int _maxHealth;
+    protected int _currHealth;
     
-    [SerializeField] private bool _isInvincible = false;
-    [SerializeField] private float _iFrames = 0.2f;
-    [SerializeField] private SpriteRenderer _sr;
-
+    [SerializeField] protected bool _isInvincible = false;
+    [SerializeField] protected float _iFrames = 0.2f;
+    [SerializeField] SpriteRenderer _sr;
 
     void OnEnable()
     {
@@ -40,13 +38,10 @@ public class EnemyController : MonoBehaviour
     private IEnumerator BecomeTemporarilyInvincible()
     {
         _isInvincible = true;
-        _sr.color = Color.red;
+        if (_sr != null) _sr.color = Color.red;
         yield return new WaitForSeconds(_iFrames);
-        _sr.color = Color.white;
+        if (_sr != null) _sr.color = Color.white;
         _isInvincible = false;
     }
 
-    void OnDisable()
-    {
-    }
 }
