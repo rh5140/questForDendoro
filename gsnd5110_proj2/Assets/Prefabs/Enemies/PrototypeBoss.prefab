@@ -48,10 +48,10 @@ MonoBehaviour:
   _maxHealth: 5
   _isInvincible: 0
   _iFrames: 0.2
-  _sr: {fileID: 3524965218494505512}
   attackList:
   - {fileID: 0}
   attackInterval: 5
+  moveTo: {fileID: 5028122862478343728}
 --- !u!65 &7677730060127440695
 BoxCollider:
   m_ObjectHideFlags: 0
