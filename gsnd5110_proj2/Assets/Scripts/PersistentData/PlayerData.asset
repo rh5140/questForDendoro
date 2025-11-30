@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9719b6c9fc6290d448d1ae7376ad8612, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
-  colorVariant: {fileID: 11400000, guid: 9e1d601968924c640818daab0e6d5de0, type: 2}
+  colorVariant: {fileID: 11400000, guid: ac4ea6eb9dc81924fb72a4e19a0628f8, type: 2}

@@ -4,13 +4,12 @@ using UnityEngine.UI;
 
 public class FadeBlack : MonoBehaviour
 {
-    private Image _blackScreen;
-    private float _fadeAmount = 0.5f;
+    private CanvasGroup _loadingScreen;
 
     void Awake()
     {
-        _blackScreen = GetComponent<Image>();
-        _blackScreen.color = Color.black;
+        _loadingScreen = GetComponent<CanvasGroup>();
+        _loadingScreen.alpha = 1f;
         StartCoroutine(FadeOpacity(0f, 1f));
     }
 
@@ -18,16 +17,15 @@ public class FadeBlack : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         float time = 0;
-        Color startValue = _blackScreen.color;
-        Color endValue = new Color(startValue.r, startValue.b, startValue.g, endOpacity);
+        float startValue = _loadingScreen.alpha;
 
         while (time < duration)
         {
-            _blackScreen.color = Color.Lerp(startValue, endValue, time / duration);
+            _loadingScreen.alpha = Mathf.Lerp(startValue, endOpacity, time / duration);
             time += Time.deltaTime;
             yield return null;
         }
-        _blackScreen.color = endValue;
+        _loadingScreen.alpha = endOpacity;
     }
 
     public void RunFadeCoroutine(float endOpacity, float duration)

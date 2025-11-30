@@ -9,4 +9,5 @@ public class ColorVariantAssets : ScriptableObject
     public Sprite waist;
     public Sprite body;
     public Sprite r_arm;
+    public Sprite dead;
 }
