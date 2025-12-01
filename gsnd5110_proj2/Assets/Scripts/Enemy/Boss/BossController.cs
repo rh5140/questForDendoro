@@ -21,6 +21,8 @@ public class BossController : EnemyController
     int currAttackIdx = 0;
     EnemyAOE currAttack;
 
+    [SerializeField] GameObject shadowSprite;
+
     void Update()
     {
         switch (currState)
@@ -58,7 +60,7 @@ public class BossController : EnemyController
     {
         _currHealth = 0;
         currState = BossState.Dying;
-        Destroy(transform.parent.gameObject);
+        StartCoroutine(DeathSequence());
     }
 
     protected int RandomAttack()
@@ -71,5 +73,23 @@ public class BossController : EnemyController
         currAttackIdx = RandomAttack();
         currAttack = attackList[currAttackIdx].GetComponent<EnemyAOE>();
         currAttack.UseAttack();
+    }
+
+    IEnumerator DeathSequence()
+    {
+        shadowSprite.SetActive(false);
+        _sr.color = Color.red;
+
+        float time = 0;
+        float duration = 1f;
+
+        while (time < duration)
+        {
+            _sr.color = Color.Lerp(Color.red, Color.clear, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        _sr.color = Color.clear;
+        Destroy(transform.parent.gameObject);
     }
 }

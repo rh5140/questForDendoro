@@ -40,11 +40,13 @@ public class Weapon : MonoBehaviour
                 GameObject currTarget = hitCollider.gameObject;
                 if (hitCollider.gameObject.tag == "Enemy" && currTarget != null)
                 {
-                    currTarget.transform.GetComponent<EnemyController>().ReceiveDamage(damage);
+                    EnemyController ec = currTarget.transform.GetComponent<EnemyController>();
+                    if (ec != null) ec.ReceiveDamage(damage);
                 }
                 else if (hitCollider.gameObject.tag == "NPC" && currTarget != null)
                 {
-                    currTarget.transform.GetComponent<BubbleOnProximity>().ReactToHit();
+                    BubbleOnProximity bop = currTarget.transform.GetComponent<BubbleOnProximity>();
+                    if (bop != null) bop.ReactToHit();
                 }
             }
             StartCoroutine(ButtonCooldown());

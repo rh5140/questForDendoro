@@ -53,6 +53,7 @@ MonoBehaviour:
   - {fileID: 0}
   attackInterval: 5
   moveTo: {fileID: 5028122862478343728}
+  shadowSprite: {fileID: 4520908064707416195}
 --- !u!65 &7677730060127440695
 BoxCollider:
   m_ObjectHideFlags: 0
