@@ -16,13 +16,13 @@ public class UnlockGate : MonoBehaviour
 
     public void Raise()
     {
-        _sr.color = Color.orange;
+        if (_sr != null) _sr.color = Color.orange;
         transform.position = endPosition;
     }
 
     public void Lower()
     {
-        _sr.color = Color.orange;
+        if (_sr != null) _sr.color = Color.orange;
         transform.position = startPosition;
     }
 }
