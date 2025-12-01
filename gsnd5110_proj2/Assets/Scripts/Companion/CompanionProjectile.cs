@@ -8,6 +8,7 @@ public class CompanionProjectile : MonoBehaviour
     [SerializeField] float range = 1f;
     [SerializeField] Vector3 hitboxSize;
     int shootRight = 1;
+    [SerializeField] SpriteRenderer _sr;
 
     private float _currTime = 0;
 
@@ -20,6 +21,7 @@ public class CompanionProjectile : MonoBehaviour
     public void SetDirection(int dir)
     {
         shootRight = dir;
+        if (dir < 0) _sr.flipX = true;
     }
 
     // Update is called once per frame

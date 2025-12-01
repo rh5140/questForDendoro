@@ -13,6 +13,7 @@ public class RaccoonEnemy : EnemyController
     [SerializeField] Transform attackTransform;
     Vector3 attackPosition;
     [SerializeField] Vector3 hitboxSize;
+    [SerializeField] Animator animator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,7 +27,7 @@ public class RaccoonEnemy : EnemyController
     void Update()
     {
         currTime += Time.deltaTime;
-        if (currTime > attackInterval)
+        if (_currHealth >= 0 && currTime > attackInterval)
         {
             StartCoroutine(Lunge());
             currTime = 0;
@@ -35,9 +36,10 @@ public class RaccoonEnemy : EnemyController
 
     private IEnumerator Lunge()
     {
+        attackIndicator.color = Color.white;
         float moveDuration = 0.5f;
         float moveTime = 0;
-
+        animator.SetTrigger("Attack");
         while (moveTime < moveDuration)
         {
             moveTime += Time.deltaTime;
@@ -45,7 +47,7 @@ public class RaccoonEnemy : EnemyController
             yield return null;
         }
         StartCoroutine(Attack());
-        yield return new WaitForSeconds(0.5f);   
+        yield return new WaitForSeconds(1f);   
         moveTime = 0;
         while (moveTime < moveDuration)
         {
@@ -58,7 +60,6 @@ public class RaccoonEnemy : EnemyController
 
     private IEnumerator Attack()
     {
-        attackIndicator.color = Color.red;
         yield return new WaitForSeconds(0.5f);
         Collider[] hitColliders = Physics.OverlapBox(attackPosition, hitboxSize);
         foreach (var hitCollider in hitColliders)
@@ -70,5 +71,11 @@ public class RaccoonEnemy : EnemyController
             }
         }
         attackIndicator.color = Color.clear;
+    }
+
+    protected override void Die()
+    {
+        animator.SetTrigger("Dead");
+        Destroy(gameObject, 2f);
     }
 }
