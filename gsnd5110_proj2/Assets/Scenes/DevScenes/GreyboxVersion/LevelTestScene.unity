@@ -842,6 +842,10 @@ PrefabInstance:
       propertyPath: dialogue
       value: Watch out for enemies ahead!
       objectReference: {fileID: 0}
+    - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: changesWhenHit
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1077,7 +1081,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
       propertyPath: dialogue
-      value: Be careful! There's a raccoon up ahead..
+      value: Raccoon up ahead! Be careful!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1869,6 +1873,10 @@ PrefabInstance:
       propertyPath: dialogue
       value: If you're stuck, venture to the left.
       objectReference: {fileID: 0}
+    - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: changesWhenHit
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1961,6 +1969,10 @@ PrefabInstance:
     - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
       propertyPath: dialogue
       value: Buttons can open gates!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: changesWhenHit
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2884,6 +2896,10 @@ PrefabInstance:
     - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
       propertyPath: dialogue
       value: You might need a helping hand.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: changesWhenHit
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4670,6 +4686,10 @@ PrefabInstance:
       propertyPath: dialogue
       value: What do the bushes hide?
       objectReference: {fileID: 0}
+    - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: changesWhenHit
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6030,63 +6050,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1630546617
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3432741097875953490, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 163.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432741097875953490, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432741097875953490, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 45.44
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432741097875953490, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432741097875953490, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432741097875953490, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432741097875953490, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432741097875953490, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432741097875953490, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432741097875953490, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4195617228768950792, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_Name
-      value: Bush
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
 --- !u!1001 &1633205754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7141,63 +7104,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1779628505
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3432741097875953490, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 165.4832
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432741097875953490, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.7199991
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432741097875953490, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 45.107777
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432741097875953490, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432741097875953490, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432741097875953490, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432741097875953490, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432741097875953490, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432741097875953490, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432741097875953490, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4195617228768950792, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
-      propertyPath: m_Name
-      value: Bush (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a738cfc60b6e6644ea10e0c2be36733f, type: 3}
 --- !u!1001 &1807166405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7539,6 +7445,10 @@ PrefabInstance:
     - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
       propertyPath: dialogue
       value: wRite Lift Lift
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: changesWhenHit
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8920,8 +8830,6 @@ SceneRoots:
   - {fileID: 1171076248}
   - {fileID: 663679173}
   - {fileID: 475195563}
-  - {fileID: 1630546617}
-  - {fileID: 1779628505}
   - {fileID: 8598894}
   - {fileID: 1139974617}
   - {fileID: 1586927523}

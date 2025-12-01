@@ -8,6 +8,7 @@ public class BubbleOnProximity : MonoBehaviour
     [SerializeField] TextMeshPro dialogueTMP;
     [SerializeField] public string dialogue;
     [SerializeField] string hitReaction;
+    [SerializeField] bool changesWhenHit = true;
 
     void Awake()
     {
@@ -31,6 +32,7 @@ public class BubbleOnProximity : MonoBehaviour
 
     public void ReactToHit()
     {
+        if (!changesWhenHit) return;
         dialogueTMP.text = hitReaction;
         StartCoroutine(RefreshDialogue());
     }

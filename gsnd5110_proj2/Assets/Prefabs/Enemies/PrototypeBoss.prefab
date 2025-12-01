@@ -48,6 +48,7 @@ MonoBehaviour:
   _maxHealth: 5
   _isInvincible: 0
   _iFrames: 0.2
+  _sr: {fileID: 3524965218494505512}
   attackList:
   - {fileID: 0}
   attackInterval: 5

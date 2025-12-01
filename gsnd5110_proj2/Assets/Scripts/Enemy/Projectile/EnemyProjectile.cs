@@ -18,7 +18,6 @@ public class EnemyProjectile : MonoBehaviour
                 BossController bc = hitCollider.gameObject.GetComponent<BossController>();
                 if (bc != null) 
                 {
-                    Debug.Log("HIT RACCOON...");
                     bc.ReceiveDamage(damage);
                     Destroy(gameObject);
                 }

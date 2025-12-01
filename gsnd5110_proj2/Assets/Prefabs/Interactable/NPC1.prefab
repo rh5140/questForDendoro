@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5561005396765387321
 RectTransform:
   m_ObjectHideFlags: 0
@@ -247,7 +247,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8757441757534217274, guid: 58e591c910f015a428f2685846d6ae1e, type: 2}
+  - {fileID: 9175618170104575979, guid: 6ac30024b6906754d95d0eb4e7413605, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -292,8 +292,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Be careful
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 58e591c910f015a428f2685846d6ae1e, type: 2}
-  m_sharedMaterial: {fileID: -8757441757534217274, guid: 58e591c910f015a428f2685846d6ae1e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6ac30024b6906754d95d0eb4e7413605, type: 2}
+  m_sharedMaterial: {fileID: 9175618170104575979, guid: 6ac30024b6906754d95d0eb4e7413605, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

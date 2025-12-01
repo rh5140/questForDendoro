@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
     
     [SerializeField] protected bool _isInvincible = false;
     [SerializeField] protected float _iFrames = 0.2f;
+    [SerializeField] protected SpriteRenderer _sr;
 
     void OnEnable()
     {
@@ -42,8 +43,10 @@ public class EnemyController : MonoBehaviour
     private IEnumerator BecomeTemporarilyInvincible()
     {
         _isInvincible = true;
+        if (_sr != null) _sr.color = Color.red;
         yield return new WaitForSeconds(_iFrames);
         _isInvincible = false;
+        if (_sr != null) _sr.color = Color.white;
     }
 
 }

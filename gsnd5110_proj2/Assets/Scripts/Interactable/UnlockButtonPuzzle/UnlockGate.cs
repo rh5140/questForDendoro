@@ -11,6 +11,7 @@ public class UnlockGate : MonoBehaviour
     {
         startPosition = transform.position;
         endPosition = new Vector3(startPosition.x, startPosition.y + 5, startPosition.z);
+        if (_sr == null) _sr = GetComponentInChildren<SpriteRenderer>();
     }
 
     public void Raise()
