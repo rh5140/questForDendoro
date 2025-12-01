@@ -3042,7 +3042,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5168714378095343463, guid: 4978e18e7f435304d861bcf36ab0c0f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.61
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5168714378095343463, guid: 4978e18e7f435304d861bcf36ab0c0f2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7822,7 +7822,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60.000004
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -8124,7 +8124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 892345745142148434, guid: 705ccb79c71d8a2408649fa19a63b949, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.23
       objectReference: {fileID: 0}
     - target: {fileID: 892345745142148434, guid: 705ccb79c71d8a2408649fa19a63b949, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8487,6 +8487,10 @@ PrefabInstance:
     - target: {fileID: 8256413106714031578, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.02448304
+      objectReference: {fileID: 0}
+    - target: {fileID: 8470495411122474371, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
+      propertyPath: Lens.FieldOfView
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8552517227040051336, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: m_CastShadows

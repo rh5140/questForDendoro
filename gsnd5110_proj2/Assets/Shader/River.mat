@@ -157,7 +157,7 @@ Material:
     - _Second_Normal_Scale: {r: 3, g: 3, b: 0, a: 0}
     - _Shallow_Water: {r: 0.45882356, g: 1, b: 0.9058824, a: 0.27058825}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Water_Color: {r: 0.35377356, g: 0.6718725, b: 1, a: 0}
+    - _Water_Color: {r: 0.2971698, g: 0.6421955, b: 1, a: 1}
     - _Wave_Direction: {r: 0.5, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
