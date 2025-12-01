@@ -1209,6 +1209,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8565915229723774433, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
+      propertyPath: sfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 86d633e80c8961a4ab9f96d8df117d42, type: 3}
+    - target: {fileID: 8565915229723774433, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 244513238}
+    - target: {fileID: 8565915229723774433, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
       propertyPath: comicStates.Array.size
       value: 7
       objectReference: {fileID: 0}
@@ -1498,6 +1506,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f73f46b65ec894c4591bb3bad066fe55, type: 3}
+--- !u!82 &244513238 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7786677617487014271, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
+  m_PrefabInstance: {fileID: 1634720406}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &253238472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2385,7 +2398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3384802075886963159, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4730496526585700706, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
       propertyPath: m_Pivot.x
@@ -2467,6 +2480,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8565915229723774433, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
+      propertyPath: sfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 86d633e80c8961a4ab9f96d8df117d42, type: 3}
+    - target: {fileID: 8565915229723774433, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 244513238}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4712,6 +4733,7 @@ GameObject:
   - component: {fileID: 1081731684}
   - component: {fileID: 1081731683}
   - component: {fileID: 1081731682}
+  - component: {fileID: 1081731685}
   m_Layer: 0
   m_Name: QueenBossTrigger
   m_TagString: Untagged
@@ -4769,6 +4791,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1081731685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081731681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a6069eb74b5bfa428231ef1c76811b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerMusic
+  audioSource: {fileID: 244513238}
+  intro: {fileID: 8300000, guid: cf7b9b7d72e83734dad3a44d81c2aa81, type: 3}
+  loop: {fileID: 8300000, guid: 579dc975a367d0d4a97400cb18f477f7, type: 3}
 --- !u!1001 &1093825757
 PrefabInstance:
   m_ObjectHideFlags: 0

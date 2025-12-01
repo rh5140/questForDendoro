@@ -5,6 +5,8 @@ public class Comic : MonoBehaviour
 {
     [SerializeField] GameObject[] comicStates;
     int currIdx = 0;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip sfx;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,6 +23,7 @@ public class Comic : MonoBehaviour
         {
             comicStates[currIdx].SetActive(true);
             currIdx++;
+            audioSource.PlayOneShot(sfx);
         }
     }
 }

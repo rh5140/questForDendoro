@@ -20,19 +20,23 @@ public class RaccoonEnemy : EnemyController
     [SerializeField] GameObject bodyHitbox;
     [SerializeField] SpriteRenderer attackRange;
 
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip[] impactSfx;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         startPosition = transform.position;
         attackPosition = attackTransform.position;
         lungePosition = startPosition + lungeVector;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
         currTime += Time.deltaTime;
-        if (_currHealth >= 0 && currTime > attackInterval)
+        if (_currHealth > 0 && currTime > attackInterval)
         {
             animator.SetTrigger("Attack");
             StartCoroutine(Lunge());
@@ -116,5 +120,17 @@ public class RaccoonEnemy : EnemyController
         }
         _sr.color = Color.clear;
         Destroy(gameObject);
+    }
+
+    public override void ReceiveDamage(int dmg)
+    {
+        if (_currHealth > 0) PlaySFX();
+        base.ReceiveDamage(dmg);
+    }
+
+    private void PlaySFX()
+    {
+        int idx = Random.Range(0, impactSfx.Length);
+        audioSource.PlayOneShot(impactSfx[idx]);
     }
 }

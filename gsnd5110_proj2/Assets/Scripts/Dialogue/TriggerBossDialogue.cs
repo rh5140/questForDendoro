@@ -6,6 +6,7 @@ public class TriggerBossDialogue : MonoBehaviour
     [SerializeField] GameObject bossGO;
     BossController boss;
     [SerializeField] string bossDialogue;
+    bool triggered = false;
 
     void Start()
     {
@@ -14,10 +15,11 @@ public class TriggerBossDialogue : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (triggered) return;
         if (other.gameObject.tag == "Player")
         {
             boss.BossDialogue(bossDialogue);
-            Destroy(gameObject);
+            triggered = true;
         }
     }
 }

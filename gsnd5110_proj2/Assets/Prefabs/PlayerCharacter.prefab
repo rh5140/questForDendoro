@@ -536,7 +536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4840590477515097739
 Transform:
   m_ObjectHideFlags: 0
@@ -847,6 +847,13 @@ MonoBehaviour:
   interval: 1
   playerAnimator: {fileID: 3316488627837859217}
   audioSource: {fileID: 0}
+  swingSfx:
+  - {fileID: 8300000, guid: 9beee41a3105fc643bbb6a20f9619b84, type: 3}
+  - {fileID: 8300000, guid: 544d9166ba4bb154e92a71908dc66548, type: 3}
+  - {fileID: 8300000, guid: f6c38b268ade01348ae87971269dd780, type: 3}
+  - {fileID: 8300000, guid: 6d146984ea0847f4b83511a33fe04303, type: 3}
+  - {fileID: 8300000, guid: fd32448da853bee44837ece010664194, type: 3}
+  - {fileID: 8300000, guid: 2140602d660190541b4626e6f4d7e3d8, type: 3}
 --- !u!82 &4960664998788461028
 AudioSource:
   m_ObjectHideFlags: 0
@@ -858,7 +865,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 48173ff68696ee1478581e2aa0294b90, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

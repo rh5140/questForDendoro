@@ -26,7 +26,7 @@ public class EnemyController : MonoBehaviour
         if (_currHealth > _maxHealth) _currHealth = _maxHealth;
     }
 
-    public void ReceiveDamage(int dmg)
+    public virtual void ReceiveDamage(int dmg)
     {
         if (_currHealth <= 0) return;
         if (_isInvincible) return;

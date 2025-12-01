@@ -18,6 +18,7 @@ public class Weapon : MonoBehaviour
     // TEMPORARY
     [SerializeField] Animator playerAnimator;
     [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip[] swingSfx;
 
     public void Start()
     {
@@ -32,7 +33,7 @@ public class Weapon : MonoBehaviour
         if (!_onCooldown)
         {
             playerAnimator.Play("Attack");
-            audioSource.Play();
+            SwordSFX();
             StartCoroutine(DisplayHit());
             Collider[] hitColliders = Physics.OverlapBox(transform.position, hitboxSize);
             foreach (var hitCollider in hitColliders)
@@ -52,7 +53,6 @@ public class Weapon : MonoBehaviour
             StartCoroutine(ButtonCooldown());
         }
     }
-
     
     private void OnDrawGizmos()
     {
@@ -83,5 +83,11 @@ public class Weapon : MonoBehaviour
         }
         attackButton.color = Color.white;
         _onCooldown = false;
+    }
+
+    private void SwordSFX()
+    {
+        int idx = Random.Range(0, swingSfx.Length);
+        audioSource.PlayOneShot(swingSfx[idx]);
     }
 }
