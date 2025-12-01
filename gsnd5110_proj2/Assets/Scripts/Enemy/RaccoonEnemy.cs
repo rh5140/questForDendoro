@@ -29,6 +29,7 @@ public class RaccoonEnemy : EnemyController
         currTime += Time.deltaTime;
         if (_currHealth >= 0 && currTime > attackInterval)
         {
+            animator.SetTrigger("Attack");
             StartCoroutine(Lunge());
             currTime = 0;
         }
@@ -39,7 +40,6 @@ public class RaccoonEnemy : EnemyController
         attackIndicator.color = Color.white;
         float moveDuration = 0.5f;
         float moveTime = 0;
-        animator.SetTrigger("Attack");
         while (moveTime < moveDuration)
         {
             moveTime += Time.deltaTime;
