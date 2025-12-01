@@ -11,7 +11,7 @@ public class EnemyAOE : MonoBehaviour
     [SerializeField] SpriteRenderer rangeOutline;
     bool attackCompleted = true;
 
-    public void UseAttack()
+    public virtual void UseAttack()
     {
         if (!attackCompleted) return;
         attackCompleted = false;
@@ -24,7 +24,7 @@ public class EnemyAOE : MonoBehaviour
         if (rangeOutline != null) rangeOutline.color = Color.white;
         float time = 0;
         Color startValue = rangeIndicator.color;
-        Color endValue = new Color(startValue.r, startValue.b, startValue.g, 1f);
+        Color endValue = Color.white;
 
         while (time < duration)
         {
@@ -39,9 +39,9 @@ public class EnemyAOE : MonoBehaviour
     {
         yield return new WaitForSeconds(warningTime);
         CheckOverlapForDamage();
-        rangeIndicator.color = new Color(rangeIndicator.color.r, rangeIndicator.color.b, rangeIndicator.color.g, 0f);
-        if (rangeOutline != null) rangeOutline.color = Color.clear;
         attackCompleted = true;
+        rangeIndicator.color = Color.clear;
+        if (rangeOutline != null) rangeOutline.color = Color.clear;
     }
 
     protected virtual void CheckOverlapForDamage()
