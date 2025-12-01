@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3225081453651404813}
   - component: {fileID: 2143849379968833075}
   - component: {fileID: 4112728112954926291}
+  - component: {fileID: 7970347163039758292}
   m_Layer: 0
   m_Name: MimicDummy
   m_TagString: Enemy
@@ -63,7 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43bdd504f7237d54fa56b9927f58f282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MimicEnemy
-  _maxHealth: 0
+  _maxHealth: 1
   _isInvincible: 0
   _iFrames: 0.2
   _sr: {fileID: 7538878812351143419}
@@ -89,6 +90,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 8, y: 1, z: 8}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7970347163039758292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7269624973058464283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b7603046f99754ab38b60dd8eaffa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
+  damage: 1
+  interval: 1
+  hitboxSize: {x: 1, y: 1, z: 1}
 --- !u!1 &8968392749544477445
 GameObject:
   m_ObjectHideFlags: 0

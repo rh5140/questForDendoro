@@ -39,6 +39,7 @@ public class BossController : EnemyController
             case BossState.Attacking:
                 break;
             case BossState.Dying:
+                moveTo.StopMoving();
                 break;
             case BossState.Idle:
                 break;
@@ -52,7 +53,7 @@ public class BossController : EnemyController
             currState = BossState.Attacking;
             BossAttack();
         }
-        if (currAttack != null && currState == BossState.Attacking)
+        if (currState != BossState.Dying && currAttack != null && currState == BossState.Attacking)
         {
             if (currAttack.IsAttackCompleted())
             {
@@ -86,11 +87,11 @@ public class BossController : EnemyController
     IEnumerator DeathSequence()
     {
         shadowSprite.SetActive(false);
-        _sr.color = Color.red;
         BossDialogue(deathLine);
+        yield return new WaitForSeconds(5f);
 
         float time = 0;
-        float duration = 4f;
+        float duration = 1f;
 
         while (time < duration)
         {
@@ -113,6 +114,6 @@ public class BossController : EnemyController
     {
         yield return new WaitForSeconds(waitSeconds);
         dialogueBubble.SetActive(false);
-        currState = BossState.Moving;
+        if (_currHealth > 0) currState = BossState.Moving;
     }
 }

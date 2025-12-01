@@ -54,6 +54,9 @@ MonoBehaviour:
   attackInterval: 5
   moveTo: {fileID: 5028122862478343728}
   shadowSprite: {fileID: 4520908064707416195}
+  dialogueBubble: {fileID: 0}
+  dialogueTMP: {fileID: 0}
+  deathLine: 
 --- !u!65 &7677730060127440695
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -674,7 +677,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7841843142095484831}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.06}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -878,6 +881,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: RingAOE
       objectReference: {fileID: 0}
+    - target: {fileID: 5044322656731671534, guid: 85148d691bc3f2549ab2eacf713fd980, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6896566078017015611, guid: 85148d691bc3f2549ab2eacf713fd980, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8326718523155535996, guid: 85148d691bc3f2549ab2eacf713fd980, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -976,6 +987,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6767448328774631556, guid: 4f8a2fd2fbfe93b4ea45b3d8d6cd2366, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8791293099714463143, guid: 4f8a2fd2fbfe93b4ea45b3d8d6cd2366, type: 3}
       propertyPath: m_Name
       value: CircleAOE
@@ -1038,9 +1053,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4426794062995941990, guid: 06c2437cff511b74ab42a8dd1df2e484, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7882912887546356470, guid: 06c2437cff511b74ab42a8dd1df2e484, type: 3}
       propertyPath: m_Name
       value: RectAOE
+      objectReference: {fileID: 0}
+    - target: {fileID: 8130181405512680541, guid: 06c2437cff511b74ab42a8dd1df2e484, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

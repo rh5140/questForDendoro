@@ -22,6 +22,11 @@ public class EndScreen : MonoBehaviour
         StartCoroutine(ResetPlayer());
     }
 
+    public void SetNewStartingPosition(Vector3 newPos)
+    {
+        startingPosition = newPos;
+    }
+
     IEnumerator ResetPlayer()
     {
         fadeBlack.RunFadeCoroutine(1f, 1f);

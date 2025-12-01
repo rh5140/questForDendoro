@@ -427,6 +427,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2236783422576739530, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236783422576739530, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236783422576739530, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.12
+      objectReference: {fileID: 0}
     - target: {fileID: 2921632192780111636, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 251.48
@@ -480,9 +492,21 @@ PrefabInstance:
       value: RaccoonAOE
       objectReference: {fileID: 0}
     - target: {fileID: 5287169560748551586, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
+      propertyPath: deathLine
+      value: ...this dark power...
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287169560748551586, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
       propertyPath: _maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5287169560748551586, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
+      propertyPath: dialogueTMP
+      value: 
+      objectReference: {fileID: 3921966178478276329}
+    - target: {fileID: 5287169560748551586, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
+      propertyPath: dialogueBubble
+      value: 
+      objectReference: {fileID: 2998155376455669753}
     - target: {fileID: 5287169560748551586, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
       propertyPath: attackList.Array.size
       value: 5
@@ -547,6 +571,10 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7841843142095484831, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8514689634693539773, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
       propertyPath: m_Name
       value: DemonQueenBoss Variant
@@ -566,6 +594,22 @@ PrefabInstance:
       addedObject: {fileID: 1192074813385063018}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
+--- !u!1 &2998155376455669753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7841843142095484831, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
+  m_PrefabInstance: {fileID: 4992315658776502374}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3921966178478276329 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8297279581857341071, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
+  m_PrefabInstance: {fileID: 4992315658776502374}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshPro
 --- !u!1 &4785711080174925584 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 513980432900183926, guid: af460bda3026aec418fc0964dfd9930d, type: 3}

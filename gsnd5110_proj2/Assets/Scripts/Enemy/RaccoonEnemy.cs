@@ -15,6 +15,11 @@ public class RaccoonEnemy : EnemyController
     [SerializeField] Vector3 hitboxSize;
     [SerializeField] Animator animator;
 
+    [SerializeField] GameObject shadowSprite;
+    [SerializeField] GameObject deadSprite;
+    [SerializeField] GameObject bodyHitbox;
+    [SerializeField] SpriteRenderer attackRange;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,7 +42,15 @@ public class RaccoonEnemy : EnemyController
 
     private IEnumerator Lunge()
     {
-        attackIndicator.color = Color.white;
+        float time = 0;
+        float duration = 0.5f;
+        while (time < duration)
+        {
+            attackRange.color = Color.Lerp(Color.clear, Color.white, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        attackRange.color = Color.clear;
         float moveDuration = 0.5f;
         float moveTime = 0;
         while (moveTime < moveDuration)
@@ -49,13 +62,15 @@ public class RaccoonEnemy : EnemyController
         StartCoroutine(Attack());
         yield return new WaitForSeconds(1f);   
         moveTime = 0;
-        while (moveTime < moveDuration)
+        if (_currHealth > 0)
         {
-            moveTime += Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, startPosition, 2);
-            yield return null;
+            while (moveTime < moveDuration)
+            {
+                moveTime += Time.deltaTime;
+                transform.position = Vector3.MoveTowards(transform.position, startPosition, 2);
+                yield return null;
+            }
         }
-
     }
 
     private IEnumerator Attack()
@@ -75,7 +90,31 @@ public class RaccoonEnemy : EnemyController
 
     protected override void Die()
     {
+        StartCoroutine(DeathSequence());
+    }
+
+    private IEnumerator DeathSequence()
+    {
         animator.SetTrigger("Dead");
-        Destroy(gameObject, 2f);
+        bodyHitbox.SetActive(false);
+
+        yield return new WaitForSeconds(0.5f);
+        
+        shadowSprite.SetActive(false);
+        deadSprite.SetActive(true);
+
+        float time = 0;
+        float duration = 2f;
+
+        SpriteRenderer _sr = deadSprite.GetComponent<SpriteRenderer>();
+
+        while (time < duration)
+        {
+            _sr.color = Color.Lerp(Color.white, Color.clear, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        _sr.color = Color.clear;
+        Destroy(gameObject);
     }
 }
