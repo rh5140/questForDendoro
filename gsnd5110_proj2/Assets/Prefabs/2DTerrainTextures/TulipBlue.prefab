@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d92dfff154c5b7f4ca4abb23eea837de, type: 2}
     - target: {fileID: 919132149155446097, guid: afd5b5d0074bb71488b455fc1ee6d5b4, type: 3}
       propertyPath: m_Name
-      value: Quad_stand (6)
+      value: TulipBlue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
