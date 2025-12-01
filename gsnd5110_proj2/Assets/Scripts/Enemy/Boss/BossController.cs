@@ -1,11 +1,13 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 enum BossState
 {
     Moving,
     Attacking,
-    Dying
+    Dying,
+    Idle,
 }
 
 public class BossController : EnemyController
@@ -14,7 +16,7 @@ public class BossController : EnemyController
     [SerializeField] float attackInterval = 10f;
     private float currTime = 0f;
 
-    private BossState currState = BossState.Moving;
+    private BossState currState = BossState.Idle;
     [SerializeField] MoveTo moveTo;
 
     bool isAttacking = false;
@@ -22,6 +24,10 @@ public class BossController : EnemyController
     EnemyAOE currAttack;
 
     [SerializeField] GameObject shadowSprite;
+
+    [SerializeField] GameObject dialogueBubble;
+    [SerializeField] TextMeshPro dialogueTMP;
+    [SerializeField] string deathLine;
 
     void Update()
     {
@@ -34,10 +40,12 @@ public class BossController : EnemyController
                 break;
             case BossState.Dying:
                 break;
+            case BossState.Idle:
+                break;
             default:
                 break;
         }
-        if (!isAttacking && currTime > attackInterval)
+        if (currState != BossState.Idle && !isAttacking && currTime > attackInterval)
         {
             moveTo.StopMoving();
             isAttacking = true;
@@ -79,9 +87,10 @@ public class BossController : EnemyController
     {
         shadowSprite.SetActive(false);
         _sr.color = Color.red;
+        BossDialogue(deathLine);
 
         float time = 0;
-        float duration = 1f;
+        float duration = 4f;
 
         while (time < duration)
         {
@@ -90,6 +99,20 @@ public class BossController : EnemyController
             yield return null;
         }
         _sr.color = Color.clear;
-        Destroy(transform.parent.gameObject);
+        Destroy(transform.parent.gameObject, 1f);
+    }
+
+    public void BossDialogue(string line)
+    {
+        dialogueBubble.SetActive(true);
+        dialogueTMP.text = line;
+        StartCoroutine(DelayBeforeContinue());
+    }
+
+    IEnumerator DelayBeforeContinue(float waitSeconds = 5f)
+    {
+        yield return new WaitForSeconds(waitSeconds);
+        dialogueBubble.SetActive(false);
+        currState = BossState.Moving;
     }
 }

@@ -924,6 +924,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f73f46b65ec894c4591bb3bad066fe55, type: 3}
+--- !u!114 &167891354 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6754104321141325823, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
+  m_PrefabInstance: {fileID: 1634720406}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshPro
 --- !u!1001 &169629262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1081,7 +1092,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
       propertyPath: dialogue
-      value: Raccoon up ahead! Be careful!
+      value: I feel much safer knowing you're here.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1882,6 +1893,74 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+--- !u!1 &371637820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 371637821}
+  - component: {fileID: 371637822}
+  - component: {fileID: 371637823}
+  m_Layer: 0
+  m_Name: RaccoonBossTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &371637821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371637820}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 206.06, y: 0.05, z: 104.12157}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &371637822
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371637820}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.0428925, y: 5.3474674, z: 10.848534}
+  m_Center: {x: 0.5214462, y: 2.1737337, z: -4.924267}
+--- !u!114 &371637823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371637820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d50c59a7b8e15ed46a09e3fc30590fef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerBossDialogue
+  bossGO: {fileID: 1163101937}
+  bossDialogue: Huh?!?! You've got it all wrong!
 --- !u!1001 &372658407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2054,7 +2133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3384802075886963159, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4730496526585700706, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
       propertyPath: m_Pivot.x
@@ -2882,6 +2961,135 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4978e18e7f435304d861bcf36ab0c0f2, type: 3}
+--- !u!1 &680493891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 680493892}
+  m_Layer: 0
+  m_Name: BOSS RACCOON =============
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &680493892
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680493891}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 212.5526, y: 0, z: 98.84648}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &689850419
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1029102817}
+    m_Modifications:
+    - target: {fileID: 291400691062929430, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_text
+      value: Brave warrior, you must recover the amulet!
+      objectReference: {fileID: 0}
+    - target: {fileID: 291400691062929430, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_margin.w
+      value: -1.1648556
+      objectReference: {fileID: 0}
+    - target: {fileID: 291400691062929430, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_margin.x
+      value: -2.1554337
+      objectReference: {fileID: 0}
+    - target: {fileID: 291400691062929430, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_margin.z
+      value: -2.1979294
+      objectReference: {fileID: 0}
+    - target: {fileID: 726083087473490526, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 289.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 726083087473490526, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.33597
+      objectReference: {fileID: 0}
+    - target: {fileID: 980635466610426025, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_Name
+      value: StartNPC1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440519054515916594, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 05683a2fba758a04bac05217a89ce2cf, type: 3}
+    - target: {fileID: 1843590087366032584, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.6087894
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: dialogue
+      value: Thank you for coming to Dendoro's aid.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+--- !u!4 &689850420 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+  m_PrefabInstance: {fileID: 689850419}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &691118852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3437,6 +3645,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 895664031}
   m_CullTransparentMesh: 1
+--- !u!1 &917373733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 917373734}
+  - component: {fileID: 917373735}
+  - component: {fileID: 917373736}
+  m_Layer: 0
+  m_Name: CompanionTrigger1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &917373734
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917373733}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 27.53, y: 0, z: -2.05}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1029102817}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &917373735
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917373733}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.459419, y: 8.348616, z: 11.49777}
+  m_Center: {x: 4.7297096, y: 3.6743083, z: -5.248885}
+--- !u!114 &917373736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917373733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 778636ed4a645f9489cd556a52c69ca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerBirdDialogue
+  dialogueBubble: {fileID: 1654434513}
+  dialogueTMP: {fileID: 167891354}
+  line: You saved me before. You can save them too.
 --- !u!1001 &957819433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3575,6 +3852,42 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab314e29914b9409f6ffadbdb2b807, type: 3}
+--- !u!1 &1029102816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1029102817}
+  m_Layer: 0
+  m_Name: StartDialogueNPCs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1029102817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029102816}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 31.78444, y: -0, z: 32.66879}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1081174542}
+  - {fileID: 689850420}
+  - {fileID: 1171166234}
+  - {fileID: 917373734}
+  - {fileID: 1223726799}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1034725544
 GameObject:
   m_ObjectHideFlags: 0
@@ -3700,6 +4013,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40ef667620125434fb9fc9f140b87ebe, type: 3}
+--- !u!4 &1081174542 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+  m_PrefabInstance: {fileID: 2034743327}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1093825757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4115,6 +4433,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac30422ee667f5f48823edf893a00543, type: 3}
+--- !u!1 &1163101937 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 600829056681733767, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
+  m_PrefabInstance: {fileID: 1522079221}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1163918100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4335,6 +4658,173 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4978e18e7f435304d861bcf36ab0c0f2, type: 3}
+--- !u!1001 &1171166233
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1029102817}
+    m_Modifications:
+    - target: {fileID: 291400691062929430, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_text
+      value: Brave warrior, you must recover the amulet!
+      objectReference: {fileID: 0}
+    - target: {fileID: 291400691062929430, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_margin.w
+      value: -1.1648556
+      objectReference: {fileID: 0}
+    - target: {fileID: 291400691062929430, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_margin.x
+      value: -2.1554337
+      objectReference: {fileID: 0}
+    - target: {fileID: 291400691062929430, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_margin.z
+      value: -2.1979294
+      objectReference: {fileID: 0}
+    - target: {fileID: 726083087473490526, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 289.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 726083087473490526, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.33597
+      objectReference: {fileID: 0}
+    - target: {fileID: 980635466610426025, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_Name
+      value: StartNPC2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440519054515916594, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e5d4ffadd88132e47a1143eb4624eb0d, type: 3}
+    - target: {fileID: 1843590087366032584, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.6087894
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: dialogue
+      value: The amulet is what keeps us safe from evil.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+--- !u!4 &1171166234 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+  m_PrefabInstance: {fileID: 1171166233}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1175103375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1175103378}
+  - component: {fileID: 1175103377}
+  - component: {fileID: 1175103376}
+  m_Layer: 0
+  m_Name: CompanionTrigger3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1175103376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175103375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 778636ed4a645f9489cd556a52c69ca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerBirdDialogue
+  dialogueBubble: {fileID: 1654434513}
+  dialogueTMP: {fileID: 167891354}
+  line: Return the amulet at once, thief!
+--- !u!65 &1175103377
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175103375}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.5222473, y: 8.348616, z: 11.49777}
+  m_Center: {x: 1.2611237, y: 3.6743083, z: -5.248885}
+--- !u!4 &1175103378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175103375}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 201.13, y: 0.05, z: 104.12157}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1180887719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4667,6 +5157,75 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab314e29914b9409f6ffadbdb2b807, type: 3}
+--- !u!1 &1223726798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1223726799}
+  - component: {fileID: 1223726801}
+  - component: {fileID: 1223726800}
+  m_Layer: 0
+  m_Name: CompanionTrigger2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1223726799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223726798}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 42.37, y: 0, z: -2.05}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1029102817}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1223726800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223726798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 778636ed4a645f9489cd556a52c69ca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerBirdDialogue
+  dialogueBubble: {fileID: 1654434513}
+  dialogueTMP: {fileID: 167891354}
+  line: The raccoon ran into the forest!
+--- !u!65 &1223726801
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223726798}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.459419, y: 8.348616, z: 11.49777}
+  m_Center: {x: 4.7297096, y: 3.6743083, z: -5.248885}
 --- !u!1001 &1227969945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5880,9 +6439,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5287169560748551586, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
+      propertyPath: deathLine
+      value: ...Fine. Have the amulet.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287169560748551586, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
       propertyPath: _maxHealth
       value: 1500
       objectReference: {fileID: 0}
+    - target: {fileID: 5287169560748551586, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
+      propertyPath: dialogueTMP
+      value: 
+      objectReference: {fileID: 1928762985}
+    - target: {fileID: 5287169560748551586, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
+      propertyPath: dialogueBubble
+      value: 
+      objectReference: {fileID: 1812659077}
     - target: {fileID: 5287169560748551586, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
       propertyPath: attackList.Array.size
       value: 2
@@ -6849,6 +7420,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f86e1816895b8847984814a32503078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnlockGate
+--- !u!1 &1654434513 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3393673168289505534, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
+  m_PrefabInstance: {fileID: 1634720406}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1667797678 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5605659387598194638, guid: 68ab314e29914b9409f6ffadbdb2b807, type: 3}
@@ -7616,6 +8192,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40ef667620125434fb9fc9f140b87ebe, type: 3}
+--- !u!1 &1812659077 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7841843142095484831, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
+  m_PrefabInstance: {fileID: 1522079221}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1815197156 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3365916530881757847, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
@@ -7791,6 +8372,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1928762985 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8297279581857341071, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
+  m_PrefabInstance: {fileID: 1522079221}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshPro
 --- !u!1 &1949395501 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5605659387598194638, guid: 68ab314e29914b9409f6ffadbdb2b807, type: 3}
@@ -8063,7 +8655,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1029102817}
     m_Modifications:
     - target: {fileID: 291400691062929430, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
       propertyPath: m_text
@@ -8097,13 +8689,37 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 8290d72f237debf438aafbe651bd73cf, type: 3}
+    - target: {fileID: 1727519983721675760, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727519983721675760, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727519983721675760, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727519983721675760, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727519983721675760, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727519983721675760, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1843590087366032584, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.04
+      value: -4.31
       objectReference: {fileID: 0}
     - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8111,7 +8727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 30.06
+      value: -1.45
       objectReference: {fileID: 0}
     - target: {fileID: 2589285743831190033, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8141,9 +8757,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8340521971424838238, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.85
+      objectReference: {fileID: 0}
     - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
       propertyPath: dialogue
-      value: Brave warrior, you must recover the amulet!
+      value: Brave hero, you must recover the amulet!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9390,7 +10010,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 2137013241}
   - {fileID: 1629680518}
-  - {fileID: 2034743327}
+  - {fileID: 1029102817}
   - {fileID: 1634720406}
   - {fileID: 1670992537}
   - {fileID: 219587587}
@@ -9442,6 +10062,9 @@ SceneRoots:
   - {fileID: 691118852}
   - {fileID: 1366613802}
   - {fileID: 888447910}
+  - {fileID: 680493892}
+  - {fileID: 371637821}
+  - {fileID: 1175103378}
   - {fileID: 1522079221}
   - {fileID: 1617781248}
   - {fileID: 1272486437}

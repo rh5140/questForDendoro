@@ -28,6 +28,7 @@ public class EnemyController : MonoBehaviour
 
     public void ReceiveDamage(int dmg)
     {
+        if (_currHealth <= 0) return;
         if (_isInvincible) return;
         _currHealth -= dmg;
         if (_currHealth <= 0) Die();
