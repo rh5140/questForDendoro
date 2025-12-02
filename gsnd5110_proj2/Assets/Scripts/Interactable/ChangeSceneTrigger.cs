@@ -1,10 +1,11 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class EnableGameObject : MonoBehaviour
+public class ChangeSceneTrigger : MonoBehaviour
 {
-    [SerializeField] GameObject targetGO; 
-    [SerializeField] float waitTime = 0f;
+    [SerializeField] string nextScene; 
+    [SerializeField] float waitTime = 5f;
 
     void OnTriggerEnter(Collider other)
     {
@@ -14,10 +15,9 @@ public class EnableGameObject : MonoBehaviour
         }
     }
 
-    IEnumerator DelayBeforeEnable(float wait = 0f)
+    IEnumerator DelayBeforeEnable(float wait = 5f)
     {
         yield return new WaitForSeconds(wait);
-        targetGO.SetActive(true);
-        Destroy(gameObject);
+        SceneManager.LoadScene(nextScene);
     }
 }

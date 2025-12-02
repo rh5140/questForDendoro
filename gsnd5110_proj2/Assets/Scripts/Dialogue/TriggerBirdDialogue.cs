@@ -1,13 +1,15 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TriggerBirdDialogue : MonoBehaviour
 {
     [SerializeField] GameObject dialogueBubble;
     [SerializeField] TextMeshPro dialogueTMP;
     [SerializeField] string line;
-
+    [SerializeField] bool changeScene = false;
+    [SerializeField] string nextScene;
 
     void OnTriggerEnter(Collider other)
     {
@@ -22,9 +24,8 @@ public class TriggerBirdDialogue : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("EXIT");
             dialogueBubble.SetActive(false);
-            Destroy(gameObject);
+            Destroy(gameObject,5f);
         }
     }
 
@@ -32,5 +33,11 @@ public class TriggerBirdDialogue : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         dialogueBubble.SetActive(false);
+        Destroy(gameObject);
+    }
+
+    void OnDestroy()
+    {
+        if (changeScene) SceneManager.LoadScene(nextScene);
     }
 }

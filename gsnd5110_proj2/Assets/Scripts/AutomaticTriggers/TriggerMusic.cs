@@ -26,7 +26,6 @@ public class TriggerMusic : MonoBehaviour
         yield return new WaitForSeconds(introLength);
         audioSource.clip = loop;
         audioSource.Play();
-        // audioSource.PlayOneShot(loop);
         yield return null;
     }
 }

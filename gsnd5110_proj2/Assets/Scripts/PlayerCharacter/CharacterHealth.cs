@@ -19,6 +19,8 @@ public class CharacterHealth : MonoBehaviour
 
     private string _scene;
 
+    [SerializeField] bool hasBirdHealing = false;
+
     void OnEnable()
     {
         _currHealth = _maxHealth;
@@ -46,6 +48,8 @@ public class CharacterHealth : MonoBehaviour
         _currHealth -= dmg;
         if (_currHealth <= 0) Die();
         if (!_isInvincible) StartCoroutine(BecomeTemporarilyInvincible());
+
+        if (hasBirdHealing && _currHealth == 1) StartCoroutine(WaitToHeal());
     }
 
     public int GetCurrhealth()
@@ -80,6 +84,12 @@ public class CharacterHealth : MonoBehaviour
     public void SetPlayerAlive()
     {
         _isDead = false;
+    }
+
+    private IEnumerator WaitToHeal()
+    {
+        yield return new WaitForSeconds(1f);
+        HealDamage(1);
     }
 
 }

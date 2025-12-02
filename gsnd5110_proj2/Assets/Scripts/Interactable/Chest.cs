@@ -6,7 +6,7 @@ public class Chest : Interactable
 
     public override void RunInteraction()
     {
-        Instantiate(changeToThis, transform.position, Quaternion.identity);
+        Instantiate(changeToThis, transform.parent.position, Quaternion.identity);
         Destroy(transform.parent.gameObject);
     }
 }

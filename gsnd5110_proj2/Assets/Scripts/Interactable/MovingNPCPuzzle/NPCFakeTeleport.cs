@@ -9,7 +9,7 @@ public class NPCFakeTeleport : MonoBehaviour
     {
         if (activated && collider.gameObject.tag == "Player")
         {
-            Destroy(this, 3f);
+            Destroy(this, 6f);
         }
             
     }

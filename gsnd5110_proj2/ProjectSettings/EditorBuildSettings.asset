@@ -15,11 +15,17 @@ EditorBuildSettings:
     path: Assets/Scenes/DevScenes/Nov18Playtest_Ray.unity
     guid: 374a4d87650d87f4fa47fee6d0753053
   - enabled: 1
+    path: Assets/Scenes/DevScenes/MainMenu.unity
+    guid: f4bc7233d5cbd0f4aa64ef76346d8e72
+  - enabled: 0
     path: Assets/Scenes/DevScenes/GreyboxVersion/ColorSelection.unity
     guid: 53aa8b75a32304b46a6c6bee87872e04
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DevScenes/GreyboxVersion/LevelTestScene.unity
     guid: 40bf19340e0fc7d4b8218e36c6dbbe86
+  - enabled: 1
+    path: Assets/Scenes/DevScenes/Level_0.unity
+    guid: 6d0dc2b305394af49890e7d6330c0ebb
   - enabled: 1
     path: Assets/Scenes/DevScenes/Level_1.unity
     guid: 4be5958f8945f8c4cabed4ad462d1c81
@@ -27,14 +33,23 @@ EditorBuildSettings:
     path: Assets/Scenes/DevScenes/Level_2.unity
     guid: 236e0a5fce862674483178149cde4ee3
   - enabled: 1
+    path: Assets/Scenes/DevScenes/Level_2.5.unity
+    guid: 5653cca7e109d104ea6192e935f3b76b
+  - enabled: 1
     path: Assets/Scenes/DevScenes/Level_3.unity
     guid: 788f3a703f86e1742857ef866bac6b43
   - enabled: 1
     path: Assets/Scenes/DevScenes/Level_4_Dark.unity
     guid: 70c1cfed9979ce3478ea376a2c2703cd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DevScenes/Level_4.unity
     guid: 7ed83061667144342baa6850549d3f13
+  - enabled: 1
+    path: Assets/Scenes/DevScenes/Level_5.unity
+    guid: 5452058da2c94e74d91c0da4615ed6a7
+  - enabled: 1
+    path: Assets/Scenes/DevScenes/Level_6.unity
+    guid: 8b64006111a874a47b9121d65aef557d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

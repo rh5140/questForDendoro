@@ -671,7 +671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c32df1758dcb0a4db28346559363957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeSceneTrigger
-  nextScene: Level_5
+  nextScene: Level_3
   waitTime: 5
 --- !u!1 &280698932
 GameObject:
@@ -816,7 +816,7 @@ Transform:
   m_GameObject: {fileID: 284087243}
   serializedVersion: 2
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 99.67044, y: 24.52, z: 67.67963}
+  m_LocalPosition: {x: 99.67044, y: 23.02, z: 67.67963}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2279,7 +2279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5489195717390066562, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5489195717390066562, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2984,6 +2984,8 @@ MonoBehaviour:
   dialogueBubble: {fileID: 707149777}
   dialogueTMP: {fileID: 707149776}
   line: A job well done
+  changeScene: 0
+  nextScene: 
 --- !u!65 &1218910090
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3264,6 +3266,8 @@ MonoBehaviour:
   dialogueBubble: {fileID: 707149777}
   dialogueTMP: {fileID: 707149776}
   line: You did it again!
+  changeScene: 0
+  nextScene: 
 --- !u!65 &1495032080
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3936,6 +3940,8 @@ MonoBehaviour:
   dialogueBubble: {fileID: 707149777}
   dialogueTMP: {fileID: 707149776}
   line: You saved the day!
+  changeScene: 0
+  nextScene: 
 --- !u!65 &2120169848
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -7,6 +7,8 @@ public class Comic : MonoBehaviour
     int currIdx = 0;
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip sfx;
+    [SerializeField] AudioClip intro;
+    [SerializeField] bool isTwist = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,6 +25,7 @@ public class Comic : MonoBehaviour
         {
             comicStates[currIdx].SetActive(true);
             currIdx++;
+            if (isTwist && currIdx == 4) audioSource.PlayOneShot(intro);
             audioSource.PlayOneShot(sfx);
         }
     }

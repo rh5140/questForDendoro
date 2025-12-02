@@ -29,6 +29,9 @@ public class BossController : EnemyController
     [SerializeField] TextMeshPro dialogueTMP;
     [SerializeField] string deathLine;
 
+    [SerializeField] bool isQueen = false;
+    [SerializeField] Sprite normalQueen;
+
     void Update()
     {
         switch (currState)
@@ -95,6 +98,7 @@ public class BossController : EnemyController
 
         while (time < duration)
         {
+            if (isQueen && time < duration / 2) _sr.sprite = normalQueen;
             _sr.color = Color.Lerp(Color.red, Color.clear, time / duration);
             time += Time.deltaTime;
             yield return null;

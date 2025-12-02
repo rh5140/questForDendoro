@@ -6,8 +6,8 @@ public class HealingSpawnerButton : Interactable
     [SerializeField] Sprite unpressed;
     [SerializeField] Sprite pressed;
 
-    public GameObject potion;
-    public GameObject spawnPoint;
+    [SerializeField] GameObject potion;
+    [SerializeField] GameObject[] spawnPoint;
     bool coolDown = false;
     
     float curTime = 0f;
@@ -35,9 +35,9 @@ public class HealingSpawnerButton : Interactable
 
     void SpawnPotion()
     {
-        Instantiate(potion, spawnPoint.transform.position, spawnPoint.transform.rotation);
+        int idx = Random.Range(0, spawnPoint.Length);
+        Instantiate(potion, spawnPoint[idx].transform.position, spawnPoint[idx].transform.rotation);
         coolDown = true;
         curTime = 0f;
     }
-
 }

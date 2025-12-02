@@ -11179,7 +11179,8 @@ MonoBehaviour:
   unpressed: {fileID: 21300000, guid: bce1f45536ab0224094cf92a76f838ef, type: 3}
   pressed: {fileID: 21300000, guid: 6890ad35b53308e4f8549f5762c23ad5, type: 3}
   potion: {fileID: 6908832447871160125, guid: 49135ffa968831d4db62fa3c5ee42058, type: 3}
-  spawnPoint: {fileID: 541254874}
+  spawnPoint:
+  - {fileID: 0}
 --- !u!1001 &8800463904445899089
 PrefabInstance:
   m_ObjectHideFlags: 0

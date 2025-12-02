@@ -10,7 +10,7 @@ public class ChangeNPCBehavior : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if (!changedDialogue)
+        if (collider.gameObject.tag == "Player" && !changedDialogue)
         {
             ChangeDialogue("Oh! I can stand on a pressure plate.");
             nft.enabled = true;

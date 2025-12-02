@@ -14,7 +14,7 @@ public class MimicEnemy : EnemyController
     {
         rangeAttack = GetComponent<EnemyRangedAttack>();
         startPosition = transform.position;
-        jumpPosition = new Vector3(startPosition.x, 5, startPosition.z);
+        jumpPosition = new Vector3(startPosition.x, startPosition.y + 5, startPosition.z);
     }
 
     // Update is called once per frame
