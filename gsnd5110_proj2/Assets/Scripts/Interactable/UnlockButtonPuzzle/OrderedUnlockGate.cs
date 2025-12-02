@@ -17,12 +17,12 @@ public class OrderedUnlockGate : MonoBehaviour
         pressedOrder = new List<OrderedUnlockButton>();
         numButtons = orderedButtons.Count;
         startPosition = transform.position;
-        endPosition = new Vector3(startPosition.x, startPosition.y + 5, startPosition.z);
+        endPosition = new Vector3(startPosition.x, startPosition.y + 10, startPosition.z);
     }
 
     public void AddButton(OrderedUnlockButton pressedButton)
     {
-        symbols[currPressed].color = Color.red;
+        symbols[currPressed].color = Color.orange;
         pressedOrder.Add(pressedButton);
         currPressed++;
         ButtonPressed();

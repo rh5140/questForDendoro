@@ -119,5 +119,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyProjectile
   targetPosition: {x: 0, y: 0, z: 0}
-  speed: 5
+  speed: 7
   damage: 1

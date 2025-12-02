@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5561005396765387321
 RectTransform:
   m_ObjectHideFlags: 0
@@ -434,6 +434,7 @@ MonoBehaviour:
   dialogueTMP: {fileID: 291400691062929430}
   dialogue: hoi
   hitReaction: ouch!!!
+  changesWhenHit: 1
 --- !u!1 &4187098813213550053
 GameObject:
   m_ObjectHideFlags: 0

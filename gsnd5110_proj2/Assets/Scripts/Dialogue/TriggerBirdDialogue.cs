@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -14,14 +15,22 @@ public class TriggerBirdDialogue : MonoBehaviour
         {
             dialogueBubble.SetActive(true);
             dialogueTMP.text = line;
+            StartCoroutine(DisableBubble());
         }
     }
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
+            Debug.Log("EXIT");
             dialogueBubble.SetActive(false);
-            Destroy(gameObject, 10f);
+            Destroy(gameObject);
         }
+    }
+
+    IEnumerator DisableBubble()
+    {
+        yield return new WaitForSeconds(5f);
+        dialogueBubble.SetActive(false);
     }
 }
