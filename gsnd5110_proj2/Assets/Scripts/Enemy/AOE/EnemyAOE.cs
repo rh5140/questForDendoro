@@ -33,6 +33,10 @@ public class EnemyAOE : MonoBehaviour
             yield return null;
         }
         rangeIndicator.color = endValue;
+
+        yield return new WaitForSeconds(0.2f);
+        rangeIndicator.color = Color.clear;
+        if (rangeOutline != null) rangeOutline.color = Color.clear;
     }
 
     IEnumerator WaitBeforeAttack()
