@@ -33,7 +33,7 @@ public class EnemyProjectile : MonoBehaviour
 
     public void SetTargetPosition(Vector3 newPosition)
     {
-        targetPosition = newPosition;
+        targetPosition = newPosition + new Vector3(0,0.5f,0);
         Destroy(gameObject, 5f); // super jank
     }
 

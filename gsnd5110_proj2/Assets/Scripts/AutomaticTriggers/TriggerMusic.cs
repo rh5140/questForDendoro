@@ -18,14 +18,15 @@ public class TriggerMusic : MonoBehaviour
         }
     }
 
-    IEnumerator PlayIntroThenLoop(float introLength = 8.3f)
+    IEnumerator PlayIntroThenLoop(float introLength = 8.0924f)
     {
+        audioSource.Stop();
         audioSource.clip = intro;
-        audioSource.Play();
+        audioSource.PlayOneShot(intro);
         yield return new WaitForSeconds(introLength);
-        Debug.Log("hi");
         audioSource.clip = loop;
         audioSource.Play();
+        // audioSource.PlayOneShot(loop);
         yield return null;
     }
 }
