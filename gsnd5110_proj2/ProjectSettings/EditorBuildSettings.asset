@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DevScenes/Level_4_Dark.unity
     guid: 70c1cfed9979ce3478ea376a2c2703cd
+  - enabled: 1
+    path: Assets/Scenes/DevScenes/Level_4.unity
+    guid: 7ed83061667144342baa6850549d3f13
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
