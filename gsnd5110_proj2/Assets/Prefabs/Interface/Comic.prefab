@@ -102,7 +102,13 @@ MonoBehaviour:
   - {fileID: 6947379326590820300}
   - {fileID: 8421940388571580617}
   audioSource: {fileID: 5926455346732081133}
-  sfx: {fileID: 8300000, guid: 86d633e80c8961a4ab9f96d8df117d42, type: 3}
+  sfx:
+  - {fileID: 8300000, guid: 04bad201d7838ef41b7a6a2aa0070335, type: 3}
+  - {fileID: 8300000, guid: b997419895d7d3146bc9157a212953a2, type: 3}
+  - {fileID: 8300000, guid: d259d7c8bf5d54f4f8a49b728d5f704c, type: 3}
+  lastPageFlip: {fileID: 8300000, guid: 63e2be0bfc88fa7479e6ac7e5e73edd3, type: 3}
+  intro: {fileID: 8300000, guid: b03067b563b40a845b139e754e6d1ff7, type: 3}
+  isTwist: 0
 --- !u!114 &6773015230624515508
 MonoBehaviour:
   m_ObjectHideFlags: 0

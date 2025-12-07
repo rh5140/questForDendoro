@@ -9,10 +9,13 @@ public class BubbleOnProximity : MonoBehaviour
     [SerializeField] public string dialogue;
     [SerializeField] string hitReaction;
     [SerializeField] bool changesWhenHit = true;
+    private AudioSource audioSource;
+    [SerializeField] AudioClip[] sfx;
 
     void Awake()
     {
         dialogueTMP.text = dialogue;
+        audioSource = GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -20,12 +23,14 @@ public class BubbleOnProximity : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             dialogueBubble.SetActive(true);
+            if (changesWhenHit) PlayRandomSfx();
         }
     }
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
+            audioSource.Stop();
             dialogueBubble.SetActive(false);
         }
     }
@@ -46,5 +51,11 @@ public class BubbleOnProximity : MonoBehaviour
     public void RefreshDialogueImmediate()
     {
         dialogueTMP.text = dialogue;
+    }
+
+    private void PlayRandomSfx()
+    {
+        int idx = Random.Range(0, sfx.Length);
+        audioSource.PlayOneShot(sfx[idx]);
     }
 }

@@ -10,6 +10,13 @@ public class TriggerBirdDialogue : MonoBehaviour
     [SerializeField] string line;
     [SerializeField] bool changeScene = false;
     [SerializeField] string nextScene;
+    private AudioSource audioSource;
+    [SerializeField] AudioClip[] sfx;
+
+    void OnAwake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -17,6 +24,7 @@ public class TriggerBirdDialogue : MonoBehaviour
         {
             dialogueBubble.SetActive(true);
             dialogueTMP.text = line;
+            PlayRandomSfx();
             StartCoroutine(DisableBubble());
         }
     }
@@ -39,5 +47,12 @@ public class TriggerBirdDialogue : MonoBehaviour
     void OnDestroy()
     {
         if (changeScene) SceneManager.LoadScene(nextScene);
+    }
+
+    private void PlayRandomSfx()
+    {
+        if (sfx.Length == 0) return;
+        int idx = Random.Range(0, sfx.Length);
+        audioSource.PlayOneShot(sfx[idx]);
     }
 }

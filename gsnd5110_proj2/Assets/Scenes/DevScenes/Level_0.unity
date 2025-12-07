@@ -1605,11 +1605,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9217149276553302, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.20037694
+      value: 0.20037729
       objectReference: {fileID: 0}
     - target: {fileID: 9217149276553302, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.97971886
+      value: 0.9797188
       objectReference: {fileID: 0}
     - target: {fileID: 1023546746946584493, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1617,19 +1617,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1023546746946584493, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.038103785
+      value: -0.038103655
       objectReference: {fileID: 0}
     - target: {fileID: 1762939815612311015, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.00000013038516
+      value: 0.000000033527613
       objectReference: {fileID: 0}
     - target: {fileID: 1964193679581539157, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000003993511
+      value: 0.00000423938
       objectReference: {fileID: 0}
     - target: {fileID: 1965178487201658645, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.2766211
+      value: 0.27662122
       objectReference: {fileID: 0}
     - target: {fileID: 1965178487201658645, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1653,11 +1653,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3981107231738678237, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9957414
+      value: 0.99574137
       objectReference: {fileID: 0}
     - target: {fileID: 3981107231738678237, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.09219027
+      value: 0.09219101
       objectReference: {fileID: 0}
     - target: {fileID: 4039704519992578129, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1677,15 +1677,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4276653836427754947, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.03124826
+      value: 0.031248227
       objectReference: {fileID: 0}
     - target: {fileID: 4454578412355743793, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000004656613
+      value: -0.0000050514936
       objectReference: {fileID: 0}
     - target: {fileID: 5215478025062441190, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000002719462
+      value: -0.00000033713877
       objectReference: {fileID: 0}
     - target: {fileID: 5409037580904234144, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1737,7 +1737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7094635690167473302, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.023446187
+      value: 0.023446253
       objectReference: {fileID: 0}
     - target: {fileID: 7786677617487014271, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_Resource
@@ -1789,7 +1789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8476354966137057138, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.093519226
+      value: -0.09351959
       objectReference: {fileID: 0}
     - target: {fileID: 9007540916216767375, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_Name
@@ -2070,6 +2070,8 @@ MonoBehaviour:
   dialogueBubble: {fileID: 1680752056}
   dialogueTMP: {fileID: 908741306}
   line: The mushroom ring will take us there.
+  changeScene: 0
+  nextScene: 
 --- !u!65 &763557781
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2402,6 +2404,8 @@ MonoBehaviour:
   dialogueBubble: {fileID: 1680752056}
   dialogueTMP: {fileID: 908741306}
   line: You saved me before. You can save them too.
+  changeScene: 0
+  nextScene: 
 --- !u!65 &1083876141
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2645,6 +2649,38 @@ PrefabInstance:
       propertyPath: dialogue
       value: The amulet is what keeps us safe from evil.
       objectReference: {fileID: 0}
+    - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'sfx.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 76901115c9389164e8262f8cd90b53e5, type: 3}
+    - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'sfx.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 6aa282d390861e94b93e42ab03d4693b, type: 3}
+    - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'sfx.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 1343122c2b1865049ab7c5f7c4dde98d, type: 3}
+    - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'sfx.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: c8d08588342a0e04998a82fd0c90bb9a, type: 3}
+    - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'sfx.Array.data[4]'
+      value: 
+      objectReference: {fileID: 8300000, guid: e294504b46583f24e9b944402dc6c9af, type: 3}
+    - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'sfx.Array.data[5]'
+      value: 
+      objectReference: {fileID: 8300000, guid: ae500a2a17168644db62f74b3fdd2399, type: 3}
+    - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'sfx.Array.data[6]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 6147057dc3fe07a4f8cb4a025a74c214, type: 3}
+    - target: {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'sfx.Array.data[7]'
+      value: 
+      objectReference: {fileID: 8300000, guid: ee5097d081b94234fba7337bc46d7249, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3419,6 +3455,8 @@ MonoBehaviour:
   dialogueBubble: {fileID: 1680752056}
   dialogueTMP: {fileID: 908741306}
   line: The raccoon ran into the forest!
+  changeScene: 0
+  nextScene: 
 --- !u!65 &1720019446
 BoxCollider:
   m_ObjectHideFlags: 0
