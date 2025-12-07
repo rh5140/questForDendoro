@@ -4,4 +4,5 @@ using UnityEngine;
 public class PlayerData : ScriptableObject
 {
     public ColorVariantAssets colorVariant;
+    public bool hasSword;
 }

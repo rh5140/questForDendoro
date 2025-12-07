@@ -11,6 +11,9 @@ public class PlayerSetup : MonoBehaviour
     public SpriteRenderer r_arm;
     public SpriteRenderer dead;
 
+    public GameObject stickHand;
+    public GameObject swordHand;
+
     void Awake()
     {
         helm.sprite = playerData.colorVariant.helm;
@@ -19,5 +22,21 @@ public class PlayerSetup : MonoBehaviour
         body.sprite = playerData.colorVariant.body;
         r_arm.sprite = playerData.colorVariant.r_arm;
         dead.sprite = playerData.colorVariant.dead;
+
+        ChangeHand();
+    }
+
+    public void ChangeHand()
+    {
+        if (playerData.hasSword)
+        {
+            stickHand.SetActive(false);
+            swordHand.SetActive(true);
+        }
+        else
+        {
+            stickHand.SetActive(true);
+            swordHand.SetActive(false);
+        }
     }
 }
