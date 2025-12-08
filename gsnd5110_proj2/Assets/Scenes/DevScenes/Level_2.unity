@@ -352,6 +352,7 @@ GameObject:
   - component: {fileID: 122958753}
   - component: {fileID: 122958755}
   - component: {fileID: 122958754}
+  - component: {fileID: 122958756}
   m_Layer: 5
   m_Name: Panel2
   m_TagString: Untagged
@@ -422,6 +423,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122958752}
   m_CullTransparentMesh: 1
+--- !u!114 &122958756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122958752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908faf0df55da8479090e3210c72681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnAwake
+  audioSource: {fileID: 303456228}
+  audioClip: {fileID: 8300000, guid: 76901115c9389164e8262f8cd90b53e5, type: 3}
 --- !u!1 &125995063
 GameObject:
   m_ObjectHideFlags: 0
@@ -2136,7 +2151,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8117108409469413970, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1881643589}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7515483975349547126, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 269036397}
   m_SourcePrefab: {fileID: 100100000, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
 --- !u!224 &269036392 stripped
 RectTransform:
@@ -2153,6 +2171,30 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3384802075886963159, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
   m_PrefabInstance: {fileID: 269036391}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &269036395 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5926455346732081133, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
+  m_PrefabInstance: {fileID: 269036391}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &269036396 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7515483975349547126, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
+  m_PrefabInstance: {fileID: 269036391}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &269036397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269036396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908faf0df55da8479090e3210c72681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnAwake
+  audioSource: {fileID: 269036395}
+  audioClip: {fileID: 8300000, guid: 6aa282d390861e94b93e42ab03d4693b, type: 3}
 --- !u!1001 &271210403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2733,7 +2775,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8117108409469413970, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1940605480}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7515483975349547126, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 303456230}
   m_SourcePrefab: {fileID: 100100000, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
 --- !u!224 &303456225 stripped
 RectTransform:
@@ -2750,6 +2795,30 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3384802075886963159, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
   m_PrefabInstance: {fileID: 303456224}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &303456228 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5926455346732081133, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
+  m_PrefabInstance: {fileID: 303456224}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &303456229 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7515483975349547126, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
+  m_PrefabInstance: {fileID: 303456224}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &303456230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303456229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908faf0df55da8479090e3210c72681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnAwake
+  audioSource: {fileID: 303456228}
+  audioClip: {fileID: 8300000, guid: c8d08588342a0e04998a82fd0c90bb9a, type: 3}
 --- !u!1 &304238347
 GameObject:
   m_ObjectHideFlags: 0
@@ -7316,6 +7385,7 @@ GameObject:
   - component: {fileID: 976015745}
   - component: {fileID: 976015747}
   - component: {fileID: 976015746}
+  - component: {fileID: 976015748}
   m_Layer: 5
   m_Name: Panel4
   m_TagString: Untagged
@@ -7385,6 +7455,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 976015744}
   m_CullTransparentMesh: 1
+--- !u!114 &976015748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976015744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908faf0df55da8479090e3210c72681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnAwake
+  audioSource: {fileID: 269036395}
+  audioClip: {fileID: 8300000, guid: ae500a2a17168644db62f74b3fdd2399, type: 3}
 --- !u!1001 &987555155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15078,6 +15162,7 @@ GameObject:
   - component: {fileID: 2038214103}
   - component: {fileID: 2038214105}
   - component: {fileID: 2038214104}
+  - component: {fileID: 2038214106}
   m_Layer: 5
   m_Name: Panel2
   m_TagString: Untagged
@@ -15148,6 +15233,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2038214102}
   m_CullTransparentMesh: 1
+--- !u!114 &2038214106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038214102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908faf0df55da8479090e3210c72681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnAwake
+  audioSource: {fileID: 269036395}
+  audioClip: {fileID: 8300000, guid: 76901115c9389164e8262f8cd90b53e5, type: 3}
 --- !u!1001 &2044325596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15453,6 +15552,7 @@ GameObject:
   - component: {fileID: 2123291750}
   - component: {fileID: 2123291752}
   - component: {fileID: 2123291751}
+  - component: {fileID: 2123291753}
   m_Layer: 5
   m_Name: Panel3
   m_TagString: Untagged
@@ -15522,6 +15622,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123291749}
   m_CullTransparentMesh: 1
+--- !u!114 &2123291753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123291749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908faf0df55da8479090e3210c72681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnAwake
+  audioSource: {fileID: 269036395}
+  audioClip: {fileID: 8300000, guid: ee5097d081b94234fba7337bc46d7249, type: 3}
 --- !u!1001 &2124965519
 PrefabInstance:
   m_ObjectHideFlags: 0
