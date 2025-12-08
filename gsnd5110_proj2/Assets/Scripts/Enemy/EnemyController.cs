@@ -50,4 +50,9 @@ public class EnemyController : MonoBehaviour
         if (_sr != null) _sr.color = Color.white;
     }
 
+    public int GetMaxHealth()
+    {
+        return _maxHealth;
+    }
+
 }

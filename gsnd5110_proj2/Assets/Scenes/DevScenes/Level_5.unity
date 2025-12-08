@@ -2377,6 +2377,11 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!1 &642215042 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 178599312750429797, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
+  m_PrefabInstance: {fileID: 1131648063}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &643937563
 GameObject:
   m_ObjectHideFlags: 0
@@ -2752,6 +2757,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2550205795397862596, guid: 4e5ec16dc172b444bb1a558e9aebfaf4, type: 3}
   m_PrefabInstance: {fileID: 1202902229}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &838018187 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7092457809425893345, guid: 4e5ec16dc172b444bb1a558e9aebfaf4, type: 3}
+  m_PrefabInstance: {fileID: 1202902229}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838018184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb0b472e8f2f4494299464c98a630b16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossController
 --- !u!1001 &849885464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3198,6 +3214,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.97972065
       objectReference: {fileID: 0}
+    - target: {fileID: 178599312750429797, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 739666927713638041, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 838018187}
     - target: {fileID: 1023546746946584493, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9992741
@@ -3225,6 +3249,14 @@ PrefabInstance:
     - target: {fileID: 1965178487201658645, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.9609774
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074115469130411311, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074115469130411311, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3765094340397129905, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3274,6 +3306,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.000000037252903
       objectReference: {fileID: 0}
+    - target: {fileID: 4848838604038065570, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 838018187}
     - target: {fileID: 4966277880277434281, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3324,6 +3360,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5945250525487567252, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761813506193169444, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761813506193169444, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761813506193169444, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7094635690167473302, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
@@ -3386,6 +3434,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8203880673469975585, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
+      propertyPath: m_text
+      value: Demon
+      objectReference: {fileID: 0}
     - target: {fileID: 8476354966137057138, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9956174
@@ -3415,6 +3467,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
+--- !u!114 &1131648064 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4848838604038065570, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
+  m_PrefabInstance: {fileID: 1131648063}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b4ec1a3aa31de74d80d64527f121425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthBar
 --- !u!1001 &1156700217
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3636,12 +3699,20 @@ PrefabInstance:
       value: DemonBoss Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7092457809425893345, guid: 4e5ec16dc172b444bb1a558e9aebfaf4, type: 3}
+      propertyPath: healthUI
+      value: 
+      objectReference: {fileID: 642215042}
+    - target: {fileID: 7092457809425893345, guid: 4e5ec16dc172b444bb1a558e9aebfaf4, type: 3}
       propertyPath: deathLine
       value: ...no...this... cannot be the end...I was... so close...
       objectReference: {fileID: 0}
     - target: {fileID: 7092457809425893345, guid: 4e5ec16dc172b444bb1a558e9aebfaf4, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1131648064}
+    - target: {fileID: 7092457809425893345, guid: 4e5ec16dc172b444bb1a558e9aebfaf4, type: 3}
       propertyPath: _maxHealth
-      value: 60
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 7816748354397651526, guid: 4e5ec16dc172b444bb1a558e9aebfaf4, type: 3}
       propertyPath: m_SizeDelta.y

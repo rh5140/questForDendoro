@@ -57,6 +57,8 @@ MonoBehaviour:
   dialogueBubble: {fileID: 0}
   dialogueTMP: {fileID: 0}
   deathLine: 
+  isQueen: 0
+  normalQueen: {fileID: 0}
 --- !u!65 &7677730060127440695
 BoxCollider:
   m_ObjectHideFlags: 0

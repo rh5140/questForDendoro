@@ -32,6 +32,9 @@ public class BossController : EnemyController
     [SerializeField] bool isQueen = false;
     [SerializeField] Sprite normalQueen;
 
+    [SerializeField] GameObject healthUI;
+    [SerializeField] HealthBar healthBar;
+
     void Update()
     {
         switch (currState)
@@ -68,9 +71,18 @@ public class BossController : EnemyController
         currTime += Time.deltaTime;
     }
 
+    
+    public override void ReceiveDamage(int dmg)
+    {
+        base.ReceiveDamage(dmg);
+        healthBar.SetHealth(_currHealth);
+    }
+
+
     protected override void Die()
     {
         _currHealth = 0;
+        healthUI.SetActive(false);
         currState = BossState.Dying;
         StartCoroutine(DeathSequence());
     }
@@ -111,6 +123,7 @@ public class BossController : EnemyController
     {
         dialogueBubble.SetActive(true);
         dialogueTMP.text = line;
+        healthUI.SetActive(true);
         StartCoroutine(DelayBeforeContinue());
     }
 

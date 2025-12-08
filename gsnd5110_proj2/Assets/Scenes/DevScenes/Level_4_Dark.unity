@@ -3078,6 +3078,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.000000037252903
       objectReference: {fileID: 0}
+    - target: {fileID: 4848838604038065570, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 1673078680}
     - target: {fileID: 4966277880277434281, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3186,6 +3190,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8203880673469975585, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
+      propertyPath: m_text
+      value: CORRUPTED QUEEN
+      objectReference: {fileID: 0}
     - target: {fileID: 8476354966137057138, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9956174
@@ -3218,6 +3226,22 @@ PrefabInstance:
 --- !u!82 &1131648064 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 7786677617487014271, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
+  m_PrefabInstance: {fileID: 1131648063}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1131648065 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4848838604038065570, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
+  m_PrefabInstance: {fileID: 1131648063}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b4ec1a3aa31de74d80d64527f121425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthBar
+--- !u!1 &1131648066 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 178599312750429797, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
   m_PrefabInstance: {fileID: 1131648063}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1131853730 stripped
@@ -4856,12 +4880,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 871314688645959108, guid: b14566d942f26db48aa3bb6db469aaab, type: 3}
+      propertyPath: healthUI
+      value: 
+      objectReference: {fileID: 1131648066}
+    - target: {fileID: 871314688645959108, guid: b14566d942f26db48aa3bb6db469aaab, type: 3}
       propertyPath: deathLine
       value: ...blue jay... take my power...
       objectReference: {fileID: 0}
     - target: {fileID: 871314688645959108, guid: b14566d942f26db48aa3bb6db469aaab, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1131648065}
+    - target: {fileID: 871314688645959108, guid: b14566d942f26db48aa3bb6db469aaab, type: 3}
       propertyPath: _maxHealth
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 871314688645959108, guid: b14566d942f26db48aa3bb6db469aaab, type: 3}
       propertyPath: normalQueen
@@ -4942,6 +4974,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnableOnDestroy
   toEnable: {fileID: 753690509}
+--- !u!114 &1673078680 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 871314688645959108, guid: b14566d942f26db48aa3bb6db469aaab, type: 3}
+  m_PrefabInstance: {fileID: 1673078676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673078677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb0b472e8f2f4494299464c98a630b16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossController
 --- !u!4 &1674756250 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3293913974288320263, guid: b9e1e27129399e9459beae3ab58c160b, type: 3}
