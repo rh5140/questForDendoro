@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2864857984548875115}
   - component: {fileID: 9067311837068304317}
   - component: {fileID: 863062014578058547}
+  - component: {fileID: 497750443619376464}
   - component: {fileID: 5821010252374259442}
   m_Layer: 0
   m_Name: CompanionTrigger
@@ -69,10 +70,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TriggerBirdDialogue
   dialogueBubble: {fileID: 0}
   dialogueTMP: {fileID: 0}
-  line: I can shoot that crystal!
+  dialogue: 
+  hitReaction: 
+  changesWhenHit: 0
   changeScene: 0
   nextScene: 
-  sfx:
+--- !u!114 &497750443619376464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593961794270368310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed50ec76c643eb43be66b3bbb887f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayRandomAudio
+  clips:
   - {fileID: 8300000, guid: 76901115c9389164e8262f8cd90b53e5, type: 3}
   - {fileID: 8300000, guid: 6aa282d390861e94b93e42ab03d4693b, type: 3}
   - {fileID: 8300000, guid: 1343122c2b1865049ab7c5f7c4dde98d, type: 3}

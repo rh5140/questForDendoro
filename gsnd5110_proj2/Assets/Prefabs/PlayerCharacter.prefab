@@ -745,6 +745,7 @@ GameObject:
   - component: {fileID: 2418757689864007716}
   - component: {fileID: 1401084111949941241}
   - component: {fileID: 4960664998788461028}
+  - component: {fileID: 1455026562850987592}
   m_Layer: 3
   m_Name: Weapon
   m_TagString: Untagged
@@ -847,13 +848,7 @@ MonoBehaviour:
   interval: 1
   playerAnimator: {fileID: 3316488627837859217}
   audioSource: {fileID: 0}
-  swingSfx:
-  - {fileID: 8300000, guid: 9beee41a3105fc643bbb6a20f9619b84, type: 3}
-  - {fileID: 8300000, guid: 544d9166ba4bb154e92a71908dc66548, type: 3}
-  - {fileID: 8300000, guid: f6c38b268ade01348ae87971269dd780, type: 3}
-  - {fileID: 8300000, guid: 6d146984ea0847f4b83511a33fe04303, type: 3}
-  - {fileID: 8300000, guid: fd32448da853bee44837ece010664194, type: 3}
-  - {fileID: 8300000, guid: 2140602d660190541b4626e6f4d7e3d8, type: 3}
+  swingSfx: []
 --- !u!82 &4960664998788461028
 AudioSource:
   m_ObjectHideFlags: 0
@@ -951,6 +946,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1455026562850987592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6391497797236798376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed50ec76c643eb43be66b3bbb887f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayRandomAudio
+  clips:
+  - {fileID: 8300000, guid: 9beee41a3105fc643bbb6a20f9619b84, type: 3}
+  - {fileID: 8300000, guid: 544d9166ba4bb154e92a71908dc66548, type: 3}
+  - {fileID: 8300000, guid: f6c38b268ade01348ae87971269dd780, type: 3}
+  - {fileID: 8300000, guid: 6d146984ea0847f4b83511a33fe04303, type: 3}
+  - {fileID: 8300000, guid: fd32448da853bee44837ece010664194, type: 3}
+  - {fileID: 8300000, guid: 2140602d660190541b4626e6f4d7e3d8, type: 3}
 --- !u!1 &6400874830725628530
 GameObject:
   m_ObjectHideFlags: 0

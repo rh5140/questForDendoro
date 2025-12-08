@@ -4,35 +4,41 @@ using UnityEngine;
 
 public class BubbleOnProximity : MonoBehaviour
 {
-    [SerializeField] GameObject dialogueBubble;
-    [SerializeField] TextMeshPro dialogueTMP;
+    [SerializeField] protected GameObject dialogueBubble;
+    [SerializeField] protected TextMeshPro dialogueTMP;
     [SerializeField] public string dialogue;
     [SerializeField] string hitReaction;
     [SerializeField] bool changesWhenHit = true;
-    private AudioSource audioSource;
-    [SerializeField] AudioClip[] sfx;
+    protected AudioSource audioSource;
+    protected PlayRandomAudio randomAudio;
 
-    void Awake()
+    protected void Awake()
     {
         dialogueTMP.text = dialogue;
         audioSource = GetComponent<AudioSource>();
+        randomAudio = GetComponent<PlayRandomAudio>();
     }
 
-    void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
             dialogueBubble.SetActive(true);
-            if (changesWhenHit) PlayRandomSfx();
+            if (changesWhenHit) PlaySfx();
         }
     }
-    void OnTriggerExit(Collider other)
+    protected virtual void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            audioSource.Stop();
+            if (changesWhenHit) audioSource.Stop();
             dialogueBubble.SetActive(false);
         }
+    }
+
+    protected void PlaySfx()
+    {
+        randomAudio.PlayRandomSfx();
     }
 
     public void ReactToHit()
@@ -46,16 +52,11 @@ public class BubbleOnProximity : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         dialogueTMP.text = dialogue;
+        randomAudio.PlayRandomSfx();
     }
 
     public void RefreshDialogueImmediate()
     {
         dialogueTMP.text = dialogue;
-    }
-
-    private void PlayRandomSfx()
-    {
-        int idx = Random.Range(0, sfx.Length);
-        audioSource.PlayOneShot(sfx[idx]);
     }
 }
