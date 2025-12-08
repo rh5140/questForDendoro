@@ -29,11 +29,13 @@ public class BossController : EnemyController
     [SerializeField] TextMeshPro dialogueTMP;
     [SerializeField] string deathLine;
 
-    [SerializeField] bool isQueen = false;
-    [SerializeField] Sprite normalQueen;
+    // [SerializeField] bool isQueen = false;
+    // [SerializeField] Sprite normalQueen;
 
     [SerializeField] GameObject healthUI;
     [SerializeField] HealthBar healthBar;
+
+    [SerializeField] GameObject endDialogue;
 
     void Update()
     {
@@ -82,7 +84,6 @@ public class BossController : EnemyController
     protected override void Die()
     {
         _currHealth = 0;
-        healthUI.SetActive(false);
         currState = BossState.Dying;
         StartCoroutine(DeathSequence());
     }
@@ -102,29 +103,34 @@ public class BossController : EnemyController
     IEnumerator DeathSequence()
     {
         shadowSprite.SetActive(false);
-        BossDialogue(deathLine);
-        yield return new WaitForSeconds(5f);
 
         float time = 0;
         float duration = 1f;
 
         while (time < duration)
         {
-            if (isQueen && time < duration / 2) _sr.sprite = normalQueen;
+            // if (isQueen && time < duration / 2) _sr.sprite = normalQueen;
             _sr.color = Color.Lerp(Color.red, Color.clear, time / duration);
             time += Time.deltaTime;
             yield return null;
         }
         _sr.color = Color.clear;
+        endDialogue.SetActive(true);
         Destroy(transform.parent.gameObject, 1f);
     }
 
-    public void BossDialogue(string line)
+    // public void BossDialogue(string line)
+    // {
+    //     dialogueBubble.SetActive(true);
+    //     dialogueTMP.text = line;
+    //     healthUI.SetActive(true);
+    //     StartCoroutine(DelayBeforeContinue());
+    // }
+
+    public void StartBoss()
     {
-        dialogueBubble.SetActive(true);
-        dialogueTMP.text = line;
         healthUI.SetActive(true);
-        StartCoroutine(DelayBeforeContinue());
+        currState = BossState.Moving;
     }
 
     IEnumerator DelayBeforeContinue(float waitSeconds = 5f)

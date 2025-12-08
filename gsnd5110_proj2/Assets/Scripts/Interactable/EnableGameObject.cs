@@ -5,12 +5,14 @@ public class EnableGameObject : MonoBehaviour
 {
     [SerializeField] GameObject targetGO; 
     [SerializeField] float waitTime = 0f;
+    bool enabled = false;
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (!enabled && other.gameObject.tag == "Player")
         {
             StartCoroutine(DelayBeforeEnable(waitTime));
+            enabled = true;
         }
     }
 
@@ -18,6 +20,6 @@ public class EnableGameObject : MonoBehaviour
     {
         yield return new WaitForSeconds(wait);
         targetGO.SetActive(true);
-        Destroy(gameObject);
+        // Destroy(gameObject);
     }
 }

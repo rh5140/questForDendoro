@@ -1,4 +1,12 @@
-﻿title: Test
+﻿title: MeetRaccoon
+---
+Blue Jay: Thief! Return the amulet at once.
+Boss Raccoon: Huh?!? You've got it all wrong-
+<<disable_dialogue>>
+===
+
+
+title: Test
 ---
 trigger entered
 ===

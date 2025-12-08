@@ -5617,9 +5617,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "- Jocelyn Chiang (2D art)\n- Ray Hsiao (programming), \n- Nathan Lawson
-    (3D art), \n- Jiayi Zhang (2D art), \n- Qitao Zheng (environment art)\nwith professor
-    Cliff Lee"
+  m_text: '- Jocelyn Chiang (2D art)
+
+    - Ray Hsiao (programming)
+
+    - Nathan
+    Lawson (3D art)
+
+    - Jiayi Zhang (2D art)
+
+    - Qitao Zheng (environment art)
+
+    with
+    professor Cliff Lee'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6ac30024b6906754d95d0eb4e7413605, type: 2}
   m_sharedMaterial: {fileID: 9175618170104575979, guid: 6ac30024b6906754d95d0eb4e7413605, type: 2}

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,5 +17,12 @@ public class HealthBar : MonoBehaviour
     public void SetHealth(int hp)
     {
         slider.value = hp;
+        if (hp == 0) StartCoroutine(DestroyHealthBar());
+    }
+
+    IEnumerator DestroyHealthBar()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(transform.parent.gameObject);
     }
 }

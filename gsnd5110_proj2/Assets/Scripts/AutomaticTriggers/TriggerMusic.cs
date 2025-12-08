@@ -9,14 +9,19 @@ public class TriggerMusic : MonoBehaviour
     [SerializeField] AudioClip loop;
     bool started = false;
 
-    void OnTriggerEnter(Collider other)
+    // void OnTriggerEnter(Collider other)
+    // {
+    //     if (started) return;
+    //     if (other.gameObject.tag == "Player")
+    //     {
+    //         StartCoroutine(PlayIntroThenLoop());
+    //         started = true;
+    //     }
+    // }
+
+    public void StartMusic()
     {
-        if (started) return;
-        if (other.gameObject.tag == "Player")
-        {
-            StartCoroutine(PlayIntroThenLoop());
-            started = true;
-        }
+        StartCoroutine(PlayIntroThenLoop());
     }
 
     IEnumerator PlayIntroThenLoop(float introLength = 8.0924f)

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Comic : MonoBehaviour
@@ -10,6 +11,15 @@ public class Comic : MonoBehaviour
     [SerializeField] AudioClip lastPageFlip;
     [SerializeField] AudioClip intro;
     [SerializeField] bool isTwist = false;
+    [SerializeField] bool triggersBoss = false;
+    [SerializeField] BossController boss;
+    [SerializeField] bool triggersMusic = false;
+    [SerializeField] TriggerMusic musicTrigger;
+    [SerializeField] bool changeScene = false;
+    [SerializeField] string newScene;
+    [SerializeField] bool changeSword = false;
+    [SerializeField] PlayerData playerData;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,6 +31,10 @@ public class Comic : MonoBehaviour
         if (currIdx == comicStates.Length)
         {
             audioSource.PlayOneShot(lastPageFlip);
+            if (triggersBoss) boss.StartBoss();
+            if (triggersMusic) musicTrigger.StartMusic();
+            if (changeScene) SceneManager.LoadScene(newScene);
+            if (changeSword) playerData.hasSword = true;
             foreach (GameObject state in comicStates)
             {
                 state.SetActive(false);

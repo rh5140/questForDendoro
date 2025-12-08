@@ -429,6 +429,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4883364135231041989, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'clips.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 76901115c9389164e8262f8cd90b53e5, type: 3}
+    - target: {fileID: 4883364135231041989, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'clips.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 6aa282d390861e94b93e42ab03d4693b, type: 3}
+    - target: {fileID: 4883364135231041989, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'clips.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 1343122c2b1865049ab7c5f7c4dde98d, type: 3}
+    - target: {fileID: 4883364135231041989, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'clips.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: c8d08588342a0e04998a82fd0c90bb9a, type: 3}
+    - target: {fileID: 4883364135231041989, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'clips.Array.data[4]'
+      value: 
+      objectReference: {fileID: 8300000, guid: e294504b46583f24e9b944402dc6c9af, type: 3}
+    - target: {fileID: 4883364135231041989, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'clips.Array.data[5]'
+      value: 
+      objectReference: {fileID: 8300000, guid: ae500a2a17168644db62f74b3fdd2399, type: 3}
+    - target: {fileID: 4883364135231041989, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'clips.Array.data[6]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 6147057dc3fe07a4f8cb4a025a74c214, type: 3}
+    - target: {fileID: 4883364135231041989, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'clips.Array.data[7]'
+      value: 
+      objectReference: {fileID: 8300000, guid: ee5097d081b94234fba7337bc46d7249, type: 3}
     - target: {fileID: 5561005396765387321, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.62
@@ -682,7 +714,8 @@ PrefabInstance:
       propertyPath: dialogue
       value: We are so grateful for your aid.
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8586429765505321655, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -713,7 +746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeSceneTrigger
   nextScene: Level_3
-  waitTime: 5
+  waitTime: 0.5
 --- !u!1 &280698932
 GameObject:
   m_ObjectHideFlags: 0
@@ -1849,6 +1882,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4883364135231041989, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'clips.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 76901115c9389164e8262f8cd90b53e5, type: 3}
+    - target: {fileID: 4883364135231041989, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'clips.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 6aa282d390861e94b93e42ab03d4693b, type: 3}
+    - target: {fileID: 4883364135231041989, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'clips.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 1343122c2b1865049ab7c5f7c4dde98d, type: 3}
+    - target: {fileID: 4883364135231041989, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'clips.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: f2a2e4f090d369f49aeafe8a440224dd, type: 3}
+    - target: {fileID: 4883364135231041989, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'clips.Array.data[4]'
+      value: 
+      objectReference: {fileID: 8300000, guid: e294504b46583f24e9b944402dc6c9af, type: 3}
+    - target: {fileID: 4883364135231041989, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'clips.Array.data[5]'
+      value: 
+      objectReference: {fileID: 8300000, guid: ae500a2a17168644db62f74b3fdd2399, type: 3}
+    - target: {fileID: 4883364135231041989, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'clips.Array.data[6]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 6147057dc3fe07a4f8cb4a025a74c214, type: 3}
+    - target: {fileID: 4883364135231041989, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
+      propertyPath: 'clips.Array.data[7]'
+      value: 
+      objectReference: {fileID: 8300000, guid: ee5097d081b94234fba7337bc46d7249, type: 3}
     - target: {fileID: 5561005396765387321, guid: 051bcf6b4c04ba54f86b19f2269af9dc, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.69
