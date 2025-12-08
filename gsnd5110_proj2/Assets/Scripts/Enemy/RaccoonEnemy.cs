@@ -13,11 +13,13 @@ public class RaccoonEnemy : EnemyController
     [SerializeField] Transform attackTransform;
     Vector3 attackPosition;
     [SerializeField] Vector3 hitboxSize;
-    [SerializeField] Animator animator;
 
+    [SerializeField] Animator animator;
+    [SerializeField] Animator redFlashAnimator;
     [SerializeField] GameObject shadowSprite;
     [SerializeField] GameObject deadSprite;
     [SerializeField] GameObject bodyHitbox;
+
     [SerializeField] SpriteRenderer attackRange;
 
     private PlayRandomAudio randomAudio;
@@ -38,6 +40,7 @@ public class RaccoonEnemy : EnemyController
         if (_currHealth > 0 && currTime > attackInterval)
         {
             animator.SetTrigger("Attack");
+            redFlashAnimator.SetTrigger("Attack");
             StartCoroutine(Lunge());
             currTime = 0;
         }
@@ -99,6 +102,7 @@ public class RaccoonEnemy : EnemyController
     private IEnumerator DeathSequence()
     {
         animator.SetTrigger("Dead");
+        redFlashAnimator.SetTrigger("Dead");
         bodyHitbox.SetActive(false);
 
         yield return new WaitForSeconds(0.5f);

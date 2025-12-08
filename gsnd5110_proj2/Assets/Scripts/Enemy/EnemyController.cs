@@ -44,7 +44,7 @@ public class EnemyController : MonoBehaviour
     private IEnumerator BecomeTemporarilyInvincible()
     {
         _isInvincible = true;
-        if (_sr != null) _sr.color = Color.red;
+        if (_sr != null && _currHealth > 0) _sr.color = Color.red;
         yield return new WaitForSeconds(_iFrames);
         _isInvincible = false;
         if (_sr != null) _sr.color = Color.white;

@@ -839,7 +839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d589de5a1b3fb95409ed22cf828a592d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Weapon
-  damage: 1
+  damage: 3
   center: {x: 0, y: 0, z: 0}
   range: 0
   hitboxSize: {x: 0, y: 0, z: 0}
@@ -847,8 +847,6 @@ MonoBehaviour:
   attackButton: {fileID: 0}
   interval: 1
   playerAnimator: {fileID: 3316488627837859217}
-  audioSource: {fileID: 0}
-  swingSfx: []
 --- !u!82 &4960664998788461028
 AudioSource:
   m_ObjectHideFlags: 0
