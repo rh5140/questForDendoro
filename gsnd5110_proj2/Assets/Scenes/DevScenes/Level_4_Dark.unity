@@ -857,6 +857,10 @@ PrefabInstance:
       value: She should be up ahead.
       objectReference: {fileID: 0}
     - target: {fileID: 863062014578058547, guid: 984660e1b2a58354e8732a24f05008ac, type: 3}
+      propertyPath: dialogue
+      value: Let's stop this.
+      objectReference: {fileID: 0}
+    - target: {fileID: 863062014578058547, guid: 984660e1b2a58354e8732a24f05008ac, type: 3}
       propertyPath: dialogueTMP
       value: 
       objectReference: {fileID: 616440700}
@@ -2088,6 +2092,10 @@ PrefabInstance:
       value: I can't believe this happened...
       objectReference: {fileID: 0}
     - target: {fileID: 863062014578058547, guid: 984660e1b2a58354e8732a24f05008ac, type: 3}
+      propertyPath: dialogue
+      value: I didn't realize the amulet such evil...
+      objectReference: {fileID: 0}
+    - target: {fileID: 863062014578058547, guid: 984660e1b2a58354e8732a24f05008ac, type: 3}
       propertyPath: dialogueTMP
       value: 
       objectReference: {fileID: 616440700}
@@ -2518,6 +2526,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9e1e27129399e9459beae3ab58c160b, type: 3}
+--- !u!1001 &832905428
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3993513586458547198, guid: 8bda91cefb8c6714d9bb397c5bdfed75, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 101.01374
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993513586458547198, guid: 8bda91cefb8c6714d9bb397c5bdfed75, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.549995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993513586458547198, guid: 8bda91cefb8c6714d9bb397c5bdfed75, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 221.26436
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993513586458547198, guid: 8bda91cefb8c6714d9bb397c5bdfed75, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993513586458547198, guid: 8bda91cefb8c6714d9bb397c5bdfed75, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993513586458547198, guid: 8bda91cefb8c6714d9bb397c5bdfed75, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993513586458547198, guid: 8bda91cefb8c6714d9bb397c5bdfed75, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993513586458547198, guid: 8bda91cefb8c6714d9bb397c5bdfed75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993513586458547198, guid: 8bda91cefb8c6714d9bb397c5bdfed75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993513586458547198, guid: 8bda91cefb8c6714d9bb397c5bdfed75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558451990433932247, guid: 8bda91cefb8c6714d9bb397c5bdfed75, type: 3}
+      propertyPath: m_Size.x
+      value: 28.849884
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558451990433932247, guid: 8bda91cefb8c6714d9bb397c5bdfed75, type: 3}
+      propertyPath: m_Center.x
+      value: 1.707489
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159285249494165697, guid: 8bda91cefb8c6714d9bb397c5bdfed75, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8bda91cefb8c6714d9bb397c5bdfed75, type: 3}
 --- !u!4 &842005694 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3293913974288320263, guid: b9e1e27129399e9459beae3ab58c160b, type: 3}
@@ -4220,6 +4293,10 @@ PrefabInstance:
       value: We can do this together!
       objectReference: {fileID: 0}
     - target: {fileID: 863062014578058547, guid: 984660e1b2a58354e8732a24f05008ac, type: 3}
+      propertyPath: dialogue
+      value: We can do it together!
+      objectReference: {fileID: 0}
+    - target: {fileID: 863062014578058547, guid: 984660e1b2a58354e8732a24f05008ac, type: 3}
       propertyPath: dialogueTMP
       value: 
       objectReference: {fileID: 616440700}
@@ -5823,3 +5900,4 @@ SceneRoots:
   - {fileID: 1255827940}
   - {fileID: 753690508}
   - {fileID: 205208728}
+  - {fileID: 832905428}

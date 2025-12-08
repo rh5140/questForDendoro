@@ -9,6 +9,7 @@ public class EnemyAOE : MonoBehaviour
     [SerializeField] protected float radius;
     [SerializeField] SpriteRenderer rangeIndicator; // change to shader if time
     [SerializeField] SpriteRenderer rangeOutline;
+    [SerializeField] SpriteRenderer occludingIndicator;
     bool attackCompleted = true;
 
     public virtual void UseAttack()
@@ -24,18 +25,21 @@ public class EnemyAOE : MonoBehaviour
         if (rangeOutline != null) rangeOutline.color = Color.white;
         float time = 0;
         Color startValue = rangeIndicator.color;
-        Color endValue = Color.white;
+        Color endValue = new Color(1f, 1f, 1f, 0.5f); // Color.white;
 
         while (time < duration)
         {
             rangeIndicator.color = Color.Lerp(startValue, endValue, time / duration);
+            occludingIndicator.color = Color.Lerp(startValue, endValue, time / duration);
             time += Time.deltaTime;
             yield return null;
         }
         rangeIndicator.color = endValue;
+        occludingIndicator.color = endValue;
 
         yield return new WaitForSeconds(0.2f);
         rangeIndicator.color = Color.clear;
+        occludingIndicator.color = Color.clear;
         if (rangeOutline != null) rangeOutline.color = Color.clear;
     }
 
@@ -45,6 +49,7 @@ public class EnemyAOE : MonoBehaviour
         CheckOverlapForDamage();
         attackCompleted = true;
         rangeIndicator.color = Color.clear;
+        occludingIndicator.color = Color.clear;
         if (rangeOutline != null) rangeOutline.color = Color.clear;
     }
 
