@@ -274,6 +274,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: RaccoonAOE
       objectReference: {fileID: 0}
+    - target: {fileID: 4708812676195220390, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5287169560748551586, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
       propertyPath: deathLine
       value: ...this dark power...

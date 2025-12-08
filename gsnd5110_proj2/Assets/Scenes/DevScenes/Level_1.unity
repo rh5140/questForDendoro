@@ -1751,6 +1751,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1668581341191340608, guid: 59673193ee68df3448481e99bc19bd87, type: 3}
   m_PrefabInstance: {fileID: 1174635994}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &306797361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 306797362}
+  - component: {fileID: 306797363}
+  m_Layer: 0
+  m_Name: SceneSetup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &306797362
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306797361}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 146.05298, y: -0, z: 152.48354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &306797363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306797361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00b9346d0a36c1499c30bc92741f404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetUpMusic
+  audioClip: {fileID: 8300000, guid: 2a7eb8da735cd7c49aaf42840bfd84d9, type: 3}
 --- !u!1001 &310590601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10957,6 +11002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2521224067752563145}
   - component: {fileID: 7786677617600478578}
+  - component: {fileID: 7786677617600478579}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -11567,11 +11613,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7786677617600478579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3509231443581457277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8531c94ded26d9144a21b97c4ad53545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicManager
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 4797618864181904861}
+  - {fileID: 306797362}
   - {fileID: 2521224067752563145}
   - {fileID: 7058572625034996334}
   - {fileID: 4305986725246872707}

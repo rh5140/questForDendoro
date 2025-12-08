@@ -7,6 +7,7 @@ public class NPCFakeTeleport : MonoBehaviour
     public bool activated = false;
     bool alreadyRunning = false;
     [SerializeField] Animator movementAnimator;
+    [SerializeField] Animator wobbleAnimator;
 
     void OnTriggerEnter(Collider collider)
     {
@@ -28,5 +29,6 @@ public class NPCFakeTeleport : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         movementAnimator.SetTrigger("Move");
+        wobbleAnimator.SetTrigger("Wobble");
     }
 }

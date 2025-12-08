@@ -26,13 +26,17 @@ public class Comic : MonoBehaviour
                 state.SetActive(false);
             }
             GetComponent<Image>().enabled = false;
-            Destroy(gameObject, 5f);
+            Destroy(gameObject, 10f);
         }
         else
         {
             comicStates[currIdx].SetActive(true);
             currIdx++;
-            if (isTwist && currIdx == 4) audioSource.PlayOneShot(intro);
+            if (isTwist && currIdx == 4) 
+            {
+                MusicManager.Instance.StopAudio();
+                audioSource.PlayOneShot(intro);
+            }
             PlayRandomSfx();
         }
     }
