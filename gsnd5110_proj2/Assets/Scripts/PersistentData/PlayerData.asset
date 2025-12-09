@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
   colorVariant: {fileID: 11400000, guid: ac4ea6eb9dc81924fb72a4e19a0628f8, type: 2}
+  hasSword: 0

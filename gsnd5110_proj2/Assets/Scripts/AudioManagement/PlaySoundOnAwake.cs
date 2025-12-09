@@ -7,6 +7,7 @@ public class PlaySoundOnAwake : MonoBehaviour
 
     void OnEnable()
     {
+        MusicManager.Instance.DropVolume();
         audioSource.Stop();
         audioSource.PlayOneShot(audioClip);
     }

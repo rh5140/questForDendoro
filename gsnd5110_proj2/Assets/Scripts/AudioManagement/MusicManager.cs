@@ -20,6 +20,11 @@ public class MusicManager : MonoBehaviour
         }
     }
 
+    public void PlayOnce(AudioClip audioClip)
+    {
+        audioSource.PlayOneShot(audioClip);
+    }
+
     public void ChangeTrack(AudioClip audioClip)
     {
         StopAudio();
@@ -35,5 +40,15 @@ public class MusicManager : MonoBehaviour
     public AudioClip GetCurrentClip()
     {
         return audioSource.clip;
+    }
+
+    public void DropVolume()
+    {
+        audioSource.volume = 0.25f;
+    }
+
+    public void ResetVolume()
+    {
+        audioSource.volume = 1f;
     }
 }

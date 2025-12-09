@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -19,6 +20,9 @@ public class Comic : MonoBehaviour
     [SerializeField] string newScene;
     [SerializeField] bool changeSword = false;
     [SerializeField] PlayerData playerData;
+    
+    bool buffered = false;
+    float bufferTime = 0.5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,6 +32,7 @@ public class Comic : MonoBehaviour
 
     public void ChangeToNextState()
     {
+        if (buffered) return;
         if (currIdx == comicStates.Length)
         {
             audioSource.PlayOneShot(lastPageFlip);
@@ -40,16 +45,19 @@ public class Comic : MonoBehaviour
                 state.SetActive(false);
             }
             GetComponent<Image>().enabled = false;
+            MusicManager.Instance.ResetVolume();
             Destroy(gameObject, 10f);
         }
         else
         {
+            buffered = true;
+            StartCoroutine(WaitForBuffer());
             comicStates[currIdx].SetActive(true);
             currIdx++;
             if (isTwist && currIdx == 4) 
             {
                 MusicManager.Instance.StopAudio();
-                audioSource.PlayOneShot(intro);
+                MusicManager.Instance.PlayOnce(intro);
             }
             PlayRandomSfx();
         }
@@ -59,5 +67,11 @@ public class Comic : MonoBehaviour
     {
         int idx = Random.Range(0, sfx.Length);
         audioSource.PlayOneShot(sfx[idx]);
+    }
+
+    IEnumerator WaitForBuffer()
+    {
+        yield return new WaitForSeconds(bufferTime);
+        buffered = false;
     }
 }
