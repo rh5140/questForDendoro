@@ -7,7 +7,6 @@ public class SetUpMusic : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (audioClip == null) return;
         if (audioClip != MusicManager.Instance.GetCurrentClip())
         {
             MusicManager.Instance.ChangeTrack(audioClip);

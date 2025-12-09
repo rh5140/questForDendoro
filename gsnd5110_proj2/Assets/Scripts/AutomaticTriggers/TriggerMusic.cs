@@ -4,7 +4,6 @@ using UnityEngine;
 public class TriggerMusic : MonoBehaviour
 {
     [SerializeField] AudioSource introOnly;
-    [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip intro;
     [SerializeField] AudioClip loop;
     bool started = false;
@@ -21,14 +20,11 @@ public class TriggerMusic : MonoBehaviour
 
     public void StartMusic()
     {
-        Debug.Log("Start music");
         StartCoroutine(PlayIntroThenLoop());
     }
 
     IEnumerator PlayIntroThenLoop(float introLength = 8.0924f)
     {
-        Debug.Log("Play intro then loop");
-        audioSource.clip = loop;
         introOnly.Play();
         yield return new WaitForSecondsRealtime(introLength + 0.15f);
         MusicManager.Instance.ChangeTrack(loop);
