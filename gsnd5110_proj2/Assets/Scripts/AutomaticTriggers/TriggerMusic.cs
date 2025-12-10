@@ -25,6 +25,7 @@ public class TriggerMusic : MonoBehaviour
 
     IEnumerator PlayIntroThenLoop(float introLength = 8.0924f)
     {
+        MusicManager.Instance.StopAudio();
         introOnly.Play();
         yield return new WaitForSecondsRealtime(introLength + 0.15f);
         MusicManager.Instance.ChangeTrack(loop);

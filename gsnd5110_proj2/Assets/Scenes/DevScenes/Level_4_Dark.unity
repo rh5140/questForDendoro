@@ -771,7 +771,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerMusic
   introOnly: {fileID: 45830032}
-  audioSource: {fileID: 1131648064}
   intro: {fileID: 8300000, guid: 376f7eec83996704b829d0e053189558, type: 3}
   loop: {fileID: 8300000, guid: c895fffe9553c20408965b240b70b5b8, type: 3}
 --- !u!65 &45830030
@@ -7381,6 +7380,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.0380964
       objectReference: {fileID: 0}
+    - target: {fileID: 1274261160554212793, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 668bb6f30fa08cf4dbb1c10835126bf5, type: 3}
     - target: {fileID: 1762939815612311015, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.0000003315508
@@ -7596,11 +7599,6 @@ PrefabInstance:
       addedObject: {fileID: 189505}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
---- !u!82 &1131648064 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 7786677617487014271, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
-  m_PrefabInstance: {fileID: 1131648063}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1131648065 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4848838604038065570, guid: bf01ffe395075544c91696f4cda30f83, type: 3}

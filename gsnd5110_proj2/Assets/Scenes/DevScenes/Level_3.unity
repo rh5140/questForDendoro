@@ -1952,6 +1952,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: cf7b9b7d72e83734dad3a44d81c2aa81, type: 3}
     - target: {fileID: 8565915229723774433, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
+      propertyPath: portal
+      value: 
+      objectReference: {fileID: 8300000, guid: 668bb6f30fa08cf4dbb1c10835126bf5, type: 3}
+    - target: {fileID: 8565915229723774433, guid: 1891da5051d3b7a4388a3ba7789e0df9, type: 3}
       propertyPath: isTwist
       value: 1
       objectReference: {fileID: 0}

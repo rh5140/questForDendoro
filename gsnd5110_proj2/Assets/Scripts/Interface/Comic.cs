@@ -11,6 +11,7 @@ public class Comic : MonoBehaviour
     [SerializeField] AudioClip[] sfx;
     [SerializeField] AudioClip lastPageFlip;
     [SerializeField] AudioClip intro;
+    [SerializeField] AudioClip portal;
     [SerializeField] bool isTwist = false;
     [SerializeField] bool triggersBoss = false;
     [SerializeField] BossController boss;
@@ -58,6 +59,7 @@ public class Comic : MonoBehaviour
             {
                 MusicManager.Instance.StopAudio();
                 MusicManager.Instance.PlayOnce(intro);
+                StartCoroutine(WaitForIntro());
             }
             PlayRandomSfx();
         }
@@ -73,5 +75,12 @@ public class Comic : MonoBehaviour
     {
         yield return new WaitForSeconds(bufferTime);
         buffered = false;
+    }
+
+    IEnumerator WaitForIntro()
+    {
+        float introLength = 8.0924f;
+        yield return new WaitForSecondsRealtime(introLength + 0.15f);
+        MusicManager.Instance.ChangeTrack(portal);
     }
 }

@@ -10,6 +10,7 @@ public class CharacterHealth : MonoBehaviour
     [SerializeField] private float _iFrames = 0.5f;
     // [SerializeField] private SpriteRenderer _sr;
     [SerializeField] private HeartsInterface _hearts;
+    AudioSource audioSource;
     [SerializeField] private GameObject _gameOverScreen;
     [SerializeField] Animator playerAnimator;
     [SerializeField] GameObject animatedBody;
@@ -24,7 +25,7 @@ public class CharacterHealth : MonoBehaviour
     void OnEnable()
     {
         _currHealth = _maxHealth;
-        // _scene = SceneManager.GetActiveScene().name;
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void HealDamage(int heal)
@@ -44,6 +45,7 @@ public class CharacterHealth : MonoBehaviour
         if (_isDead) return;
         if (_isInvincible) return;
         playerAnimator.Play("Hurt");
+        audioSource.Play();
         _hearts.RemoveHearts(dmg);
         _currHealth -= dmg;
         if (_currHealth <= 0) Die();

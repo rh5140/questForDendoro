@@ -432,6 +432,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1103639461}
+        m_TargetAssemblyTypeName: PlayRandomAudio, Assembly-CSharp
+        m_MethodName: PlayRandomSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &268778282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -800,8 +812,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a205995ba52f441936b1493578d876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
-  audioSource: {fileID: 531779141}
-  sfx: {fileID: 8300000, guid: 86d633e80c8961a4ab9f96d8df117d42, type: 3}
 --- !u!212 &430228747 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 8183179476549180911, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
@@ -1118,6 +1128,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: green
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1103639461}
+        m_TargetAssemblyTypeName: PlayRandomAudio, Assembly-CSharp
+        m_MethodName: PlayRandomSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &525798982
@@ -1533,6 +1555,18 @@ MonoBehaviour:
           m_StringArgument: white
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1103639461}
+        m_TargetAssemblyTypeName: PlayRandomAudio, Assembly-CSharp
+        m_MethodName: PlayRandomSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &563771858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1869,9 +1903,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 429577492}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: PlaySfx
+      - m_Target: {fileID: 1103639461}
+        m_TargetAssemblyTypeName: PlayRandomAudio, Assembly-CSharp
+        m_MethodName: PlayRandomSfx
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2009,6 +2043,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1730196611}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1103639461}
+        m_TargetAssemblyTypeName: PlayRandomAudio, Assembly-CSharp
+        m_MethodName: PlayRandomSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2819,6 +2865,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1103639461}
+        m_TargetAssemblyTypeName: PlayRandomAudio, Assembly-CSharp
+        m_MethodName: PlayRandomSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &865495378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3167,6 +3225,18 @@ MonoBehaviour:
           m_StringArgument: Level_0
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1103639461}
+        m_TargetAssemblyTypeName: PlayRandomAudio, Assembly-CSharp
+        m_MethodName: PlayRandomSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &909147210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3303,6 +3373,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: red
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1103639461}
+        m_TargetAssemblyTypeName: PlayRandomAudio, Assembly-CSharp
+        m_MethodName: PlayRandomSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &971827811
@@ -3631,6 +3713,152 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094484846}
   m_CullTransparentMesh: 1
+--- !u!1 &1103639460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1103639463}
+  - component: {fileID: 1103639462}
+  - component: {fileID: 1103639461}
+  m_Layer: 0
+  m_Name: MenuAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1103639461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103639460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed50ec76c643eb43be66b3bbb887f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayRandomAudio
+  clips:
+  - {fileID: 8300000, guid: 35355b881e814064aad44574685c7e1d, type: 3}
+  - {fileID: 8300000, guid: a042b6973cdb8994e96ea8d6aa36bdb9, type: 3}
+  - {fileID: 8300000, guid: 3a732e90eb3dfcd41acb31ec0ba9173a, type: 3}
+--- !u!82 &1103639462
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103639460}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1103639463
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103639460}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 294.8532, y: 0, z: 61.46222}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1151396124
 GameObject:
   m_ObjectHideFlags: 0
@@ -4200,11 +4428,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1457078344135118819, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000104308114
+      value: -0.000000059604638
       objectReference: {fileID: 0}
     - target: {fileID: 1458908830413099939, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.27662578
+      value: 0.27662593
       objectReference: {fileID: 0}
     - target: {fileID: 1458908830413099939, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: m_LocalRotation.z
@@ -4504,7 +4732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7858666056442540064, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.02344306
+      value: 0.023443127
       objectReference: {fileID: 0}
     - target: {fileID: 7978878832521655311, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: m_Layer
@@ -4524,7 +4752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8256413106714031578, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.02448234
+      value: -0.024482407
       objectReference: {fileID: 0}
     - target: {fileID: 8389592473565862897, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: m_Layer
@@ -4536,7 +4764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8852015663467154372, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.09351999
+      value: -0.09352016
       objectReference: {fileID: 0}
     - target: {fileID: 8865972038812125736, guid: 68d789ec1aaa4914a8d639d8470e49e6, type: 3}
       propertyPath: m_Layer
@@ -4669,6 +4897,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: blue
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1103639461}
+        m_TargetAssemblyTypeName: PlayRandomAudio, Assembly-CSharp
+        m_MethodName: PlayRandomSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1330691491
@@ -5362,6 +5602,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1730196611}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1103639461}
+        m_TargetAssemblyTypeName: PlayRandomAudio, Assembly-CSharp
+        m_MethodName: PlayRandomSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6090,6 +6342,18 @@ MonoBehaviour:
           m_StringArgument: orange
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1103639461}
+        m_TargetAssemblyTypeName: PlayRandomAudio, Assembly-CSharp
+        m_MethodName: PlayRandomSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2031688837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6274,3 +6538,4 @@ SceneRoots:
   - {fileID: 587326769}
   - {fileID: 899414599}
   - {fileID: 531779142}
+  - {fileID: 1103639463}
