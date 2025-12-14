@@ -7383,7 +7383,7 @@ PrefabInstance:
     - target: {fileID: 1274261160554212793, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 668bb6f30fa08cf4dbb1c10835126bf5, type: 3}
+      objectReference: {fileID: 8300000, guid: ff91f497773f93a43b20df878d9c230b, type: 3}
     - target: {fileID: 1762939815612311015, guid: bf01ffe395075544c91696f4cda30f83, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.0000003315508

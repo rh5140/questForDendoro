@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2438270328997752976}
   - component: {fileID: 6715768629598516398}
+  - component: {fileID: 2805844148956981077}
   m_Layer: 0
   m_Name: CrossRectAOE
   m_TagString: Untagged
@@ -52,9 +53,27 @@ MonoBehaviour:
   rangeIndicator: {fileID: 0}
   rangeOutline: {fileID: 0}
   occludingIndicator: {fileID: 0}
+  playAudio: 1
   rects:
   - {fileID: 5266137490721161215}
   - {fileID: 1967564377130179556}
+--- !u!114 &2805844148956981077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025109295314284868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed50ec76c643eb43be66b3bbb887f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayRandomAudio
+  clips:
+  - {fileID: 8300000, guid: 7af171794e5467e478e7410376145d50, type: 3}
+  - {fileID: 8300000, guid: 4be3d5119da44d14d94e99505a7347b2, type: 3}
+  - {fileID: 8300000, guid: 3d5fcb929d1e85c46a76bca926adbcef, type: 3}
+  - {fileID: 8300000, guid: 29595de959c7aad4db3e7fb839423e82, type: 3}
 --- !u!1001 &2625791705714105609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -151,7 +170,8 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 6fc669b5ab639524f981c94f2e34eaeb, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7901823595343944572, guid: 06c2437cff511b74ab42a8dd1df2e484, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -354,6 +374,22 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7679380799196609151, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
+      propertyPath: 'clips.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: e15a340194944774d826e962b621e949, type: 3}
+    - target: {fileID: 7679380799196609151, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
+      propertyPath: 'clips.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 5b6aa86e8be3c934da8811f245128034, type: 3}
+    - target: {fileID: 7679380799196609151, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
+      propertyPath: 'clips.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 50a3f1077318e9841b6cca8205e75321, type: 3}
+    - target: {fileID: 7679380799196609151, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
+      propertyPath: 'clips.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 82047d33cb38a0e4a9ae43b605734e30, type: 3}
     - target: {fileID: 7841843142095484831, guid: af460bda3026aec418fc0964dfd9930d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -502,7 +538,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: RaccoonAOE
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7901823595343944572, guid: 06c2437cff511b74ab42a8dd1df2e484, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

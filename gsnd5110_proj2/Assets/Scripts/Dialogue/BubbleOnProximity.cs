@@ -9,13 +9,11 @@ public class BubbleOnProximity : MonoBehaviour
     [SerializeField] public string dialogue;
     [SerializeField] string hitReaction;
     [SerializeField] bool changesWhenHit = true;
-    protected AudioSource audioSource;
     protected PlayRandomAudio randomAudio;
 
     protected void Awake()
     {
         dialogueTMP.text = dialogue;
-        audioSource = GetComponent<AudioSource>();
         randomAudio = GetComponent<PlayRandomAudio>();
     }
 
@@ -31,7 +29,6 @@ public class BubbleOnProximity : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (changesWhenHit) audioSource.Stop();
             dialogueBubble.SetActive(false);
         }
     }

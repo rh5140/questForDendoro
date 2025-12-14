@@ -190,6 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4893945967732495425}
   - component: {fileID: 1855805784412216797}
+  - component: {fileID: -390919013658336985}
   m_Layer: 0
   m_Name: CircleAOE
   m_TagString: Enemy
@@ -232,3 +233,20 @@ MonoBehaviour:
   rangeIndicator: {fileID: 6767448328774631556}
   rangeOutline: {fileID: 0}
   occludingIndicator: {fileID: 8728751597969576915}
+--- !u!114 &-390919013658336985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8791293099714463143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed50ec76c643eb43be66b3bbb887f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayRandomAudio
+  clips:
+  - {fileID: 8300000, guid: 005aef22d448af549b426210a3a4e41e, type: 3}
+  - {fileID: 8300000, guid: 5390087de68a9ee4e8fc884f1f8f7309, type: 3}
+  - {fileID: 8300000, guid: 067e266ec378c7d4397a258df402c3ca, type: 3}
+  - {fileID: 8300000, guid: 3993b6beae564eb439e91e700f1c3b63, type: 3}

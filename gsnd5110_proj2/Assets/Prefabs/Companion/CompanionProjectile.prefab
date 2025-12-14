@@ -53,6 +53,8 @@ MonoBehaviour:
   range: 1
   hitboxSize: {x: 1, y: 1, z: 1}
   _sr: {fileID: 2490522014927806099}
+  shootSfx: {fileID: 8300000, guid: 473b1958f574496458cb72c491927b7e, type: 3}
+  impactSfx: {fileID: 8300000, guid: e72e1dc19512de745906989ff6ec737b, type: 3}
 --- !u!212 &2490522014927806099
 SpriteRenderer:
   m_ObjectHideFlags: 0

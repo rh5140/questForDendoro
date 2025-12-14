@@ -3,12 +3,12 @@ using UnityEngine;
 public class CharacterInteraction : MonoBehaviour
 {
     Interactable currInteractable = null;
-    AudioSource audioSource;
     [SerializeField] Animator playerAnimator;
+    PlayRandomAudio randomAudio;
 
     public void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        randomAudio = GetComponent<PlayRandomAudio>();
     }
 
     public void Interact()
@@ -16,7 +16,7 @@ public class CharacterInteraction : MonoBehaviour
         if (currInteractable != null) 
         {
             playerAnimator.Play("Interact");
-            audioSource.Play();
+            randomAudio.PlayRandomSfx();
             currInteractable.RunInteraction();
         }
     }

@@ -23,6 +23,8 @@ public class RaccoonEnemy : EnemyController
     [SerializeField] SpriteRenderer attackRange;
 
     private PlayRandomAudio randomAudio;
+    [SerializeField] AudioClip attackSfx;
+    [SerializeField] AudioClip[] growlSfx;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -48,6 +50,7 @@ public class RaccoonEnemy : EnemyController
 
     private IEnumerator Lunge()
     {
+        GetComponent<AudioSource>().PlayOneShot(attackSfx);
         float time = 0;
         float duration = 0.5f;
         while (time < duration)
@@ -77,6 +80,7 @@ public class RaccoonEnemy : EnemyController
                 yield return null;
             }
         }
+        if (_currHealth != 0) PlayRandomSfx();
     }
 
     private IEnumerator Attack()
@@ -134,5 +138,11 @@ public class RaccoonEnemy : EnemyController
     private void PlaySFX()
     {
         randomAudio.PlayRandomSfx();
+    }
+
+    private void PlayRandomSfx()
+    {
+        int idx = Random.Range(0,growlSfx.Length);
+        GetComponent<AudioSource>().PlayOneShot(growlSfx[idx]);
     }
 }

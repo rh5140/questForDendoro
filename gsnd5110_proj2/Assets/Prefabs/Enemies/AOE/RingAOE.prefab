@@ -190,6 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8326718523155535996}
   - component: {fileID: 2408442117644275112}
+  - component: {fileID: 8545524607954042946}
   m_Layer: 0
   m_Name: RingAOE
   m_TagString: Enemy
@@ -233,8 +234,25 @@ MonoBehaviour:
   rangeIndicator: {fileID: 6896566078017015611}
   rangeOutline: {fileID: 5044322656731671534}
   occludingIndicator: {fileID: 4214423338392506628}
+  playAudio: 1
   innerRadius: 8
-  isRaccoon: 0
+--- !u!114 &8545524607954042946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4723224232574159614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed50ec76c643eb43be66b3bbb887f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayRandomAudio
+  clips:
+  - {fileID: 8300000, guid: 5e1419ee0d75fc74298453bafb8a0391, type: 3}
+  - {fileID: 8300000, guid: 283952e578101f648b23e320a7722c9c, type: 3}
+  - {fileID: 8300000, guid: e1af6f68c041d31418e21bedb072e293, type: 3}
+  - {fileID: 8300000, guid: 11c0a5bb156840749a0107fbe43bac3a, type: 3}
 --- !u!1 &6893630751221903816
 GameObject:
   m_ObjectHideFlags: 0

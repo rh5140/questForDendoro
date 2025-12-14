@@ -29,13 +29,18 @@ public class BossController : EnemyController
     [SerializeField] TextMeshPro dialogueTMP;
     [SerializeField] string deathLine;
 
-    // [SerializeField] bool isQueen = false;
-    // [SerializeField] Sprite normalQueen;
-
     [SerializeField] GameObject healthUI;
     [SerializeField] HealthBar healthBar;
 
     [SerializeField] GameObject endDialogue;
+    
+    PlayRandomAudio randomAudio;
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        randomAudio = GetComponent<PlayRandomAudio>();
+    }
 
     void Update()
     {
@@ -80,6 +85,7 @@ public class BossController : EnemyController
         base.ReceiveDamage(dmg);
         if (!healthUI.activeSelf) healthUI.SetActive(true);
         healthBar.SetHealth(_currHealth);
+        StartCoroutine(DelayBeforeHurtSound());
     }
 
 
@@ -119,6 +125,12 @@ public class BossController : EnemyController
         _sr.color = Color.clear;
         endDialogue.SetActive(true);
         Destroy(transform.parent.gameObject, 1f);
+    }
+
+    IEnumerator DelayBeforeHurtSound()
+    {
+        yield return new WaitForSecondsRealtime(0.2f);
+        randomAudio.PlayRandomSfx();
     }
 
     // public void BossDialogue(string line)

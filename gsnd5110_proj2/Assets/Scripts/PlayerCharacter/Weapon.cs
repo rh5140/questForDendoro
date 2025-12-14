@@ -18,6 +18,7 @@ public class Weapon : MonoBehaviour
     // TEMPORARY
     [SerializeField] Animator playerAnimator;
     private PlayRandomAudio randomAudio;
+    [SerializeField] AudioClip swordImpact;
 
     public void Start()
     {
@@ -41,7 +42,11 @@ public class Weapon : MonoBehaviour
                 if (hitCollider.gameObject.tag == "Enemy" && currTarget != null)
                 {
                     EnemyController ec = currTarget.transform.GetComponent<EnemyController>();
-                    if (ec != null) ec.ReceiveDamage(damage);
+                    if (ec != null) 
+                    {
+                        MusicManager.Instance.PlayOnce(swordImpact);
+                        ec.ReceiveDamage(damage);
+                    }
                 }
                 else if (hitCollider.gameObject.tag == "NPC" && currTarget != null)
                 {

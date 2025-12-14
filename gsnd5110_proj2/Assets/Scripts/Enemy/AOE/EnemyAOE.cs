@@ -11,10 +11,18 @@ public class EnemyAOE : MonoBehaviour
     [SerializeField] SpriteRenderer rangeOutline;
     [SerializeField] SpriteRenderer occludingIndicator;
     bool attackCompleted = true;
+    [SerializeField] bool playAudio = false;
+    protected PlayRandomAudio randomAudio;
+
+    void Start()
+    {
+        randomAudio = GetComponent<PlayRandomAudio>();
+    }
 
     public virtual void UseAttack()
     {
         if (!attackCompleted) return;
+        if (playAudio) randomAudio.PlayRandomSfx();
         attackCompleted = false;
         StartCoroutine(IncreaseOpacity(warningTime));
         StartCoroutine(WaitBeforeAttack());

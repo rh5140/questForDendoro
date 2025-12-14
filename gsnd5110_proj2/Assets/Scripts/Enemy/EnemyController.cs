@@ -10,12 +10,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] protected float _iFrames = 0.2f;
     [SerializeField] protected SpriteRenderer _sr;
 
-    void OnEnable()
-    {
-        _currHealth = _maxHealth;
-    }
-    
-    void OnStart()
+    protected virtual void OnEnable()
     {
         _currHealth = _maxHealth;
     }

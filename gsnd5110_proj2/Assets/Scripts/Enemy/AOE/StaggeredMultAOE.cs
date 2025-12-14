@@ -13,6 +13,7 @@ public class StaggeredMultAOE : EnemyAOE
 
     IEnumerator StaggerAtack()
     {
+        randomAudio.PlayRandomSfx();
         foreach (GameObject go in aoe)
         {
             yield return new WaitForSeconds(delay);

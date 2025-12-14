@@ -574,7 +574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnAwake
   audioSource: {fileID: 1749325338}
-  audioClip: {fileID: 8300000, guid: 3c2fff08535c15a47b5507c5e8cd4fae, type: 3}
+  audioClip: {fileID: 8300000, guid: 7a75f905a8387d34f994fd53f6bcaccd, type: 3}
 --- !u!114 &63909967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1423,7 +1423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnAwake
   audioSource: {fileID: 1749325338}
-  audioClip: {fileID: 8300000, guid: b6fcdb9844e8a244d8ebc55161e326be, type: 3}
+  audioClip: {fileID: 8300000, guid: ad7266c861ccf5f419760a48b639b7c1, type: 3}
 --- !u!114 &278203152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5885,7 +5885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnAwake
   audioSource: {fileID: 1749325338}
-  audioClip: {fileID: 8300000, guid: 29df227ff4bbefe4b84e9a92274a6180, type: 3}
+  audioClip: {fileID: 8300000, guid: 321f65e0bf4cab34ca05fb98b3dd9447, type: 3}
 --- !u!114 &960929216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6353,7 +6353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnAwake
   audioSource: {fileID: 1749325338}
-  audioClip: {fileID: 8300000, guid: ff2cce89b7adc434c9e0d9439ab484aa, type: 3}
+  audioClip: {fileID: 8300000, guid: 714888027be70ef4b8154feab4dabf0e, type: 3}
 --- !u!114 &1087150815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9266,7 +9266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnAwake
   audioSource: {fileID: 1749325338}
-  audioClip: {fileID: 8300000, guid: 8801321c288ff6f49a96ed4ea9da7621, type: 3}
+  audioClip: {fileID: 8300000, guid: bc9feeb95ed0ed94daf4cf73ce70692d, type: 3}
 --- !u!114 &1530444756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10157,7 +10157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnAwake
   audioSource: {fileID: 1749325338}
-  audioClip: {fileID: 8300000, guid: ff2cce89b7adc434c9e0d9439ab484aa, type: 3}
+  audioClip: {fileID: 8300000, guid: 62431746de2a0ce47b79f186eba374ce, type: 3}
 --- !u!114 &1725125489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10397,7 +10397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnAwake
   audioSource: {fileID: 1749325338}
-  audioClip: {fileID: 8300000, guid: b66fcc5406126f74dadb198662f1c67d, type: 3}
+  audioClip: {fileID: 8300000, guid: b4965fde31319f549a88c7b9d0b343a3, type: 3}
 --- !u!114 &1743269313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11730,7 +11730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnAwake
   audioSource: {fileID: 1749325338}
-  audioClip: {fileID: 8300000, guid: 24410de344d5f554295c5916bbb1faf1, type: 3}
+  audioClip: {fileID: 8300000, guid: ce59405c87408e1469c7c3dc290fd9be, type: 3}
 --- !u!114 &1964792263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12391,7 +12391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnAwake
   audioSource: {fileID: 676615132}
-  audioClip: {fileID: 8300000, guid: b6fcdb9844e8a244d8ebc55161e326be, type: 3}
+  audioClip: {fileID: 8300000, guid: ce59405c87408e1469c7c3dc290fd9be, type: 3}
 --- !u!114 &2084504424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12487,7 +12487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaySoundOnAwake
   audioSource: {fileID: 1749325338}
-  audioClip: {fileID: 8300000, guid: ff2cce89b7adc434c9e0d9439ab484aa, type: 3}
+  audioClip: {fileID: 8300000, guid: ad7266c861ccf5f419760a48b639b7c1, type: 3}
 --- !u!114 &2110482019
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -280,6 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2796920727770484997}
   - component: {fileID: 6839920967311509363}
+  - component: {fileID: 7901823595343944572}
   m_Layer: 0
   m_Name: RectAOE
   m_TagString: Untagged
@@ -326,3 +327,20 @@ MonoBehaviour:
   hitboxSize: {x: 6, y: 5, z: 12}
   hitboxGO: {fileID: 3086177193994486979}
   isRaccoon: 0
+--- !u!114 &7901823595343944572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7882912887546356470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed50ec76c643eb43be66b3bbb887f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayRandomAudio
+  clips:
+  - {fileID: 8300000, guid: ff6391d0fe77942489754b85304c2e56, type: 3}
+  - {fileID: 8300000, guid: cd0183b8c8f5f934e883d5a3b859ebb7, type: 3}
+  - {fileID: 8300000, guid: d7c5ba67d8823c74e8f2514f354cb778, type: 3}
+  - {fileID: 8300000, guid: 8f5badfce92f1a048b2481e35c45cd4c, type: 3}

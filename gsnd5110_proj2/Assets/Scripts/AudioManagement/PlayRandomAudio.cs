@@ -2,15 +2,10 @@ using UnityEngine;
 
 public class PlayRandomAudio : MonoBehaviour
 {
-    private AudioSource audioSource;
     [SerializeField] AudioClip[] clips;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] bool useSingleton = true;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
-
     public void PlayRandomSfx()
     {
         if (clips.Length == 0)
@@ -19,6 +14,7 @@ public class PlayRandomAudio : MonoBehaviour
             return;
         }
         int idx = Random.Range(0, clips.Length);
-        audioSource.PlayOneShot(clips[idx]);
+        if (useSingleton) MusicManager.Instance.PlayOnce(clips[idx]);
+        else audioSource.PlayOneShot(clips[idx]);
     }
 }

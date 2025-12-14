@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2244823693543185812}
   - component: {fileID: 5287169560748551586}
+  - component: {fileID: 7679380799196609151}
   - component: {fileID: 7677730060127440695}
   m_Layer: 0
   m_Name: Hurtbox
@@ -57,8 +58,26 @@ MonoBehaviour:
   dialogueBubble: {fileID: 0}
   dialogueTMP: {fileID: 0}
   deathLine: 
-  isQueen: 0
-  normalQueen: {fileID: 0}
+  healthUI: {fileID: 0}
+  healthBar: {fileID: 0}
+  endDialogue: {fileID: 0}
+--- !u!114 &7679380799196609151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600829056681733767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed50ec76c643eb43be66b3bbb887f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayRandomAudio
+  clips:
+  - {fileID: 8300000, guid: ffe7e6f1d7ee06242841f36aba3b87b5, type: 3}
+  - {fileID: 8300000, guid: 68acdea41fb7b5b4cb15bd9c6ecabb59, type: 3}
+  - {fileID: 8300000, guid: 16bbeff1c1d0ec44791ced7652ef6928, type: 3}
+  - {fileID: 8300000, guid: 225911511449d4340b8aff1cdfe6da20, type: 3}
 --- !u!65 &7677730060127440695
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -949,6 +968,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2921632192780111636}
     m_Modifications:
+    - target: {fileID: 1855805784412216797, guid: 4f8a2fd2fbfe93b4ea45b3d8d6cd2366, type: 3}
+      propertyPath: playAudio
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4893945967732495425, guid: 4f8a2fd2fbfe93b4ea45b3d8d6cd2366, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1058,6 +1081,10 @@ PrefabInstance:
     - target: {fileID: 4426794062995941990, guid: 06c2437cff511b74ab42a8dd1df2e484, type: 3}
       propertyPath: m_SortingOrder
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839920967311509363, guid: 06c2437cff511b74ab42a8dd1df2e484, type: 3}
+      propertyPath: playAudio
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7882912887546356470, guid: 06c2437cff511b74ab42a8dd1df2e484, type: 3}
       propertyPath: m_Name
