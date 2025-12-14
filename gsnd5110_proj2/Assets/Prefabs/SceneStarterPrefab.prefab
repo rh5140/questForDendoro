@@ -488,6 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8531c94ded26d9144a21b97c4ad53545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicManager
+  portalSfx: {fileID: 8300000, guid: f76586d1281fd1548a41a2954593fe65, type: 3}
 --- !u!1 &4763683514699909863
 GameObject:
   m_ObjectHideFlags: 0

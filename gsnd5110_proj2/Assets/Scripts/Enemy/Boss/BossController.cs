@@ -76,7 +76,9 @@ public class BossController : EnemyController
     
     public override void ReceiveDamage(int dmg)
     {
+        if (currState == BossState.Idle) return;
         base.ReceiveDamage(dmg);
+        if (!healthUI.activeSelf) healthUI.SetActive(true);
         healthBar.SetHealth(_currHealth);
     }
 

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class MusicManager : MonoBehaviour
@@ -5,6 +6,7 @@ public class MusicManager : MonoBehaviour
 
     public static MusicManager Instance {get; set;}
     AudioSource audioSource;
+    [SerializeField] AudioClip portalSfx;
     
     void Awake()
     {
@@ -27,6 +29,19 @@ public class MusicManager : MonoBehaviour
 
     public void ChangeTrack(AudioClip audioClip)
     {
+        if (GetCurrentClip() == portalSfx) // NOTE: Super hardcoded...
+        {
+            StartCoroutine(WaitForPortal(audioClip));
+        }
+        else
+        {
+            PlayTrack(audioClip);
+        }
+    }
+
+    public void PlayTrack(AudioClip audioClip)
+    {
+        
         StopAudio();
         audioSource.clip = audioClip;
         audioSource.Play();
@@ -50,5 +65,11 @@ public class MusicManager : MonoBehaviour
     public void ResetVolume()
     {
         audioSource.volume = 1f;
+    }
+
+    IEnumerator WaitForPortal(AudioClip audioClip)
+    {
+        yield return new WaitForSecondsRealtime(2.5f);
+        PlayTrack(audioClip);
     }
 }

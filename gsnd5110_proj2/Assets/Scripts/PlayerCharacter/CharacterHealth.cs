@@ -21,6 +21,7 @@ public class CharacterHealth : MonoBehaviour
     private string _scene;
 
     [SerializeField] bool hasBirdHealing = false;
+    [SerializeField] GameObject healingPotion;
 
     void OnEnable()
     {
@@ -51,7 +52,7 @@ public class CharacterHealth : MonoBehaviour
         if (_currHealth <= 0) Die();
         if (!_isInvincible) StartCoroutine(BecomeTemporarilyInvincible());
 
-        if (hasBirdHealing && _currHealth == 1) StartCoroutine(WaitToHeal());
+        if (hasBirdHealing && _currHealth == 2) StartCoroutine(WaitToHeal());
     }
 
     public int GetCurrhealth()
@@ -90,8 +91,10 @@ public class CharacterHealth : MonoBehaviour
 
     private IEnumerator WaitToHeal()
     {
+        healingPotion.SetActive(true);
         yield return new WaitForSeconds(1f);
         HealDamage(1);
+        healingPotion.SetActive(false);
     }
 
 }
