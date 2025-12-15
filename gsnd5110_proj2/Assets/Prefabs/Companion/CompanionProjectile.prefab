@@ -47,12 +47,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d40c6800b174d3142939dd8411410016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CompanionProjectile
-  _speed: 5
+  _speed: 20
   _lifetime: 3
   _damage: 1
   range: 1
   hitboxSize: {x: 1, y: 1, z: 1}
   _sr: {fileID: 2490522014927806099}
+  shootSfx: {fileID: 8300000, guid: 473b1958f574496458cb72c491927b7e, type: 3}
+  impactSfx: {fileID: 8300000, guid: e72e1dc19512de745906989ff6ec737b, type: 3}
 --- !u!212 &2490522014927806099
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class SceneChangeMushroom : Interactable
     [SerializeField] string nextSceneName;
     CharacterController player;
     FadeBlack fadeBlack;
+    [SerializeField] AudioClip portalLoading;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class SceneChangeMushroom : Interactable
 
     IEnumerator WaitBeforeSceneChange()
     {
+        MusicManager.Instance.ChangeTrack(portalLoading);
         player.enabled = false;
         fadeBlack.RunFadeCoroutine(1f, 0.5f);
         yield return new WaitForSeconds(1f);

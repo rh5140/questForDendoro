@@ -10,13 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4358368502837089132}
   - component: {fileID: 2099263985424648804}
+  - component: {fileID: 2289944399964739732}
   m_Layer: 0
-  m_Name: Dead
+  m_Name: RedFlashSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4358368502837089132
 Transform:
   m_ObjectHideFlags: 0
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2083276425878218535}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75, z: -0.1}
+  m_LocalPosition: {x: 0, y: 0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -78,8 +79,8 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b46007f16e1cd422e98b07efa3d8f1f9, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: e3352320bd9f744e0b923fd917926da0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -90,6 +91,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2289944399964739732
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083276425878218535}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a4a88a9b09b3ad74cb2e64d5b2afd1b4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5519186256167822093
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,8 +534,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7333331363688009907}
   - component: {fileID: 8621188730409288822}
+  - component: {fileID: 1784717227689964240}
   - component: {fileID: 8277849715529309844}
-  - component: {fileID: 7082592868205899199}
+  - component: {fileID: 6029160901047440519}
   m_Layer: 0
   m_Name: RaccoonEnemy
   m_TagString: Enemy
@@ -550,10 +574,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f50cd744ba9a34e89d64a990482105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RaccoonEnemy
-  _maxHealth: 1
+  _maxHealth: 3
   _isInvincible: 0
   _iFrames: 0.2
-  _sr: {fileID: 0}
+  _sr: {fileID: 2099263985424648804}
   lungeVector: {x: -5, y: 0, z: 0}
   attackDamage: 1
   attackInterval: 5
@@ -561,12 +585,29 @@ MonoBehaviour:
   attackTransform: {fileID: 5599474977066373276}
   hitboxSize: {x: 1, y: 1, z: 1}
   animator: {fileID: 8853876424528802175}
+  redFlashAnimator: {fileID: 2289944399964739732}
   shadowSprite: {fileID: 5694800703151326730}
   deadSprite: {fileID: 2083276425878218535}
   bodyHitbox: {fileID: 5519186256167822093}
   attackRange: {fileID: 879308029249795145}
-  audioSource: {fileID: 7082592868205899199}
-  impactSfx:
+  attackSfx: {fileID: 8300000, guid: 6e162162002ec7a4bba9cc3034885241, type: 3}
+  growlSfx:
+  - {fileID: 8300000, guid: 6b4bf3af213b3f142adf6c3c1296b235, type: 3}
+  - {fileID: 8300000, guid: 3d3b6d73d981a744ba803480b9f99d5f, type: 3}
+  - {fileID: 8300000, guid: 4500168a7009a684b94a64414aee7c48, type: 3}
+--- !u!114 &1784717227689964240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8906126604719830039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed50ec76c643eb43be66b3bbb887f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayRandomAudio
+  clips:
   - {fileID: 8300000, guid: 30206e2dfc51771499938c0fcf8661cb, type: 3}
   - {fileID: 8300000, guid: c1d801d996544ad4a9c92301e3fb7bc2, type: 3}
   - {fileID: 8300000, guid: dc1e4eb654b804f47839257e7e927d7b, type: 3}
@@ -591,7 +632,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!82 &7082592868205899199
+--- !u!82 &6029160901047440519
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -612,8 +653,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 10
+  MaxDistance: 300
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -648,7 +689,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

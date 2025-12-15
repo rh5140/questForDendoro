@@ -10,6 +10,7 @@ public class CharacterHealth : MonoBehaviour
     [SerializeField] private float _iFrames = 0.5f;
     // [SerializeField] private SpriteRenderer _sr;
     [SerializeField] private HeartsInterface _hearts;
+    [SerializeField] AudioClip hurtSfx;
     [SerializeField] private GameObject _gameOverScreen;
     [SerializeField] Animator playerAnimator;
     [SerializeField] GameObject animatedBody;
@@ -20,11 +21,11 @@ public class CharacterHealth : MonoBehaviour
     private string _scene;
 
     [SerializeField] bool hasBirdHealing = false;
+    [SerializeField] GameObject healingPotion;
 
     void OnEnable()
     {
         _currHealth = _maxHealth;
-        // _scene = SceneManager.GetActiveScene().name;
     }
 
     public void HealDamage(int heal)
@@ -44,12 +45,13 @@ public class CharacterHealth : MonoBehaviour
         if (_isDead) return;
         if (_isInvincible) return;
         playerAnimator.Play("Hurt");
+        MusicManager.Instance.PlayOnce(hurtSfx);
         _hearts.RemoveHearts(dmg);
         _currHealth -= dmg;
         if (_currHealth <= 0) Die();
         if (!_isInvincible) StartCoroutine(BecomeTemporarilyInvincible());
 
-        if (hasBirdHealing && _currHealth == 1) StartCoroutine(WaitToHeal());
+        if (hasBirdHealing && _currHealth == 2) StartCoroutine(WaitToHeal());
     }
 
     public int GetCurrhealth()
@@ -88,8 +90,10 @@ public class CharacterHealth : MonoBehaviour
 
     private IEnumerator WaitToHeal()
     {
+        healingPotion.SetActive(true);
         yield return new WaitForSeconds(1f);
         HealDamage(1);
+        healingPotion.SetActive(false);
     }
 
 }

@@ -13,15 +13,18 @@ public class RaccoonEnemy : EnemyController
     [SerializeField] Transform attackTransform;
     Vector3 attackPosition;
     [SerializeField] Vector3 hitboxSize;
-    [SerializeField] Animator animator;
 
+    [SerializeField] Animator animator;
+    [SerializeField] Animator redFlashAnimator;
     [SerializeField] GameObject shadowSprite;
     [SerializeField] GameObject deadSprite;
     [SerializeField] GameObject bodyHitbox;
+
     [SerializeField] SpriteRenderer attackRange;
 
-    [SerializeField] AudioSource audioSource;
-    [SerializeField] AudioClip[] impactSfx;
+    private PlayRandomAudio randomAudio;
+    [SerializeField] AudioClip attackSfx;
+    [SerializeField] AudioClip[] growlSfx;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,7 +32,7 @@ public class RaccoonEnemy : EnemyController
         startPosition = transform.position;
         attackPosition = attackTransform.position;
         lungePosition = startPosition + lungeVector;
-        audioSource = GetComponent<AudioSource>();
+        randomAudio = GetComponent<PlayRandomAudio>();
     }
 
     // Update is called once per frame
@@ -39,6 +42,7 @@ public class RaccoonEnemy : EnemyController
         if (_currHealth > 0 && currTime > attackInterval)
         {
             animator.SetTrigger("Attack");
+            redFlashAnimator.SetTrigger("Attack");
             StartCoroutine(Lunge());
             currTime = 0;
         }
@@ -46,6 +50,7 @@ public class RaccoonEnemy : EnemyController
 
     private IEnumerator Lunge()
     {
+        GetComponent<AudioSource>().PlayOneShot(attackSfx);
         float time = 0;
         float duration = 0.5f;
         while (time < duration)
@@ -75,6 +80,7 @@ public class RaccoonEnemy : EnemyController
                 yield return null;
             }
         }
+        if (_currHealth != 0) PlayRandomSfx();
     }
 
     private IEnumerator Attack()
@@ -100,6 +106,7 @@ public class RaccoonEnemy : EnemyController
     private IEnumerator DeathSequence()
     {
         animator.SetTrigger("Dead");
+        redFlashAnimator.SetTrigger("Dead");
         bodyHitbox.SetActive(false);
 
         yield return new WaitForSeconds(0.5f);
@@ -130,7 +137,12 @@ public class RaccoonEnemy : EnemyController
 
     private void PlaySFX()
     {
-        int idx = Random.Range(0, impactSfx.Length);
-        audioSource.PlayOneShot(impactSfx[idx]);
+        randomAudio.PlayRandomSfx();
+    }
+
+    private void PlayRandomSfx()
+    {
+        int idx = Random.Range(0,growlSfx.Length);
+        GetComponent<AudioSource>().PlayOneShot(growlSfx[idx]);
     }
 }

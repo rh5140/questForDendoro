@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public enum PlayerState
 {
@@ -119,5 +120,39 @@ public class InputHandler : MonoBehaviour
     private void TryAttack()
     {
         _charAttack.Attack();
+    }
+
+    // TESTING CHEATS
+    public void OnLevel0()
+    {
+        SceneManager.LoadScene("Level_0");
+    }
+    public void OnLevel1()
+    {
+        SceneManager.LoadScene("Level_1");
+    }
+    public void OnLevel2()
+    {
+        SceneManager.LoadScene("Level_2");
+    }
+    public void OnLevel3()
+    {
+        SceneManager.LoadScene("Level_2.5");
+    }
+    public void OnLevel4()
+    {
+        SceneManager.LoadScene("Level_3");
+    }
+    public void OnLevel5()
+    {
+        SceneManager.LoadScene("Level_4_Dark");
+    }
+    public void OnLevel6()
+    {
+        SceneManager.LoadScene("Level_5");
+    }
+    public void OnLevel7()
+    {
+        SceneManager.LoadScene("Level_6");
     }
 }

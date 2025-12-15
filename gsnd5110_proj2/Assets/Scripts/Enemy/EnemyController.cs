@@ -10,12 +10,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] protected float _iFrames = 0.2f;
     [SerializeField] protected SpriteRenderer _sr;
 
-    void OnEnable()
-    {
-        _currHealth = _maxHealth;
-    }
-    
-    void OnStart()
+    protected virtual void OnEnable()
     {
         _currHealth = _maxHealth;
     }
@@ -44,10 +39,15 @@ public class EnemyController : MonoBehaviour
     private IEnumerator BecomeTemporarilyInvincible()
     {
         _isInvincible = true;
-        if (_sr != null) _sr.color = Color.red;
+        if (_sr != null && _currHealth > 0) _sr.color = Color.red;
         yield return new WaitForSeconds(_iFrames);
         _isInvincible = false;
         if (_sr != null) _sr.color = Color.white;
+    }
+
+    public int GetMaxHealth()
+    {
+        return _maxHealth;
     }
 
 }

@@ -9,6 +9,8 @@ public class CompanionProjectile : MonoBehaviour
     [SerializeField] Vector3 hitboxSize;
     int shootRight = 1;
     [SerializeField] SpriteRenderer _sr;
+    [SerializeField] AudioClip shootSfx;
+    [SerializeField] AudioClip impactSfx;
 
     private float _currTime = 0;
 
@@ -16,6 +18,7 @@ public class CompanionProjectile : MonoBehaviour
     void Start()
     {
         hitboxSize = new Vector3(range, range, range);
+        MusicManager.Instance.PlayOnce(shootSfx);
     }
 
     public void SetDirection(int dir)
@@ -35,6 +38,7 @@ public class CompanionProjectile : MonoBehaviour
             EnemyController currTarget = hitCollider.transform.GetComponent<EnemyController>();
             if (hitCollider.gameObject.tag == "Enemy" && currTarget != null)
             {
+                MusicManager.Instance.PlayOnce(impactSfx);
                 currTarget.ReceiveDamage(_damage);
                 Destroy(gameObject);
             }

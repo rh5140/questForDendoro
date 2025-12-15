@@ -17,15 +17,15 @@ public class Weapon : MonoBehaviour
 
     // TEMPORARY
     [SerializeField] Animator playerAnimator;
-    [SerializeField] AudioSource audioSource;
-    [SerializeField] AudioClip[] swingSfx;
+    private PlayRandomAudio randomAudio;
+    [SerializeField] AudioClip swordImpact;
 
     public void Start()
     {
         center = transform.position;
         range = 2f;
         hitboxSize = new Vector3(range, range, range);
-        audioSource = GetComponent<AudioSource>();
+        randomAudio = GetComponent<PlayRandomAudio>();
     }
 
     public void HitTarget()
@@ -42,7 +42,11 @@ public class Weapon : MonoBehaviour
                 if (hitCollider.gameObject.tag == "Enemy" && currTarget != null)
                 {
                     EnemyController ec = currTarget.transform.GetComponent<EnemyController>();
-                    if (ec != null) ec.ReceiveDamage(damage);
+                    if (ec != null) 
+                    {
+                        MusicManager.Instance.PlayOnce(swordImpact);
+                        ec.ReceiveDamage(damage);
+                    }
                 }
                 else if (hitCollider.gameObject.tag == "NPC" && currTarget != null)
                 {
@@ -87,7 +91,6 @@ public class Weapon : MonoBehaviour
 
     private void SwordSFX()
     {
-        int idx = Random.Range(0, swingSfx.Length);
-        audioSource.PlayOneShot(swingSfx[idx]);
+        randomAudio.PlayRandomSfx();
     }
 }

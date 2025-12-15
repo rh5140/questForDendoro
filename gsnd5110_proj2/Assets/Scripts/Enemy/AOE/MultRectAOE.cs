@@ -6,6 +6,7 @@ public class MultRectAOE : EnemyAOE
 
     public override void UseAttack()
     {
+        randomAudio.PlayRandomSfx();
         foreach (GameObject go in rects)
         {
             go.GetComponent<RectAOE>().UseAttack();

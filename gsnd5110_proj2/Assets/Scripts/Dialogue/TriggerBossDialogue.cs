@@ -18,7 +18,7 @@ public class TriggerBossDialogue : MonoBehaviour
         if (triggered) return;
         if (other.gameObject.tag == "Player")
         {
-            boss.BossDialogue(bossDialogue);
+            // boss.BossDialogue(bossDialogue);
             triggered = true;
         }
     }

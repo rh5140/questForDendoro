@@ -7,7 +7,6 @@ public class CustomGate : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("hi");
         Destroy(this);
     }
 

@@ -6,25 +6,20 @@ using System.Collections.Generic;
 public class YarnCommands : MonoBehaviour
 {
     [SerializeField] DialogueRunner dr;
-    [SerializeField] NameToNpcMap map;
-    private Dictionary<string, TalkInteraction> dict;
+    [SerializeField] InputHandler player;
 
-    public void Start()
+    public void OnEnable()
     {
-        dr.AddCommandHandler<string>(
-            "interaction_cooldown",     // the name of the command
-            InteractionCooldown // the method to run
+        dr.AddCommandHandler(
+            "disable_dialogue",     // the name of the command
+            DisableDialogueCanvas // the method to run
         );
-        dict = map.npcDict;
     }
 
-    public void InteractionCooldown(string npcName)
+    public void DisableDialogueCanvas()
     {
-        if (dict.ContainsKey(npcName))
-        {
-            dict[npcName].InteractionCooldown();
-        }
-        else Debug.Log("NPC " + npcName + " not found!");
+        player.ChangePlayerToIdle();
+        gameObject.SetActive(false);
     }
 
 }

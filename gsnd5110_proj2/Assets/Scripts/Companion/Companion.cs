@@ -6,6 +6,10 @@ public class Companion : MonoBehaviour
     [SerializeField] private float _interval = 0.5f;
     private float _currTime = 0;
 
+    void Start()
+    {
+    }
+
     void Update()
     {
         _currTime += Time.deltaTime;

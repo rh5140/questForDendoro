@@ -69,6 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SceneChangeMushroom
   indicator: {fileID: 5975303165926719990}
   nextSceneName: ColorSelection
+  portalLoading: {fileID: 8300000, guid: f76586d1281fd1548a41a2954593fe65, type: 3}
 --- !u!1 &5975303165926719990
 GameObject:
   m_ObjectHideFlags: 0

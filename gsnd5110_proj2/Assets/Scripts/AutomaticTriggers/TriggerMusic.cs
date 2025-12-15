@@ -3,29 +3,32 @@ using UnityEngine;
 
 public class TriggerMusic : MonoBehaviour
 {
-    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioSource introOnly;
     [SerializeField] AudioClip intro;
     [SerializeField] AudioClip loop;
     bool started = false;
 
-    void OnTriggerEnter(Collider other)
+    // void OnTriggerEnter(Collider other)
+    // {
+    //     if (started) return;
+    //     if (other.gameObject.tag == "Player")
+    //     {
+    //         StartCoroutine(PlayIntroThenLoop());
+    //         started = true;
+    //     }
+    // }
+
+    public void StartMusic()
     {
-        if (started) return;
-        if (other.gameObject.tag == "Player")
-        {
-            StartCoroutine(PlayIntroThenLoop());
-            started = true;
-        }
+        StartCoroutine(PlayIntroThenLoop());
     }
 
     IEnumerator PlayIntroThenLoop(float introLength = 8.0924f)
     {
-        audioSource.Stop();
-        audioSource.clip = intro;
-        audioSource.PlayOneShot(intro);
-        yield return new WaitForSeconds(introLength);
-        audioSource.clip = loop;
-        audioSource.Play();
+        MusicManager.Instance.StopAudio();
+        introOnly.Play();
+        yield return new WaitForSecondsRealtime(introLength + 0.15f);
+        MusicManager.Instance.ChangeTrack(loop);
         yield return null;
     }
 }
